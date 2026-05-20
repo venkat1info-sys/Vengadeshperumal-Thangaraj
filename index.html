@@ -11,7 +11,7 @@
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background: linear-gradient(135deg, rgba(56, 189, 248, 0.15) 0%, #f8fafc 35%, #ffffff 100%);
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.18) 0%, #f8fafc 35%, #ffffff 100%);
             color: #334155;
             min-height: 100vh;
         }
@@ -93,7 +93,7 @@
                 
                 <div class="text-sm md:text-base lg:text-lg text-slate-700 font-medium tracking-wide min-h-[2.5rem] flex items-center border-l-2 border-sky-500 pl-4 py-1">
                     <span class="font-code text-sky-600 font-bold">&gt;&nbsp;</span>
-                    <span id="loopTypewriterMount" class="terminal-cursor font-code font-bold"></span>
+                    <span id="loopTypewriterMount" class="terminal-cursor font-code font-bold text-sky-800"></span>
                 </div>
             </div>
 
@@ -442,80 +442,66 @@
     </div>
 
     <script>
-        // STRUCTURAL CONTENT ARRAYS FOR THE INFINITE CYCLE TYPEWRITER ENGINE
-        const cycleRolesArray = [
-            "Subject Matter Expert & Regional Technical Coordinator | STEM Operations Executive.",
-            "Specialist in Embedded Logic Hardware R&D Platforms (Arduino, ESP32 Modules).",
-            "Curriculum Architect Driving 100+ Scaled STEM, Robotics, and AI Deployments.",
-            "XR Infrastructure Supervisor Managing Unity Engine and AR/VR Walker Systems."
-        ];
+        // STRICTLY ISOLATED VALUE FOR THE TARGETED LOOP WRITER
+        const targetedRoleText = "Subject Matter Expert & Regional Technical Coordinator | STEM Operations Executive.";
 
-        let targetArrayIndex = 0;
         let targetCharIndex = 0;
         let isDeletingProcess = false;
         const typewriterMountPoint = document.getElementById("loopTypewriterMount");
 
-        const typingSpeedDelay = 50;    // Character append speed counter inside ms
-        const erasingSpeedDelay = 15;   // Backspacing cycle removal deletion metric inside ms
-        const holdVisibleDuration = 2800; // Freeze delay holding completed text visible before deletion sequence triggers inside ms
+        const typingSpeedDelay = 50;     // Append speed counter inside milliseconds
+        const erasingSpeedDelay = 15;    // Backspacing removal speed counter inside milliseconds
+        const holdVisibleDuration = 3000; // Freeze window timeframe before deletion loop execution inside milliseconds
 
-        function runInfiniteTypewriterSequence() {
-            const currentRoleString = cycleRolesArray[targetArrayIndex];
-
+        function executeTargetedLoopRoutine() {
             if (!isDeletingProcess) {
-                // Character inclusion tracking phase
-                typewriterMountPoint.textContent = currentRoleString.substring(0, targetCharIndex + 1);
+                // Character appending workflow state
+                typewriterMountPoint.textContent = targetedRoleText.substring(0, targetCharIndex + 1);
                 targetCharIndex++;
 
-                if (targetCharIndex === currentRoleString.length) {
-                    // String complete, activate visible pause hold prior to backspacing subtraction run
+                if (targetCharIndex === targetedRoleText.length) {
+                    // Maximum limits reached, hold string visible static
                     isDeletingProcess = true;
-                    setTimeout(runInfiniteTypewriterSequence, holdVisibleDuration);
+                    setTimeout(executeTargetedLoopRoutine, holdVisibleDuration);
                 } else {
-                    setTimeout(runInfiniteTypewriterSequence, typingSpeedDelay);
+                    setTimeout(executeTargetedLoopRoutine, typingSpeedDelay);
                 }
             } else {
-                // Character subtraction deletion phase
-                typewriterMountPoint.textContent = currentRoleString.substring(0, targetCharIndex - 1);
+                // Character subtraction deletion state
+                typewriterMountPoint.textContent = targetedRoleText.substring(0, targetCharIndex - 1);
                 targetCharIndex--;
 
                 if (targetCharIndex === 0) {
-                    // Backspace code block finalized, cycle tracking array index pointer map forward
+                    // Reset parameters back to type initial character phase smoothly
                     isDeletingProcess = false;
-                    targetArrayIndex = (targetArrayIndex + 1) % cycleRolesArray.length;
-                    setTimeout(runInfiniteTypewriterSequence, 500); // Reset buffer before typing fresh index string
+                    setTimeout(executeTargetedLoopRoutine, 600); // Small reset cushion pause
                 } else {
-                    setTimeout(runInfiniteTypewriterSequence, erasingSpeedDelay);
+                    setTimeout(executeTargetedLoopRoutine, erasingSpeedDelay);
                 }
             }
         }
 
-        // CONTROL VIEWPORT TAB PANELS CONTROLLER 
+        // TABBED INDEX PANEL CONTROLLER LAYOUTS SWITCHER
         function executeWorkspaceTabSwitch(targetPanelId) {
-            // Target and deactivate all currently active visibility panels in navigation frame
             const standardPanels = document.querySelectorAll('.view-pane-segment');
             standardPanels.forEach(panel => panel.classList.remove('active-pane'));
 
-            // Reset text styling colors on template buttons group selection nodes
             const consoleButtons = document.querySelectorAll('.console-tab-btn');
-            workspaceButtons = consoleButtons; // Alias correction check
-            workspaceButtons.forEach(btn => {
+            consoleButtons.forEach(btn => {
                 btn.classList.remove('text-sky-700', 'border-sky-500', 'bg-white/80');
                 btn.classList.add('text-slate-400', 'border-transparent');
             });
 
-            // Reapply layout focus tracking state directly on the user selection target content box
             document.getElementById(targetPanelId).classList.add('active-pane');
             
-            // Reapply high-contrast focus line classes back onto active triggering layout node button
             const currentTabTriggerBtn = document.getElementById('btn-' + targetPanelId);
             currentTabTriggerBtn.classList.remove('text-slate-400', 'border-transparent');
             currentTabTriggerBtn.classList.add('text-sky-700', 'border-sky-500', 'bg-white/80');
         }
 
-        // Initialize script logic routine processes
+        // Initialize targeting typing workflow script automatically
         document.addEventListener("DOMContentLoaded", function() {
-            setTimeout(runInfiniteTypewriterSequence, 600);
+            setTimeout(executeTargetedLoopRoutine, 600);
         });
     </script>
 
