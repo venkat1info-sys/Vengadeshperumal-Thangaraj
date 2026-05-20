@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vengadeshperumal Thangaraj | Strategic Tech Portfolio</title>
+    <title>Vengadeshperumal Thangaraj | Strategic Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         body {
@@ -17,286 +17,273 @@
         .font-display {
             font-family: 'Space Grotesk', sans-serif;
         }
-        /* Crisp structural frames */
-        .dossier-frame {
-            border: 1px solid #1c1c1e;
+        .custom-border {
+            border-color: #1a1a1a;
         }
-        .dossier-frame-thick {
-            border: 2px solid #ffffff;
-        }
-        /* Hover micro-animations */
-        .interactive-block {
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .interactive-block:hover {
-            background-color: #0c0c0e;
-            border-color: #ffffff;
-        }
-        /* Hide scrollbars cleanly */
-        ::-webkit-scrollbar {
-            width: 4px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #000000;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #2c2c2e;
+        /* Custom smooth scroll bar for the layout content panel */
+        @media (min-width: 1024px) {
+            .scroll-panel::-webkit-scrollbar {
+                width: 4px;
+            }
+            .scroll-panel::-webkit-scrollbar-track {
+                background: #000000;
+            }
+            .scroll-panel::-webkit-scrollbar-thumb {
+                background: #222222;
+            }
+            .scroll-panel::-webkit-scrollbar-thumb:hover {
+                background: #ffffff;
+            }
         }
     </style>
 </head>
-<body class="selection:bg-white selection:text-black antialiased p-4 md:p-8">
+<body class="selection:bg-white selection:text-black antialiased">
 
-    <header class="max-w-7xl mx-auto bg-black border-2 border-white p-8 mb-6">
-        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
-            <div>
-                <span class="font-mono text-xs tracking-[0.3em] text-zinc-500 block uppercase mb-1">// EXECUTIVE BRIEFING</span>
-                <h1 class="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white uppercase">
-                    VENGADESHPERUMAL THANGARAJ
-                </h1>
-            </div>
-            <div class="flex flex-wrap gap-3 font-mono text-[11px] uppercase tracking-wider">
-                <a href="#overview" class="px-4 py-2 bg-zinc-900 border border-zinc-800 hover:border-white transition-all">01. Overview</a>
-                <a href="#competencies" class="px-4 py-2 bg-zinc-900 border border-zinc-800 hover:border-white transition-all">02. Core</a>
-                <a href="#experience" class="px-4 py-2 bg-zinc-900 border border-zinc-800 hover:border-white transition-all">03. History</a>
-                <a href="#portfolio" class="px-4 py-2 bg-zinc-900 border border-zinc-800 hover:border-white transition-all">04. Projects</a>
-            </div>
-        </div>
-    </header>
-
-    <main class="max-w-7xl mx-auto space-y-6">
+    <div class="flex flex-col lg:flex-row min-h-screen">
         
-        <section id="overview" class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-            
-            <div class="lg:col-span-8 dossier-frame p-8 bg-zinc-950/40 space-y-6">
-                <div class="flex justify-between items-center border-b border-zinc-900 pb-4">
-                    <span class="font-mono text-xs text-zinc-400 font-bold">[SECTION // PROFILE SUMMARY]</span>
-                    <span class="font-mono text-[10px] text-zinc-600">REF: Dec 2017 - PRES</span>
+        <aside class="w-full lg:w-[35%] lg:fixed lg:top-0 lg:left-0 lg:h-screen bg-black border-b lg:border-b-0 lg:border-r custom-border p-8 md:p-12 flex flex-col justify-between z-10">
+            <div class="space-y-8">
+                <div>
+                    <span class="font-mono text-[10px] tracking-[0.3em] text-zinc-500 block uppercase mb-2">// CORE OBJECT SPEC</span>
+                    <h1 class="font-display text-3xl md:text-4xl font-bold tracking-tighter text-white uppercase leading-none">
+                        VENGADESHPERUMAL<br>THANGARAJ
+                    </h1>
+                    <div class="h-[2px] w-12 bg-white mt-4"></div>
                 </div>
-                <h2 class="font-display text-2xl font-bold text-white uppercase tracking-tight">
-                    Subject Matter Expert & Regional Technical Coordinator | STEM Operations Executive
-                </h2>
-                <p class="text-zinc-400 text-sm font-light leading-relaxed">
-                    Dynamic, results-driven STEM Executive with over 8.5 years of progressive leadership experience driving multi-center academic operations, curriculum strategy, and technical product delivery within the robotics and digital media education sectors. Expert in cross-functional leadership, institutional stakeholder management, and the end-to-end R&D of highly scalable K-10 robotics, AI, and AR/VR educational programs.
-                </p>
-                <div class="pt-2">
-                    <a href="mailto:venkatl.info@gmail.com" class="inline-flex items-center gap-3 px-6 py-3 border border-white bg-white text-black text-xs font-mono uppercase tracking-widest hover:bg-black hover:text-white transition-colors duration-300">
-                        Secure Contact Transmission <i class="fa-solid fa-arrow-right-long"></i>
+
+                <div class="space-y-4">
+                    <p class="text-zinc-400 text-xs uppercase tracking-widest font-mono font-bold">// OPERATIONS CURRENT</p>
+                    <p class="text-sm text-zinc-300 font-light leading-relaxed">
+                        Subject Matter Expert & Regional Technical Coordinator | STEM Operations Executive[cite: 2]. Managing multi-center technical infrastructure and complex curriculum K-10 strategy[cite: 5, 10].
+                    </p>
+                </div>
+                
+                <nav class="hidden lg:flex flex-col space-y-3 font-mono text-[11px] uppercase tracking-wider text-zinc-500">
+                    <a href="#about" class="hover:text-white transition-colors flex items-center gap-2"><span>01 //</span> EXECUTIVE BRIEFING</a>
+                    <a href="#competencies" class="hover:text-white transition-colors flex items-center gap-2"><span>02 //</span> CORE CAPABILITIES</a>
+                    <a href="#experience" class="hover:text-white transition-colors flex items-center gap-2"><span>03 //</span> DEPLOYMENT LOGS</a>
+                    <a href="#portfolio" class="hover:text-white transition-colors flex items-center gap-2"><span>04 //</span> CURRICULUM ARRAYS</a>
+                    <a href="#proficiencies" class="hover:text-white transition-colors flex items-center gap-2"><span>05 //</span> SYSTEM STACK</a>
+                </nav>
+            </div>
+
+            <div class="pt-8 lg:pt-0 space-y-4 border-t custom-border lg:border-t-0 font-mono text-xs text-zinc-500 uppercase tracking-wider">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2">
+                    <div><span class="text-zinc-700 text-[10px] block">// REGION</span><span class="text-white text-xs">Tamil Nadu, India</span> [cite: 2]</div>
+                    <div><span class="text-zinc-700 text-[10px] block">// TELEPHONY</span><span class="text-white text-xs">+91 85266 28310</span> [cite: 2]</div>
+                    <div><span class="text-zinc-700 text-[10px] block">// SECURE_NET</span><span class="text-white text-xs text-zinc-300">venkatl.info@gmail.com</span> [cite: 3]</div>
+                </div>
+                <div class="pt-4 border-t custom-border hidden lg:block">
+                    <a href="mailto:venkatl.info@gmail.com" class="w-full text-center block px-4 py-3 border border-white text-[10px] font-bold uppercase tracking-widest bg-white text-black hover:bg-black hover:text-white transition-colors duration-300">
+                        OPEN CONTACT SEQUENCE
                     </a>
                 </div>
             </div>
+        </aside>
 
-            <div class="lg:col-span-4 border-2 border-white p-8 bg-black flex flex-col justify-between">
-                <span class="font-mono text-xs text-zinc-400 font-bold block mb-4">[METRIC_INVENTORY]</span>
-                <div class="space-y-6">
-                    <div>
-                        <span class="font-display text-4xl font-bold text-white tracking-tight">11</span>
-                        <span class="text-[10px] font-mono uppercase tracking-widest text-zinc-500 block mt-1">Institutional Campuses Governed</span>
-                    </div>
-                    <div class="border-b border-zinc-900"></div>
-                    <div>
-                        <span class="font-display text-4xl font-bold text-white tracking-tight">50+</span>
-                        <span class="text-[10px] font-mono uppercase tracking-widest text-zinc-500 block mt-1">Faculty Members Directed</span>
-                    </div>
-                    <div class="border-b border-zinc-900"></div>
-                    <div>
-                        <span class="font-display text-4xl font-bold text-white tracking-tight">100+</span>
-                        <span class="text-[10px] font-mono uppercase tracking-widest text-zinc-500 block mt-1">STEM, Robotics & AI Deployments</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="competencies" class="dossier-frame p-8 bg-black">
-            <div class="font-mono text-xs text-zinc-400 font-bold mb-8">[SECTION // CORE COMPETENCIES]</div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                
-                <div class="p-6 border border-zinc-900 bg-zinc-950/30 interactive-block">
-                    <div class="text-zinc-600 font-mono text-xs mb-4">// AREA_01</div>
-                    <h3 class="font-display font-bold text-sm uppercase text-white mb-2">Operations Governance</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed font-light">Multi-Center Operations Governance, Institutional Stakeholder Relations, Faculty Recruitment & Training, Resource Optimization, Academic Auditing & KPI Tracking.</p>
-                </div>
-
-                <div class="p-6 border border-zinc-900 bg-zinc-950/30 interactive-block">
-                    <div class="text-zinc-600 font-mono text-xs mb-4">// AREA_02</div>
-                    <h3 class="font-display font-bold text-sm uppercase text-white mb-2">Curriculum Strategy</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed font-light">End-to-End Instructional Design (K-10 Frameworks), STEM/Robotics Integration, and systemic assessment deployment structures.</p>
-                </div>
-
-                <div class="p-6 border border-zinc-900 bg-zinc-950/30 interactive-block">
-                    <div class="text-zinc-600 font-mono text-xs mb-4">// AREA_03</div>
-                    <h3 class="font-display font-bold text-sm uppercase text-white mb-2">Hardware Architecture</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed font-light">Embedded Systems & Hardware Integration (Arduino, ESP32 Modules), native C/C++ Programming, Artificial Intelligence, and Machine Learning Frameworks.</p>
-                </div>
-
-                <div class="p-6 border border-zinc-900 bg-zinc-950/30 interactive-block">
-                    <div class="text-zinc-600 font-mono text-xs mb-4">// AREA_04</div>
-                    <h3 class="font-display font-bold text-sm uppercase text-white mb-2">Interactive Media</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed font-light">XR Environments (Unity, AR/VR Development), Game Design configurations, Advanced Motion Graphics, and multimedia pipeline control.</p>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="experience" class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <main class="w-full lg:w-[65%] lg:ml-[35%] bg-black min-h-screen scroll-panel">
             
-            <div class="lg:col-span-4 dossier-frame p-8 bg-zinc-950/20 flex flex-col justify-between">
-                <div>
-                    <span class="font-mono text-xs text-zinc-400 font-bold block mb-2">[SECTION // TIMELINE]</span>
-                    <h2 class="font-display text-3xl font-bold uppercase text-white">Professional History Log</h2>
-                </div>
-                <div class="font-mono text-xs text-zinc-500 space-y-2 mt-8 lg:mt-0">
-                    <p>SYSTEM STATUS: VERIFIED</p>
-                    <p>RECORDS CHECKED: OK</p>
-                </div>
-            </div>
+            <section id="about" class="p-8 md:p-16 border-b custom-border space-y-6">
+                <span class="font-mono text-[10px] text-zinc-600 block">[M_01 // EXECUTIVE PROFILE]</span>
+                <h2 class="font-display text-xl md:text-3xl font-bold uppercase tracking-tight text-white">
+                    Operational Strategy & Governance Delivery
+                </h2>
+                <p class="text-zinc-400 text-sm md:text-base font-light leading-relaxed">
+                    Dynamic, results-driven STEM Executive with over 8.5 years of progressive leadership experience driving multi-center academic operations, curriculum strategy, and technical product delivery within the robotics and digital media education sectors[cite: 5]. Proven track record as a Regional Coordinator directing operations across 11 institutional campuses and governing high-performing teams of over 50 faculty members[cite: 6]. Expert in cross-functional leadership, institutional stakeholder management, and the end-to-end R&D of highly scalable K-10 robotics, AI, and AR/VR educational programs[cite: 7].
+                </p>
 
-            <div class="lg:col-span-8 space-y-4">
-                <div class="border border-zinc-900 p-6 bg-[#020202] interactive-block">
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3">
-                        <h3 class="font-display font-bold text-base uppercase text-white">Regional Technical Coordinator & SME</h3>
-                        <span class="font-mono text-xs text-zinc-400 border border-zinc-800 px-3 py-1 bg-black">Feb 2022 - Present</span>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 font-display">
+                    <div class="p-6 border custom-border bg-[#020202]">
+                        <span class="text-3xl font-bold text-white block">11</span>
+                        <span class="text-[9px] font-mono uppercase tracking-widest text-zinc-500 block mt-1">Centers Governed</span> [cite: 6]
                     </div>
-                    <div class="font-mono text-[11px] text-zinc-500 uppercase tracking-wider mb-4">IMAGE INFOTAINMENT LIMITED</div>
-                    <ul class="text-xs text-zinc-400 space-y-2 font-light">
-                        <li>• Direct technical and educational operations across 11 school partner centers ensuring standardized compliance.</li>
-                        <li>• Oversee, mentor, and evaluate a high-performing regional team of 50+ faculty members; implement benchmarks.</li>
-                        <li>• Spearhead the comprehensive research, structural design, and rollout of cutting-edge modules covering Mobile Apps, Robotics, AI, and AR/VR.</li>
-                    </ul>
-                </div>
-
-                <div class="border border-zinc-900 p-6 bg-[#020202] interactive-block">
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3">
-                        <h3 class="font-display font-bold text-base uppercase text-white">Program Coordinator (Team Leader)</h3>
-                        <span class="font-mono text-xs text-zinc-500 border border-zinc-800 px-3 py-1 bg-black">May 2019 - Jan 2022</span>
+                    <div class="p-6 border custom-border bg-[#020202]">
+                        <span class="text-3xl font-bold text-white block">50+</span>
+                        <span class="text-[9px] font-mono uppercase tracking-widest text-zinc-500 block mt-1">Faculty Directed</span> [cite: 6]
                     </div>
-                    <div class="font-mono text-[11px] text-zinc-600 uppercase tracking-wider mb-3">IMAGE INFOTAINMENT LIMITED</div>
-                    <p class="text-xs text-zinc-400 font-light leading-relaxed">
-                        Managed a core team of 4 senior technical educators while supervising structural instructional pathways and project pipelines for student cohorts aged 10 and above. Maintained clean audit-ready operational documentation.
-                    </p>
-                </div>
-
-                <div class="border border-zinc-900 p-6 bg-[#020202] interactive-block">
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3">
-                        <h3 class="font-display font-bold text-base uppercase text-white">Programming & Graphic Design Faculty</h3>
-                        <span class="font-mono text-xs text-zinc-500 border border-zinc-800 px-3 py-1 bg-black">Dec 2017 - Apr 2019</span>
+                    <div class="p-6 border custom-border bg-[#020202]">
+                        <span class="text-3xl font-bold text-white block">100+</span>
+                        <span class="text-[9px] font-mono uppercase tracking-widest text-zinc-500 block mt-1">Systems Scaled</span> [cite: 35]
                     </div>
-                    <div class="font-mono text-[11px] text-zinc-600 uppercase tracking-wider mb-2">IMAGE INFOTAINMENT LIMITED</div>
-                    <p class="text-xs text-zinc-400 font-light">
-                        Delivered foundational and advanced structural instruction in core programming concepts and graphic design workflows to student layers aged 10 and above.
-                    </p>
                 </div>
-            </div>
+            </section>
 
-        </section>
+            <section id="competencies" class="p-8 md:p-16 border-b custom-border space-y-8">
+                <span class="font-mono text-[10px] text-zinc-600 block">[M_02 // CORE ARCHITECTURE]</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    
+                    <div class="p-6 border custom-border bg-zinc-950/40 hover:bg-zinc-900/20 transition-colors">
+                        <span class="font-mono text-[11px] text-zinc-600 block mb-4">[02.A]</span>
+                        <h3 class="font-display font-bold text-sm uppercase text-white mb-2">Operations Governance</h3>
+                        <p class="text-xs text-zinc-400 leading-relaxed font-light">Multi-Center Operations Governance, Institutional Stakeholder Relations, Faculty Recruitment & Training, Resource Optimization, Academic Auditing & KPI Tracking[cite: 9].</p>
+                    </div>
 
-        <section id="portfolio" class="dossier-frame p-8 bg-black">
-            <div class="font-mono text-xs text-zinc-400 font-bold mb-8">[SECTION // DEPLOYED CURRICULUM PROJECTS]</div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="p-6 border custom-border bg-zinc-950/40 hover:bg-zinc-900/20 transition-colors">
+                        <span class="font-mono text-[11px] text-zinc-600 block mb-4">[02.B]</span>
+                        <h3 class="font-display font-bold text-sm uppercase text-white mb-2">Curriculum Strategy</h3>
+                        <p class="text-xs text-zinc-400 leading-relaxed font-light">End-to-End Instructional Design mapped cleanly to complex K-10 Frameworks, systemic STEM/Robotics Integration models, and validation assessment matrices[cite: 10].</p>
+                    </div>
+
+                    <div class="p-6 border custom-border bg-zinc-950/40 hover:bg-zinc-900/20 transition-colors">
+                        <span class="font-mono text-[11px] text-zinc-600 block mb-4">[02.C]</span>
+                        <h3 class="font-display font-bold text-sm uppercase text-white mb-2">Hardware Engineering</h3>
+                        <p class="text-xs text-zinc-400 leading-relaxed font-light">Embedded Systems configuration, micro hardware system integrations (Arduino, ESP32 Modules), native code compilation (C/C++), and basic AI frameworks[cite: 11].</p>
+                    </div>
+
+                    <div class="p-6 border custom-border bg-zinc-950/40 hover:bg-zinc-900/20 transition-colors">
+                        <span class="font-mono text-[11px] text-zinc-600 block mb-4">[02.D]</span>
+                        <h3 class="font-display font-bold text-sm uppercase text-white mb-2">Interactive Media</h3>
+                        <p class="text-xs text-zinc-400 leading-relaxed font-light">XR Environments development supervision (Unity Engine architectures, AR/VR system modules), game design parameters, and advanced graphic asset pipelines[cite: 12].</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="experience" class="p-8 md:p-16 border-b custom-border space-y-8">
+                <span class="font-mono text-[10px] text-zinc-600 block">[M_03 // HISTORY CHRONOLOGY]</span>
                 
-                <div class="p-6 border border-zinc-900 bg-zinc-950/20">
-                    <div class="flex justify-between items-center mb-6 text-zinc-600 font-mono text-xs">
-                        <span>DATA_ARRAY_01</span>
-                        <i class="fa-solid fa-microchip"></i>
+                <div class="space-y-8 border-l border-zinc-900 pl-6 relative">
+                    <div class="space-y-2 relative">
+                        <div class="absolute -left-[27.5px] top-1.5 w-1.5 h-1.5 bg-white"></div>
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
+                            <h3 class="font-display font-bold text-sm uppercase text-white">Regional Technical Coordinator & SME</h3>
+                            <span class="font-mono text-[10px] text-zinc-400 border border-zinc-900 px-2 py-0.5 bg-[#0a0a0a]">Feb 2022 - Present</span> [cite: 16]
+                        </div>
+                        <div class="font-mono text-[10px] text-zinc-500 uppercase tracking-wider">IMAGE INFOTAINMENT LIMITED [cite: 14]</div>
+                        <ul class="text-xs text-zinc-400 space-y-2 pt-2 font-light">
+                            <li>• Direct operational structures across 11 school partner centers ensuring standardization compliance[cite: 17].</li>
+                            <li>• Mentor, track, and audit a high-performing regional pool of 50+ faculty components[cite: 18].</li>
+                            <li>• Spearhead structural product blueprints covering Mobile Apps, Robotics, AI, and AR/VR systems[cite: 20].</li>
+                        </ul>
                     </div>
-                    <h4 class="font-display font-bold text-base uppercase text-white mb-4">Robotics & IoT Frameworks</h4>
-                    <div class="space-y-2 text-xs text-zinc-400 font-light">
-                        <p>• Voice-Controlled Rovers</p>
-                        <p>• Smart Public Transport Architectures</p>
-                        <p>• Fire Fighter Systems Architecture</p>
-                        <p>• Smart Home Automation Logs</p>
-                        <p>• Digital Speed/Height Calculators</p>
-                        <p>• Environmental Monitoring Systems</p>
+
+                    <div class="space-y-2 relative">
+                        <div class="absolute -left-[27.5px] top-1.5 w-1.5 h-1.5 bg-zinc-800"></div>
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
+                            <h3 class="font-display font-bold text-sm uppercase text-zinc-300">Program Coordinator (Team Leader)</h3>
+                            <span class="font-mono text-[10px] text-zinc-500 border border-zinc-900 px-2 py-0.5 bg-black">May 2019 - Jan 2022</span> [cite: 22]
+                        </div>
+                        <div class="font-mono text-[10px] text-zinc-600 uppercase tracking-wider">IMAGE INFOTAINMENT LIMITED [cite: 14]</div>
+                        <p class="text-xs text-zinc-400 font-light pt-1">
+                            Governed a critical instructional core team of 4 senior technical educators while controlling educational pathway logic architectures for cohorts aged 10+[cite: 23]. Run continuous division operational checkups[cite: 24].
+                        </p>
+                    </div>
+
+                    <div class="space-y-2 relative">
+                        <div class="absolute -left-[27.5px] top-1.5 w-1.5 h-1.5 bg-zinc-800"></div>
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
+                            <h3 class="font-display font-bold text-sm uppercase text-zinc-300">Programming & Graphic Design Faculty</h3>
+                            <span class="font-mono text-[10px] text-zinc-500 border border-zinc-900 px-2 py-0.5 bg-black">Dec 2017 - Apr 2019</span> [cite: 25]
+                        </div>
+                        <div class="font-mono text-[10px] text-zinc-600 uppercase tracking-wider">IMAGE INFOTAINMENT LIMITED [cite: 14]</div>
+                        <p class="text-xs text-zinc-400 font-light pt-1">
+                            Supplied structured programmatic engine instruction and production pipeline logic across advanced digital design systems to student segments aged 10 and older[cite: 26].
+                        </p>
                     </div>
                 </div>
+            </section>
 
-                <div class="p-6 border border-zinc-900 bg-zinc-950/20">
-                    <div class="flex justify-between items-center mb-6 text-zinc-600 font-mono text-xs">
-                        <span>DATA_ARRAY_02</span>
-                        <i class="fa-solid fa-brain"></i>
-                    </div>
-                    <h4 class="font-display font-bold text-base uppercase text-white mb-4">Artificial Intelligence</h4>
-                    <div class="space-y-2 text-xs text-zinc-400 font-light">
-                        <p>• Image Recognition Infrastructure</p>
-                        <p>• Sound Pattern Recognition Tracks</p>
-                        <p>• Machine Learning Implementation Arrays</p>
-                        <p>• Teachable Machine Testing Environments</p>
-                    </div>
-                </div>
-
-                <div class="p-6 border border-zinc-900 bg-zinc-950/20">
-                    <div class="flex justify-between items-center mb-6 text-zinc-600 font-mono text-xs">
-                        <span>DATA_ARRAY_03</span>
-                        <i class="fa-solid fa-vr-cardboard"></i>
-                    </div>
-                    <h4 class="font-display font-bold text-base uppercase text-white mb-4">Immersive Tech (XR)</h4>
-                    <div class="space-y-2 text-xs text-zinc-400 font-light">
-                        <p>• Original Board Game Structural Designs</p>
-                        <p>• Automated Touch & Trigger Logics</p>
-                        <p>• VR Spatial Walkthrough Blueprints</p>
-                        <p>• Interactive AR Biological Models</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-            
-            <div class="lg:col-span-7 dossier-frame p-8 bg-black space-y-6">
-                <span class="font-mono text-xs text-zinc-400 font-bold block">[TECHNICAL_SPECIFICATIONS]</span>
-                <div class="space-y-4 font-mono text-xs border-t border-zinc-900 pt-4">
-                    <div>
-                        <span class="text-zinc-600 block text-[10px] uppercase">// HARDWARE & SYSTEMS INTERACTION</span>
-                        <p class="text-zinc-300 mt-0.5">Arduino Hardware Integration, ESP Module Development, Drone Architectures, Motion Control & Display Systems.</p>
-                    </div>
-                    <div class="w-full h-[1px] bg-zinc-900"></div>
-                    <div>
-                        <span class="text-zinc-600 block text-[10px] uppercase">// LANGUAGES & REPOSITORIES</span>
-                        <p class="text-zinc-300 mt-0.5">C, C++, Embedded C++, Unity Engine, MIT App Inventor.</p>
-                    </div>
-                    <div class="w-full h-[1px] bg-zinc-900"></div>
-                    <div>
-                        <span class="text-zinc-600 block text-[10px] uppercase">// GRAPHIC PRODUCTION SUITES</span>
-                        <p class="text-zinc-300 mt-0.5">Adobe Illustrator, Adobe Photoshop, Adobe InDesign, Adobe After Effects, Video Editing Suites.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="lg:col-span-5 dossier-frame p-8 bg-[#020202] space-y-4">
-                <span class="font-mono text-xs text-zinc-400 font-bold block">[VERIFICATION_ARCHIVE]</span>
-                <div class="space-y-2 text-xs font-mono">
-                    <div class="p-3 bg-black border border-zinc-900 flex gap-4">
-                        <span class="text-zinc-700 font-bold">[01]</span>
-                        <div>
-                            <span class="text-white block font-bold uppercase text-[11px]">STEM Instructor Cert</span>
-                            <span class="text-[10px] text-zinc-500">STEM.org</span>
+            <section id="portfolio" class="p-8 md:p-16 border-b custom-border space-y-8">
+                <span class="font-mono text-[10px] text-zinc-600 block Patri">[M_04 // DEPLOYED PRODUCTION DATA]</span>
+                <div class="grid grid-cols-1 xl:grid-cols-3 gap-4">
+                    
+                    <div class="p-6 border custom-border bg-[#020202]">
+                        <span class="font-mono text-[10px] text-zinc-600 block mb-4">[DEPL_ARRAY_01]</span>
+                        <h4 class="font-display font-bold text-xs uppercase text-white mb-3">Robotics & IoT Frameworks</h4>
+                        <div class="space-y-1.5 text-[11px] text-zinc-400 font-light">
+                            <p>• Voice-Controlled Rovers [cite: 36]</p>
+                            <p>• Smart Public Transport Systems [cite: 36]</p>
+                            <p>• Automated Fire Fighter Frameworks [cite: 36]</p>
+                            <p>• Smart Home Automation Logic [cite: 36]</p>
+                            <p>• Environmental Telemetry Systems [cite: 36]</p>
                         </div>
                     </div>
-                    <div class="p-3 bg-black border border-zinc-900 flex gap-4">
-                        <span class="text-zinc-700 font-bold">[02]</span>
-                        <div>
-                            <span class="text-white block font-bold uppercase text-[11px]">Robotics & STEM / WRO Projects</span>
-                            <span class="text-[10px] text-zinc-500">India STEM Foundation</span>
+
+                    <div class="p-6 border custom-border bg-[#020202]">
+                        <span class="font-mono text-[10px] text-zinc-600 block mb-4">[DEPL_ARRAY_02]</span>
+                        <h4 class="font-display font-bold text-xs uppercase text-white mb-3">Artificial Intelligence</h4>
+                        <div class="space-y-1.5 text-[11px] text-zinc-400 font-light">
+                            <p>• High-Speed Image Recognition [cite: 37]</p>
+                            <p>• Sound Pattern Classification [cite: 37]</p>
+                            <p>• Machine Learning Architecture [cite: 37]</p>
+                            <p>• Teachable Machine Environments [cite: 37]</p>
                         </div>
                     </div>
-                    <div class="p-3 bg-black border border-zinc-900 flex gap-4">
-                        <span class="text-zinc-700 font-bold">[03]</span>
-                        <div>
-                            <span class="text-white block font-bold uppercase text-[11px]">B.E. Electronics & Communication Eng</span>
-                            <span class="text-[10px] text-zinc-500">Vidya Mandir Institute of Technology (2013-2017)</span>
+
+                    <div class="p-6 border custom-border bg-[#020202]">
+                        <span class="font-mono text-[10px] text-zinc-600 block mb-4">[DEPL_ARRAY_03]</span>
+                        <h4 class="font-display font-bold text-xs uppercase text-white mb-3">Immersive Tech (XR)</h4>
+                        <div class="space-y-1.5 text-[11px] text-zinc-400 font-light">
+                            <p>• Custom Board Game Systems [cite: 38]</p>
+                            <p>• Touch & Trigger Logic Assets [cite: 38]</p>
+                            <p>• VR Spatial Walkthrough Engine [cite: 38]</p>
+                            <p>• Interactive AR Assets [cite: 38]</p>
                         </div>
                     </div>
+
                 </div>
-            </div>
+            </section>
 
-        </section>
+            <section id="proficiencies" class="p-8 md:p-16 space-y-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    
+                    <div class="space-y-4">
+                        <span class="font-mono text-[10px] text-zinc-600 block">[SPEC_05.1 // COMPILER MATRIX]</span>
+                        <h4 class="font-display font-bold text-xs uppercase text-white tracking-widest border-b custom-border pb-2">Technical Matrix</h4>
+                        <div class="space-y-4 text-xs font-mono">
+                            <div>
+                                <span class="text-zinc-600 block text-[9px] uppercase">// INTEGRATION</span>
+                                <p class="text-zinc-400 mt-1">Arduino Hardware Integration, ESP Module Development, Drone Architectures, Motion Control & Display Systems[cite: 40].</p>
+                            </div>
+                            <div>
+                                <span class="text-zinc-600 block text-[9px] uppercase">// DEVELOPMENT</span>
+                                <p class="text-zinc-400 mt-1">C, C++, Embedded C++, Unity Engine, MIT App Inventor[cite: 41].</p>
+                            </div>
+                            <div>
+                                <span class="text-zinc-600 block text-[9px] uppercase">// MULTIMEDIA</span>
+                                <p class="text-zinc-400 mt-1">Adobe Illustrator, Adobe Photoshop, Adobe InDesign, Adobe After Effects, Video Editing Suites[cite: 42].</p>
+                            </div>
+                        </div>
+                    </div>
 
-        <footer class="border-2 border-white p-6 flex flex-col md:flex-row justify-between items-center text-[10px] font-mono text-zinc-500 uppercase tracking-widest bg-black">
-            <p>&copy; 2026 Vengadeshperumal Thangaraj. Secure Structural Repository Deployment.</p>
-            <p>Languages: English, Tamil, Kannada</p>
-        </footer>
+                    <div class="space-y-4">
+                        <span class="font-mono text-[10px] text-zinc-600 block">[SPEC_05.2 // LICENSING CODES]</span>
+                        <h4 class="font-display font-bold text-xs uppercase text-white tracking-widest border-b custom-border pb-2">Credentials Archive</h4>
+                        <div class="space-y-2 text-xs font-mono">
+                            <div class="p-3 bg-zinc-950 border custom-border flex gap-3">
+                                <span class="text-zinc-700">[01]</span>
+                                <div>
+                                    <span class="text-white font-bold block uppercase text-[11px]">STEM Instructor Certification</span>
+                                    <span class="text-[10px] text-zinc-500">STEM.org [cite: 44]</span>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-zinc-950 border custom-border flex gap-3">
+                                <span class="text-zinc-700">[02]</span>
+                                <div>
+                                    <span class="text-white font-bold block uppercase text-[11px]">Robotics & WRO Projects System</span>
+                                    <span class="text-[10px] text-zinc-500">India STEM Foundation [cite: 45, 46]</span>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-zinc-950 border custom-border flex gap-3">
+                                <span class="text-zinc-700">[03]</span>
+                                <div>
+                                    <span class="text-white font-bold block uppercase text-[11px]">B.E. Electronics & Communication Eng</span>
+                                    <span class="text-[10px] text-zinc-500">Vidya Mandir Institute of Technology (2013-2017) [cite: 28, 29]</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    </main>
+                </div>
+
+                <footer class="pt-12 border-t custom-border flex flex-col sm:flex-row justify-between items-center text-[10px] font-mono text-zinc-600 uppercase tracking-wider gap-4">
+                    <p>&copy; 2026 Vengadeshperumal Thangaraj. Secure Structural Repository Deployment.</p>
+                    <p>Languages known: English, Tamil, Kannada [cite: 54]</p>
+                </footer>
+            </section>
+
+        </main>
+    </div>
 
 </body>
 </html>
