@@ -3,536 +3,436 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vengadeshperumal Thangaraj | Strategic Technology Operations Platform</title>
+    <title>Vengadeshperumal Thangaraj | Executive STEM Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
+        :root {
+            --sky-glow: rgba(56, 189, 248, 0.4);
+        }
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background: linear-gradient(135deg, rgba(56, 189, 248, 0.25) 0%, #f8fafc 40%, #ffffff 100%);
-            color: #334155;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 40%, #e0f2fe 100%);
+            color: #1e293b;
             min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
         }
-        .font-display {
-            font-family: 'Space Grotesk', sans-serif;
+        .font-display { font-family: 'Space Grotesk', sans-serif; }
+        .font-code { font-family: 'Fira Code', monospace; }
+
+        /* --- BACKGROUND ANIMATION ELEMENTS --- */
+        .ambient-blob {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.6;
+            animation: floatBlob 20s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .font-code {
-            font-family: 'Fira Code', monospace;
+        .blob-1 {
+            width: 500px; height: 500px;
+            background: #bae6fd;
+            top: -10%; left: -10%;
+            animation-delay: 0s;
         }
-        
-        /* Corporate frosted glass panel styling */
-        .executive-mainframe {
-            background: rgba(255, 255, 255, 0.85);
+        .blob-2 {
+            width: 600px; height: 600px;
+            background: #7dd3fc;
+            bottom: -20%; right: -10%;
+            animation-delay: -5s;
+        }
+        .blob-3 {
+            width: 400px; height: 400px;
+            background: #e0e7ff;
+            top: 40%; left: 50%;
+            animation-delay: -10s;
+        }
+
+        @keyframes floatBlob {
+            0% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+
+        /* --- GLASSMORPHISM BENTO CARDS --- */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.65);
             backdrop-filter: blur(24px);
-            border: 1px solid rgba(226, 232, 240, 0.8);
-            animation: slideTopEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 10px 30px rgba(2, 132, 199, 0.05), inset 0 0 0 1px rgba(255,255,255,0.5);
+            border-radius: 2rem;
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
         }
 
-        /* HIGH FIDELITY HOVER SCALING AND GLOW MATRIX */
-        .data-module-card {
-            background: rgba(255, 255, 255, 0.95);
-            border: 1px solid rgba(56, 189, 248, 0.15);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .data-module-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            border-color: #0284c7;
-            box-shadow: 0 25px 50px rgba(2, 132, 199, 0.12);
-        }
-
-        /* CUSTOM CONTENT ENTRANCE SCROLL EFFECTS */
-        .animate-on-scroll {
+        /* Scroll Revel Animation */
+        .reveal-on-scroll {
             opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .animate-on-scroll.visible {
+        .reveal-on-scroll.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* KEYFRAME ARCHITECTURE */
-        @keyframes slideTopEntrance {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #93c5fd; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
+
+        /* --- THE TYPEWRITER CARET --- */
+        .typewriter-cursor::after {
+            content: '';
+            display: inline-block;
+            width: 3px;
+            height: 1.2em;
+            background-color: #0284c7;
+            margin-left: 4px;
+            vertical-align: text-bottom;
+            animation: blinkCaret 0.8s step-end infinite;
         }
-        @keyframes paneEntrance {
-            from { opacity: 0; transform: scale(0.97) translateY(15px); }
-            to { opacity: 1; transform: scale(1) translateY(0); }
-        }
-        @keyframes caretBlink {
+        @keyframes blinkCaret {
             0%, 100% { opacity: 1; }
             50% { opacity: 0; }
         }
-
-        /* Custom scrollbar tracking */
-        ::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 3px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #0284c7;
-        }
-
-        /* Dynamic typewriter terminal tracking point */
-        .terminal-cursor::after {
-            content: '▋';
-            animation: caretBlink 0.8s infinite;
-            color: #0284c7;
-            margin-left: 4px;
-        }
-
-        /* Tab Switch Display Panels */
-        .view-pane-segment {
-            display: none;
-        }
-        .view-pane-segment.active-pane {
-            display: block;
-            animation: paneEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        
+        /* Floating Header Styles */
+        .floating-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 1);
+            box-shadow: 0 10px 25px rgba(2, 132, 199, 0.08);
         }
     </style>
 </head>
-<body class="selection:bg-sky-100 selection:text-sky-900 antialiased p-4 sm:p-6 lg:p-10">
+<body class="antialiased">
 
-    <div class="max-w-[100rem] mx-auto space-y-6">
-        
-        <header class="executive-mainframe rounded-3xl p-8 md:p-12 shadow-xl shadow-slate-900/5 flex flex-col xl:flex-row justify-between items-start xl:items-center gap-8 relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-sky-400 via-sky-600 to-indigo-600"></div>
+    <div class="ambient-blob blob-1"></div>
+    <div class="ambient-blob blob-2"></div>
+    <div class="ambient-blob blob-3"></div>
+
+    <header class="fixed top-6 right-6 z-50 flex items-center gap-4">
+        <div class="floating-nav rounded-full px-6 py-3 hidden md:flex items-center gap-6 font-code text-xs font-bold text-slate-500 uppercase tracking-widest">
+            <a href="#experience" class="hover:text-sky-600 transition-colors">History</a>
+            <a href="#initiatives" class="hover:text-sky-600 transition-colors">Initiatives</a>
+            <a href="#tech" class="hover:text-sky-600 transition-colors">Tech Matrix</a>
+        </div>
+        <a href="mailto:venkatl.info@gmail.com" class="floating-nav rounded-full px-6 py-3 flex items-center gap-3 font-display font-bold text-sm text-sky-700 hover:bg-sky-500 hover:text-white transition-all duration-300 group cursor-pointer shadow-lg shadow-sky-500/20">
+            Secure Uplink <i class="fa-solid fa-satellite-dish group-hover:animate-pulse"></i>
+        </a>
+    </header>
+
+    <main class="max-w-[105rem] mx-auto px-4 sm:px-8 lg:px-12 pt-32 pb-24 space-y-8 relative z-10">
+
+        <section class="glass-card p-8 md:p-14 w-full flex flex-col justify-center relative overflow-hidden reveal-on-scroll">
+            <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-sky-300 via-sky-500 to-indigo-500"></div>
             
-            <div class="space-y-4 w-full xl:max-w-4xl">
+            <div class="space-y-6 max-w-5xl">
+                <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-sky-100 text-sky-600 font-code text-[10px] uppercase tracking-widest font-bold shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-sky-500 animate-ping"></span> EXECUTIVE DASHBOARD ONLINE
+                </div>
                 
-                <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 uppercase leading-none transition-transform duration-500 hover:scale-[1.01]">
-                    VENGADESHPERUMAL<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-indigo-600">THANGARAJ</span>
+                <h1 class="font-display text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-slate-800 uppercase leading-[1.05]">
+                    VENGADESHPERUMAL<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-600">THANGARAJ</span>
                 </h1>
                 
-                <div class="text-sm md:text-base lg:text-lg text-slate-700 font-medium tracking-wide min-h-[2.5rem] flex items-center border-l-2 border-sky-500 pl-4 py-1 bg-white/40 rounded-r-xl pr-4 border-t border-b border-r border-slate-100/50 shadow-inner">
-                    <span class="font-code text-sky-600 font-bold">&gt;&nbsp;</span>
-                    <span id="loopTypewriterMount" class="terminal-cursor font-code font-bold text-sky-800"></span>
+                <div class="h-10 sm:h-12 flex items-center font-code text-sm sm:text-base lg:text-xl font-bold text-sky-800 bg-white/50 border border-white rounded-xl px-5 py-2 w-fit shadow-sm">
+                    <span class="text-slate-400 mr-3">&gt;</span>
+                    <span id="isolatedTypewriter" class="typewriter-cursor"></span>
                 </div>
-            </div>
-        </header>
 
-        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 animate-on-scroll">
-            <div class="executive-mainframe p-6 rounded-2xl flex items-center gap-5 shadow-sm shadow-slate-900/5 data-module-card">
-                <div class="w-14 h-14 rounded-2xl bg-sky-50 flex items-center justify-center text-sky-600 border border-sky-100 text-xl shadow-inner transition-transform duration-300 hover:rotate-12"><i class="fa-solid fa-network-wired"></i></div>
-                <div>
-                    <span class="text-3xl font-bold font-display text-slate-900 block leading-none mb-1">11</span>
-                    <span class="text-[10px] font-code uppercase tracking-widest text-slate-400 font-bold">Campuses Governed</span>
-                </div>
-            </div>
-            <div class="executive-mainframe p-6 rounded-2xl flex items-center gap-5 shadow-sm shadow-slate-900/5 data-module-card">
-                <div class="w-14 h-14 rounded-2xl bg-indigo-50 flex items-center justify-center text-indigo-600 border border-indigo-100 text-xl shadow-inner transition-transform duration-300 hover:rotate-12"><i class="fa-solid fa-users-gear"></i></div>
-                <div>
-                    <span class="text-3xl font-bold font-display text-indigo-600 block leading-none mb-1">50+</span>
-                    <span class="text-[10px] font-code uppercase tracking-widest text-slate-400 font-bold">Faculty Directed</span>
-                </div>
-            </div>
-            <div class="executive-mainframe p-6 rounded-2xl flex items-center gap-5 shadow-sm shadow-slate-900/5 data-module-card">
-                <div class="w-14 h-14 rounded-2xl bg-sky-50 flex items-center justify-center text-sky-500 border border-sky-100 text-xl shadow-inner transition-transform duration-300 hover:rotate-12"><i class="fa-solid fa-diagram-project"></i></div>
-                <div>
-                    <span class="text-3xl font-bold font-display text-sky-600 block leading-none mb-1">100+</span>
-                    <span class="text-[10px] font-code uppercase tracking-widest text-slate-400 font-bold">STEM Solutions Deployed</span>
-                </div>
-            </div>
-            <div class="executive-mainframe p-6 rounded-2xl flex items-center gap-5 shadow-sm shadow-slate-900/5 data-module-card">
-                <div class="w-14 h-14 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-600 border border-emerald-100 text-xl shadow-inner transition-transform duration-300 hover:rotate-12"><i class="fa-solid fa-business-time"></i></div>
-                <div>
-                    <span class="text-3xl font-bold font-display text-emerald-600 block leading-none mb-1">8.5+ Yrs</span>
-                    <span class="text-[10px] font-code uppercase tracking-widest text-slate-400 font-bold">Progressive Leadership</span>
+                <div class="pt-4 flex flex-wrap gap-4 font-code text-xs text-slate-500 font-bold uppercase tracking-wider">
+                    <span class="flex items-center gap-2 bg-white/60 px-4 py-2 rounded-lg border border-white"><i class="fa-solid fa-location-dot text-sky-500"></i> Tamil Nadu, India</span>
+                    <span class="flex items-center gap-2 bg-white/60 px-4 py-2 rounded-lg border border-white"><i class="fa-solid fa-phone text-sky-500"></i> +91 85266 28310</span>
+                    <span class="flex items-center gap-2 bg-white/60 px-4 py-2 rounded-lg border border-white"><i class="fa-solid fa-envelope text-sky-500"></i> venkatl.info@gmail.com</span>
                 </div>
             </div>
         </section>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <section class="grid grid-cols-1 md:grid-cols-12 auto-rows-min gap-6">
             
-            <aside class="lg:col-span-4 space-y-6 mt-0 lg:mt-2 animate-on-scroll">
-                
-                <div class="executive-mainframe rounded-2xl p-6 shadow-sm shadow-slate-950/5 space-y-4">
-                    <div class="text-[11px] font-bold text-slate-400 font-code uppercase border-b border-slate-100 pb-3 flex justify-between items-center">
-                        <span>// OPERATIONAL_REGISTERS</span>
-                        <i class="fa-solid fa-sliders text-sky-500"></i>
+            <div class="glass-card md:col-span-8 p-8 md:p-10 reveal-on-scroll tilt-effect flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="font-code text-[10px] text-slate-400 font-bold uppercase tracking-widest">[ PROFILE_BRIEF ]</span>
+                    <i class="fa-solid fa-chess-knight text-2xl text-sky-300"></i>
+                </div>
+                <h2 class="font-display text-2xl md:text-4xl font-bold text-slate-800 tracking-tight leading-tight mb-6">
+                    Orchestrating Multi-Center Academic Architecture & Scaled STEM Innovations.
+                </h2>
+                <p class="text-slate-500 font-light leading-relaxed text-sm md:text-base">
+                    Dynamic, results-driven STEM Executive with over 8.5 years of progressive leadership experience driving multi-center academic operations, curriculum strategy, and technical product delivery within the robotics and digital media education sectors. Expert in cross-functional leadership, institutional stakeholder management, and the end-to-end R&D of highly scalable K-10 robotics, AI, and AR/VR educational programs.
+                </p>
+            </div>
+
+            <div class="md:col-span-4 grid grid-cols-2 gap-6 reveal-on-scroll">
+                <div class="glass-card p-6 flex flex-col justify-center items-center text-center tilt-effect">
+                    <span class="font-display text-4xl font-bold text-sky-500 block mb-2">11</span>
+                    <span class="font-code text-[9px] uppercase tracking-widest text-slate-500 font-bold">Campuses Governed</span>
+                </div>
+                <div class="glass-card p-6 flex flex-col justify-center items-center text-center tilt-effect">
+                    <span class="font-display text-4xl font-bold text-indigo-500 block mb-2">50+</span>
+                    <span class="font-code text-[9px] uppercase tracking-widest text-slate-500 font-bold">Faculty Directed</span>
+                </div>
+                <div class="glass-card p-6 flex flex-col justify-center items-center text-center tilt-effect">
+                    <span class="font-display text-4xl font-bold text-sky-600 block mb-2">100+</span>
+                    <span class="font-code text-[9px] uppercase tracking-widest text-slate-500 font-bold">Systems Deployed</span>
+                </div>
+                <div class="glass-card p-6 flex flex-col justify-center items-center text-center tilt-effect">
+                    <span class="font-display text-4xl font-bold text-emerald-500 block mb-2">8.5+</span>
+                    <span class="font-code text-[9px] uppercase tracking-widest text-slate-500 font-bold">Years Experience</span>
+                </div>
+            </div>
+
+            <div id="experience" class="glass-card md:col-span-12 p-8 md:p-12 reveal-on-scroll">
+                <div class="flex justify-between items-center mb-10 border-b border-white/60 pb-6">
+                    <span class="font-code text-[10px] text-slate-400 font-bold uppercase tracking-widest">[ TIMELINE_CHRONOLOGY ]</span>
+                    <h2 class="font-display text-2xl font-bold text-slate-800 uppercase">Professional Trajectory</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="p-6 bg-white/40 border border-white rounded-2xl shadow-sm tilt-effect relative overflow-hidden group">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-sky-400 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                        <span class="font-code text-[10px] text-sky-600 font-bold bg-white px-2 py-1 rounded shadow-sm inline-block mb-4">FEB 2022 - PRESENT</span>
+                        <h3 class="font-display text-lg font-bold text-slate-800 uppercase mb-1">Regional Technical Coordinator & SME</h3>
+                        <p class="font-code text-[10px] text-slate-400 uppercase tracking-widest font-bold mb-4">IMAGE INFOTAINMENT LIMITED</p>
+                        <ul class="text-xs text-slate-500 space-y-2 font-light">
+                            <li><strong class="text-slate-700">Governance:</strong> Direct technical/educational operations across 11 school partner centers.</li>
+                            <li><strong class="text-slate-700">Leadership:</strong> Oversee, mentor, and evaluate a high-performing regional team of 50+ faculty members.</li>
+                            <li><strong class="text-slate-700">Architecture:</strong> Spearhead research & rollout of Mobile App, Robotics, AI, and AR/VR modules.</li>
+                        </ul>
                     </div>
+
+                    <div class="p-6 bg-white/40 border border-white rounded-2xl shadow-sm tilt-effect relative overflow-hidden group">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-indigo-400 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                        <span class="font-code text-[10px] text-indigo-600 font-bold bg-white px-2 py-1 rounded shadow-sm inline-block mb-4">MAY 2019 - JAN 2022</span>
+                        <h3 class="font-display text-lg font-bold text-slate-800 uppercase mb-1">Program Coordinator (Team Leader)</h3>
+                        <p class="font-code text-[10px] text-slate-400 uppercase tracking-widest font-bold mb-4">IMAGE INFOTAINMENT LIMITED</p>
+                        <p class="text-xs text-slate-500 font-light leading-relaxed">
+                            Managed a core team of 4 senior educators while supervising instructional pathways and project pipelines for student cohorts aged 10 and above. Maintained end-to-end academic auditing documentation and logs across assigned divisions.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-white/40 border border-white rounded-2xl shadow-sm tilt-effect relative overflow-hidden group">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-slate-400 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                        <span class="font-code text-[10px] text-slate-600 font-bold bg-white px-2 py-1 rounded shadow-sm inline-block mb-4">DEC 2017 - APR 2019</span>
+                        <h3 class="font-display text-lg font-bold text-slate-800 uppercase mb-1">Programming & Graphic Design Faculty</h3>
+                        <p class="font-code text-[10px] text-slate-400 uppercase tracking-widest font-bold mb-4">IMAGE INFOTAINMENT LIMITED</p>
+                        <p class="text-xs text-slate-500 font-light leading-relaxed">
+                            Executed foundational and advanced instruction in core programming concepts and graphic design workflows to engineering/student layers aged 10 and above.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="initiatives" class="glass-card md:col-span-8 p-8 md:p-12 reveal-on-scroll flex flex-col justify-between">
+                <div class="mb-8">
+                    <span class="font-code text-[10px] text-slate-400 font-bold uppercase tracking-widest block mb-2">[ INITIATIVE_BLUEPRINTS ]</span>
+                    <h2 class="font-display text-3xl font-bold text-slate-800 uppercase tracking-tight">Curriculum Deployed</h2>
+                    <p class="text-xs font-code text-slate-500 mt-2">100+ Systems deployed across regional school networks.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="bg-white/50 rounded-xl p-5 border border-white tilt-effect shadow-sm hover:shadow-sky-500/10 transition-shadow">
+                        <i class="fa-solid fa-microchip text-sky-500 text-xl mb-4"></i>
+                        <h4 class="font-display font-bold text-sm text-slate-800 uppercase mb-3">Robotics & IoT</h4>
+                        <ul class="text-[11px] text-slate-500 space-y-1.5 font-light">
+                            <li>• Voice-Controlled Rovers</li>
+                            <li>• Smart Transport Architectures</li>
+                            <li>• Fire Fighter Systems</li>
+                            <li>• Digital Calculators</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/50 rounded-xl p-5 border border-white tilt-effect shadow-sm hover:shadow-indigo-500/10 transition-shadow">
+                        <i class="fa-solid fa-brain text-indigo-500 text-xl mb-4"></i>
+                        <h4 class="font-display font-bold text-sm text-slate-800 uppercase mb-3">Artificial Intelligence</h4>
+                        <ul class="text-[11px] text-slate-500 space-y-1.5 font-light">
+                            <li>• Image Recognition Tech</li>
+                            <li>• Sound Recognition Tracks</li>
+                            <li>• Machine Learning</li>
+                            <li>• Teachable Machine Deploy</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/50 rounded-xl p-5 border border-white tilt-effect shadow-sm hover:shadow-sky-500/10 transition-shadow">
+                        <i class="fa-solid fa-vr-cardboard text-sky-500 text-xl mb-4"></i>
+                        <h4 class="font-display font-bold text-sm text-slate-800 uppercase mb-3">Immersive Tech (XR)</h4>
+                        <ul class="text-[11px] text-slate-500 space-y-1.5 font-light">
+                            <li>• Board Game Frameworks</li>
+                            <li>• Touch & Trigger Logic</li>
+                            <li>• VR Spatial Walkthroughs</li>
+                            <li>• Interactive AR Assets</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tech" class="md:col-span-4 grid grid-rows-2 gap-6 reveal-on-scroll">
+                
+                <div class="glass-card p-8 flex flex-col justify-center tilt-effect">
+                    <span class="font-code text-[10px] text-slate-400 font-bold uppercase tracking-widest block mb-4">[ TECH_MATRIX ]</span>
+                    <div class="space-y-4 text-xs font-code">
+                        <div>
+                            <span class="text-sky-600 font-bold block text-[10px] uppercase">// HARDWARE</span>
+                            <p class="text-slate-600 mt-1">Arduino Integration, ESP Module Dev, Drone Architectures.</p>
+                        </div>
+                        <div>
+                            <span class="text-indigo-600 font-bold block text-[10px] uppercase">// ENGINES</span>
+                            <p class="text-slate-600 mt-1">C, C++, Embedded C++, Unity Engine, MIT App Inventor.</p>
+                        </div>
+                        <div>
+                            <span class="text-sky-600 font-bold block text-[10px] uppercase">// MEDIA DESIGN</span>
+                            <p class="text-slate-600 mt-1">Adobe Illustrator, Photoshop, InDesign, After Effects, Video Editing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 flex flex-col justify-center tilt-effect">
+                    <span class="font-code text-[10px] text-slate-400 font-bold uppercase tracking-widest block mb-4">[ VERIFICATION ]</span>
                     <div class="space-y-3 text-xs font-code">
-                        <div class="p-3.5 bg-slate-50 border border-slate-100 rounded-xl flex justify-between items-center shadow-sm hover:border-sky-300 transition-colors">
-                            <span class="text-slate-400 uppercase font-medium">Geographic Hub:</span>
-                            <span class="text-slate-800 font-bold text-right">Tamil Nadu, India</span>
+                        <div class="bg-white/60 p-2.5 rounded-lg border border-white shadow-sm flex items-start gap-3">
+                            <i class="fa-solid fa-certificate text-sky-500 pt-0.5"></i>
+                            <div>
+                                <span class="font-bold text-slate-800 block text-[10px]">STEM Instructor Certification</span>
+                                <span class="text-[9px] text-slate-400">STEM.org</span>
+                            </div>
                         </div>
-                        <div class="p-3.5 bg-slate-50 border border-slate-100 rounded-xl flex justify-between items-center shadow-sm hover:border-sky-300 transition-colors">
-                            <span class="text-slate-400 uppercase font-medium">Secure Line:</span>
-                            <span class="text-slate-800 font-bold text-right">+91 85266 28310</span>
+                        <div class="bg-white/60 p-2.5 rounded-lg border border-white shadow-sm flex items-start gap-3">
+                            <i class="fa-solid fa-robot text-indigo-500 pt-0.5"></i>
+                            <div>
+                                <span class="font-bold text-slate-800 block text-[10px]">Robotics & WRO Projects</span>
+                                <span class="text-[9px] text-slate-400">India STEM Foundation</span>
+                            </div>
                         </div>
-                        <div class="p-3.5 bg-slate-50 border border-slate-100 rounded-xl flex justify-between items-center shadow-sm hover:border-sky-300 transition-colors overflow-hidden">
-                            <span class="text-slate-400 uppercase font-medium mr-2">Net_Route:</span>
-                            <span class="text-sky-600 font-bold text-right lowercase select-all">venkatl.info@gmail.com</span>
-                        </div>
-                        <div class="p-3.5 bg-slate-50 border border-slate-100 rounded-xl flex justify-between items-center shadow-sm hover:border-sky-300 transition-colors">
-                            <span class="text-slate-400 uppercase font-medium">Linguistics:</span>
-                            <span class="text-indigo-600 font-bold text-right">English, Tamil, Kannada</span>
+                        <div class="bg-sky-50/80 p-2.5 rounded-lg border border-sky-100 shadow-sm flex items-start gap-3">
+                            <i class="fa-solid fa-graduation-cap text-sky-600 pt-0.5"></i>
+                            <div>
+                                <span class="font-bold text-slate-800 block text-[10px]">B.E. Electronics & Communication</span>
+                                <span class="text-[9px] text-slate-500">Vidya Mandir Inst. of Technology</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="executive-mainframe rounded-2xl p-6 shadow-sm shadow-slate-955/5 space-y-4">
-                    <div class="text-[11px] font-bold text-slate-400 font-code uppercase border-b border-slate-100 pb-3 flex justify-between items-center">
-                        <span>// STRATEGIC_CAPABILITY_INDEX</span>
-                        <i class="fa-solid fa-fingerprint text-indigo-500"></i>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="p-4 rounded-xl border border-slate-100 bg-white text-xs space-y-1.5 data-module-card shadow-sm">
-                            <span class="text-sky-600 font-bold block uppercase font-code">[01] Operations Governance</span>
-                            <p class="text-slate-500 font-light leading-relaxed">Multi-Center Operations Governance, Institutional Stakeholder Relations, Faculty Recruitment & Training, Resource Optimization, Academic Auditing & KPI Tracking.</p>
-                        </div>
-                        <div class="p-4 rounded-xl border border-slate-100 bg-white text-xs space-y-1.5 data-module-card shadow-sm">
-                            <span class="text-indigo-600 font-bold block uppercase font-code">[02] Product & Curriculum Strategy</span>
-                            <p class="text-slate-500 font-light leading-relaxed">End-to-End Instructional Design architectures configured tightly around modern K-10 frameworks, system STEM integrations, and custom assessment maps.</p>
-                        </div>
-                        <div class="p-4 rounded-xl border border-slate-100 bg-white text-xs space-y-1.5 data-module-card shadow-sm">
-                            <span class="text-sky-600 font-bold block uppercase font-code">[03] Technical Architecture</span>
-                            <p class="text-slate-500 font-light leading-relaxed">Embedded Systems configuration, physical micro-hardware system processing (Arduino, ESP32 Modules), native code design (C/C++), and basic AI engines.</p>
-                        </div>
-                        <div class="p-4 rounded-xl border border-slate-100 bg-white text-xs space-y-1.5 data-module-card shadow-sm">
-                            <span class="text-indigo-600 font-bold block uppercase font-code">[04] Interactive Media Oversight</span>
-                            <p class="text-slate-500 font-light leading-relaxed">XR Environments development supervision (Unity Engine deployments, AR/VR engineering walkthrough setups), Game Design, and advanced motion graphics production pipelines.</p>
-                        </div>
-                    </div>
-                </div>
-            </aside>
-
-            <main class="lg:col-span-8 executive-mainframe rounded-2xl shadow-xl shadow-slate-900/5 overflow-hidden flex flex-col justify-between animate-on-scroll">
-                
-                <div class="flex flex-wrap border-b border-slate-100 bg-slate-50/50 font-bold font-code text-xs uppercase tracking-wider">
-                    <button onclick="executeWorkspaceTabSwitch('panel-overview')" id="btn-panel-overview" class="console-tab-btn px-6 py-4 text-sky-700 border-b-2 border-sky-500 bg-white/80 transition-all duration-300 flex items-center gap-2">
-                        <i class="fa-solid fa-address-card text-sky-500"></i> 01 // OVERVIEW
-                    </button>
-                    <button onclick="executeWorkspaceTabSwitch('panel-experience')" id="btn-panel-experience" class="console-tab-btn px-6 py-4 text-slate-400 hover:text-sky-600 border-b-2 border-transparent transition-all duration-300 flex items-center gap-2">
-                        <i class="fa-solid fa-timeline"></i> 02 // CHRONOLOGY
-                    </button>
-                    <button onclick="executeWorkspaceTabSwitch('panel-portfolio')" id="btn-panel-portfolio" class="console-tab-btn px-6 py-4 text-slate-400 hover:text-sky-600 border-b-2 border-transparent transition-all duration-300 flex items-center gap-2">
-                        <i class="fa-solid fa-cubes"></i> 03 // DEPLOYMENTS
-                    </button>
-                    <button onclick="executeWorkspaceTabSwitch('panel-specs')" id="btn-panel-specs" class="console-tab-btn px-6 py-4 text-slate-400 hover:text-sky-600 border-b-2 border-transparent transition-all duration-300 flex items-center gap-2">
-                        <i class="fa-solid fa-gears"></i> 04 // TECH_MATRIX
-                    </button>
-                </div>
-
-                <div class="p-6 md:p-10 space-y-6 overflow-y-auto max-h-[78vh] flex-grow">
-                    
-                    <div id="panel-overview" class="view-pane-segment active-pane space-y-6">
-                        <div class="text-[10px] font-bold text-slate-400 font-code uppercase tracking-widest">[ SYSTEM_LEDGER // OVERVIEW_NARRATIVE ]</div>
-                        <h2 class="font-display text-xl md:text-3xl font-bold text-slate-900 uppercase tracking-tight">Academic Operations Architecture & Governance Deliveries</h2>
-                        <div class="h-[1px] w-full bg-slate-100"></div>
-                        <p class="text-slate-600 text-sm md:text-base font-light leading-relaxed">
-                            Dynamic, results-driven STEM Executive with over 8.5 years of progressive leadership experience driving multi-center academic operations, curriculum strategy, and technical product delivery within the robotics and digital media education sectors.
-                        </p>
-                        <p class="text-slate-600 text-sm md:text-base font-light leading-relaxed">
-                            Proven track record as a Regional Coordinator directing operations across 11 institutional campuses and governing high-performing teams of over 50 faculty members. Expert in cross-functional leadership, institutional stakeholder management, and the end-to-end R&D of highly scalable K-10 robotics, AI, and AR/VR educational programs.
-                        </p>
-                        <div class="p-5 border border-sky-100 bg-sky-50/30 rounded-2xl text-xs text-sky-800 flex items-start gap-4 shadow-inner transition-transform duration-300 hover:scale-[1.01]">
-                            <i class="fa-solid fa-circle-nodes text-lg pt-0.5 text-sky-500 animate-pulse"></i>
-                            <p class="leading-relaxed font-code font-medium">Strategic dashboard core configured to govern distributed network locations, auditing structural training frameworks and optimizing multi-tier output metrics flawlessly.</p>
-                        </div>
-                    </div>
-
-                    <div id="panel-experience" class="view-pane-segment space-y-8">
-                        <div class="text-[10px] font-bold text-slate-400 font-code uppercase tracking-widest">[ SYSTEM_LEDGER // HISTORY_CHRONOLOGY ]</div>
-                        
-                        <div class="space-y-6 border-l border-slate-200 pl-6 ml-2 relative">
-                            
-                            <div class="space-y-2 relative transition-all duration-300 hover:pl-2">
-                                <div class="absolute -left-[30.5px] top-1 w-2 h-2 rounded-full bg-sky-500 shadow-lg shadow-sky-500/50"></div>
-                                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-slate-100 pb-2">
-                                    <div>
-                                        <h3 class="font-header font-bold text-base uppercase text-slate-900 tracking-wide">Regional Technical Coordinator & SME</h3>
-                                        <span class="font-code text-[10px] text-slate-400 uppercase tracking-wider font-bold">IMAGE INFOTAINMENT LIMITED</span>
-                                    </div>
-                                    <span class="font-code text-[10px] text-sky-700 border border-sky-200 px-2.5 py-0.5 rounded-md bg-sky-50/50 font-bold whitespace-nowrap shadow-sm">FEB 2022 - PRESENT</span>
-                                </div>
-                                <ul class="text-xs md:text-sm text-slate-500 space-y-3 pt-2 font-light leading-relaxed">
-                                    <li>• <strong class="text-slate-800 font-medium">Multi-Center Operational Governance:</strong> Direct technical and educational operations across 11 school partner centers, ensuring standardized delivery compliance and academic excellence.</li>
-                                    <li>• <strong class="text-slate-800 font-medium">Team Leadership & Faculty Management:</strong> Oversee, mentor, and evaluate a high-performing regional team of 50+ faculty members; implement performance benchmarks and faculty development programs.</li>
-                                    <li>• <strong class="text-slate-800 font-medium">Curriculum & Product Architecture:</strong> Spearhead the comprehensive research, structural design, and rollout of cutting-edge educational modules covering Mobile App Development, Robotics, Artificial Intelligence, and AR/VR.</li>
-                                    <li>• <strong class="text-slate-800 font-medium">Data-Driven Reporting:</strong> Establish centralized reporting structures to audit center performance, faculty output, and student milestones for executive review.</li>
-                                </ul>
-                            </div>
-
-                            <div class="space-y-2 relative transition-all duration-300 hover:pl-2">
-                                <div class="absolute -left-[30.5px] top-1 w-2 h-2 rounded-full bg-slate-300"></div>
-                                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-slate-100 pb-2">
-                                    <div>
-                                        <h3 class="font-header font-bold text-base uppercase text-slate-700 tracking-wide">Program Coordinator (Team Leader)</h3>
-                                        <span class="font-code text-[10px] text-slate-400 uppercase tracking-wider font-bold">IMAGE INFOTAINMENT LIMITED</span>
-                                    </div>
-                                    <span class="font-code text-[10px] text-slate-500 border border-slate-200 px-2.5 py-0.5 rounded-md bg-white font-bold whitespace-nowrap">MAY 2019 - JAN 2022</span>
-                                </div>
-                                <p class="text-xs md:text-sm text-slate-500 font-light leading-relaxed pt-1">
-                                    <strong class="text-slate-700 font-medium">Team & Project Management:</strong> Managed a core team of 4 senior educators while supervising instructional pathways and project pipelines for student cohorts aged 10 and above. Maintained end-to-end academic auditing documentation and logs across assigned divisions.
-                                </p>
-                            </div>
-
-                            <div class="space-y-2 relative transition-all duration-300 hover:pl-2">
-                                <div class="absolute -left-[30.5px] top-1 w-2 h-2 rounded-full bg-slate-200"></div>
-                                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-slate-100 pb-2">
-                                    <div>
-                                        <h3 class="font-header font-bold text-base uppercase text-slate-700 tracking-wide">Programming & Graphic Design Faculty</h3>
-                                        <span class="font-code text-[10px] text-slate-400 uppercase tracking-wider font-bold">IMAGE INFOTAINMENT LIMITED</span>
-                                    </div>
-                                    <span class="font-code text-[10px] text-slate-500 border border-slate-200 px-2.5 py-0.5 rounded-md bg-white font-bold whitespace-nowrap">DEC 2017 - APR 2019</span>
-                                </div>
-                                <p class="text-xs md:text-sm text-slate-500 font-light leading-relaxed pt-1">
-                                    <strong class="text-slate-700 font-medium">Instructional Delivery:</strong> Executed foundational and advanced instruction in core programming concepts and graphic design workflows to student layers aged 10 and above.
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div id="panel-portfolio" class="view-pane-segment space-y-6">
-                        <div class="text-[10px] font-bold text-slate-400 font-code uppercase tracking-widest">[ SYSTEM_LEDGER // PROJECT_ARRAYS ]</div>
-                        <div class="text-xs text-slate-500 font-light border-b border-slate-100 pb-4 leading-relaxed font-code">
-                            Directed the conceptualization, system testing, and deployment of 100+ STEM, Robotics, and AI projects across regional school networks, driving experiential learning at scale.
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="p-5 rounded-2xl border border-slate-100 bg-white text-slate-700 space-y-4 data-module-card shadow-sm">
-                                <div class="flex justify-between items-center text-sky-600 border-b border-slate-100 pb-2">
-                                    <span class="font-code text-[10px] font-bold uppercase">[03.A // HARDWARE]</span>
-                                    <i class="fa-solid fa-microchip animate-pulse"></i>
-                                </div>
-                                <h4 class="font-header font-bold text-sm text-slate-900 uppercase tracking-wide">Robotics & IoT Frameworks</h4>
-                                <div class="text-[11px] text-slate-500 space-y-1.5 font-light leading-relaxed">
-                                    <p>• Voice-Controlled Rovers</p>
-                                    <p>• Smart Public Transport Architectures</p>
-                                    <p>• Fire Fighter Systems</p>
-                                    <p>• Smart Home Automation</p>
-                                    <p>• Digital Speed/Height Calculators</p>
-                                    <p>• Environmental Monitoring Arrays</p>
-                                </div>
-                            </div>
-
-                            <div class="p-5 rounded-2xl border border-slate-100 bg-white text-slate-700 space-y-4 data-module-card shadow-sm">
-                                <div class="flex justify-between items-center text-indigo-600 border-b border-slate-100 pb-2">
-                                    <span class="font-code text-[10px] font-bold uppercase">[03.B // COGNITION]</span>
-                                    <i class="fa-solid fa-brain text-indigo-400"></i>
-                                </div>
-                                <h4 class="font-header font-bold text-sm text-slate-900 uppercase tracking-wide">Artificial Intelligence</h4>
-                                <div class="text-[11px] text-slate-500 space-y-1.5 font-light leading-relaxed">
-                                    <p>• Image Recognition Infrastructure</p>
-                                    <p>• Sound Recognition Blueprints</p>
-                                    <p>• Machine Learning Execution</p>
-                                    <p>• Teachable Machine Deployments</p>
-                                </div>
-                            </div>
-
-                            <div class="p-5 rounded-2xl border border-slate-100 bg-white text-slate-700 space-y-4 data-module-card shadow-sm">
-                                <div class="flex justify-between items-center text-sky-600 border-b border-slate-100 pb-2">
-                                    <span class="font-code text-[10px] font-bold uppercase">[03.C // IM_MEDIA]</span>
-                                    <i class="fa-solid fa-vr-cardboard text-sky-500"></i>
-                                </div>
-                                <h4 class="font-header font-bold text-sm text-slate-900 uppercase tracking-wide">Immersive Tech (XR)</h4>
-                                <div class="text-[11px] text-slate-500 space-y-1.5 font-light leading-relaxed">
-                                    <p>• Original Board Game Design</p>
-                                    <p>• Touch & Trigger Systems</p>
-                                    <p>• VR Spatial Walkthroughs</p>
-                                    <p>• Interactive AR Models (e.g., Eye Anatomy, Food Chain)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="panel-specs" class="view-pane-segment space-y-6">
-                        <div class="text-[10px] font-bold text-slate-400 font-code uppercase tracking-widest">[ SYSTEM_LEDGER // SPECIFICATION_MATRIX ]</div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
-                            <div class="space-y-4">
-                                <h4 class="font-header font-bold text-xs uppercase text-slate-400 border-b border-slate-100 pb-2 tracking-widest font-code">// TECHNICAL STACK</h4>
-                                <div class="space-y-4 text-xs font-code">
-                                    <div class="p-2 rounded-xl transition-colors hover:bg-white/40">
-                                        <span class="text-sky-600 font-bold block text-[10px] uppercase">// HARDWARE EMBEDDED CONFIGURATION</span>
-                                        <p class="text-slate-500 mt-1 leading-relaxed">Arduino Hardware Integration, ESP Module Development, Drone Architectures, Motion Control & Display Systems.</p>
-                                    </div>
-                                    <div class="w-full h-[1px] bg-slate-100"></div>
-                                    <div class="p-2 rounded-xl transition-colors hover:bg-white/40">
-                                        <span class="text-indigo-400 font-bold block text-[10px] uppercase">// LANGUAGES & COMPILE SYSTEMS</span>
-                                        <p class="text-slate-500 mt-1 leading-relaxed">C, C++, Embedded C++, Unity Engine, MIT App Inventor.</p>
-                                    </div>
-                                    <div class="w-full h-[1px] bg-slate-100"></div>
-                                    <div class="p-2 rounded-xl transition-colors hover:bg-white/40">
-                                        <span class="text-sky-600 font-bold block text-[10px] uppercase">// DIGITAL VISUAL SUITES</span>
-                                        <p class="text-slate-500 mt-1 leading-relaxed">Adobe Illustrator, Adobe Photoshop, Adobe InDesign, Adobe After Effects, High-End Video Editing Suites.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="space-y-4">
-                                <h4 class="font-header font-bold text-xs uppercase text-slate-400 border-b border-slate-100 pb-2 tracking-widest font-code">// REPOSITORY VERIFICATION</h4>
-                                <div class="space-y-2 text-xs font-code">
-                                    <div class="p-3 bg-white border border-slate-100 rounded-xl flex gap-3 shadow-sm transition-transform duration-300 hover:translate-x-1">
-                                        <span class="text-sky-500 font-bold">[01]</span>
-                                        <div>
-                                            <span class="text-slate-800 font-bold block uppercase text-[11px]">STEM Education Instructor Certification</span>
-                                            <span class="text-[10px] text-sky-600 font-bold">Id Trace: STEM.org</span>
-                                        </div>
-                                    </div>
-                                    <div class="p-3 bg-white border border-slate-100 rounded-xl flex gap-3 shadow-sm transition-transform duration-300 hover:translate-x-1">
-                                        <span class="text-sky-500 font-bold">[02]</span>
-                                        <div>
-                                            <span class="text-slate-800 font-bold block uppercase text-[11px]">Robotics and STEM Frameworks</span>
-                                            <span class="text-[10px] text-indigo-600 font-bold">Id Trace: India STEM Foundation</span>
-                                        </div>
-                                    </div>
-                                    <div class="p-3 bg-white border border-slate-100 rounded-xl flex gap-3 shadow-sm transition-transform duration-300 hover:translate-x-1">
-                                        <span class="text-sky-500 font-bold">[03]</span>
-                                        <div>
-                                            <span class="text-slate-800 font-bold block uppercase text-[11px]">World Robot Olympiad (WRO) Blueprints</span>
-                                            <span class="text-[10px] text-slate-400 font-bold">Id Trace: India STEM Foundation</span>
-                                        </div>
-                                    </div>
-                                    <div class="p-3 border border-sky-100 bg-sky-50/40 rounded-xl flex gap-3 shadow-sm transition-transform duration-300 hover:translate-x-1">
-                                        <span class="text-indigo-600 font-bold">[GRAD]</span>
-                                        <div>
-                                            <span class="text-slate-800 font-bold block uppercase text-[11px]">B.E. in Electronics and Communication Engineering</span>
-                                            <span class="text-[10px] text-slate-500 font-medium">Vidya Mandir Institute of Technology (2013-2017)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="p-4 border-t border-slate-100 bg-white/80 flex flex-wrap justify-between text-[10px] font-mono uppercase tracking-widest text-slate-400 gap-2 font-code">
-                    <span>[ DEPLOYMENT_ENV_STATUS: REGISTER_SECURE ]</span>
-                    <span>[ PACKET_COMMUNICATION: SECURE_UPLINK ]</span>
-                </div>
-            </main>
-
-        </div>
-
-        <section class="grid grid-cols-1 xl:grid-cols-3 gap-6 animate-on-scroll">
-            <div class="executive-mainframe p-6 rounded-2xl data-module-card space-y-3 shadow-sm shadow-slate-900/5">
-                <div class="text-sky-400 text-xs font-bold font-code">[R&D_NODE_01]</div>
-                <h4 class="font-header font-bold text-sm text-slate-900 uppercase tracking-wider">Multi-Center Academic Operation Strategy</h4>
-                <p class="text-xs text-slate-500 font-light leading-relaxed">
-                    Maintains strict standardization tracking parameters down through multi-tier educational divisions, deploying uniform execution logic schemas to safeguard curriculum excellence benchmarks continuously.
-                </p>
             </div>
-            <div class="executive-mainframe p-6 rounded-2xl data-module-card space-y-3 shadow-sm shadow-slate-900/5">
-                <div class="text-indigo-400 text-xs font-bold font-code">[R&D_NODE_02]</div>
-                <h4 class="font-header font-bold text-sm text-slate-900 uppercase tracking-wider">Instructional Program R&D Architectures</h4>
-                <p class="text-xs text-slate-500 font-light leading-relaxed">
-                    Controls structural product design blueprints mapped to evolving interactive technological disciplines, generating highly scalable code modules for algorithmic data systems.
-                </p>
-            </div>
-            <div class="executive-mainframe p-6 rounded-2xl data-module-card space-y-3 shadow-sm shadow-slate-900/5">
-                <div class="text-sky-400 text-xs font-bold font-code">[R&D_NODE_03]</div>
-                <h4 class="font-header font-bold text-sm text-slate-900 uppercase tracking-wider">Distributed Resource Governance Models</h4>
-                <p class="text-xs text-slate-500 font-light leading-relaxed">
-                    Manages distributed regional faculty assemblies, enforcing performance auditing milestones and structural training pipelines to optimize deployment resource logic completely.
-                </p>
-            </div>
+
         </section>
 
-        <footer class="executive-mainframe rounded-3xl p-6 md:p-8 flex flex-col sm:flex-row justify-between items-center text-[10px] font-mono text-slate-400 uppercase tracking-widest gap-4 font-code animate-on-scroll">
-            <div class="space-y-1 text-center sm:text-left">
-                <p>&copy; 2026 Vengadeshperumal Thangaraj. Secure Engineering Portfolio Architecture.</p>
-                <p class="text-[9px] text-sky-500 font-bold">// PLATFORM DEPLOYMENT CONFIRMED AS SUCCESSFUL COMPILATION.</p>
-            </div>
-            <div class="flex flex-wrap justify-center gap-6 text-slate-400 text-[11px] font-bold">
+        <footer class="glass-card p-8 flex flex-col sm:flex-row justify-between items-center text-[10px] font-code font-bold text-slate-400 uppercase tracking-widest reveal-on-scroll">
+            <p>&copy; 2026 VENGADESHPERUMAL THANGARAJ. SECURE ARCHITECTURE.</p>
+            <div class="flex gap-6 mt-4 sm:mt-0">
                 <span>[ DOB: JULY 21, 1996 ]</span>
-                <span>[ MARITAL STATUS: MARRIED ]</span>
+                <span>[ STATUS: MARRIED ]</span>
             </div>
         </footer>
 
-    </div>
+    </main>
 
     <script>
-        // TARGET ISOLATED VALUE ASSIGNMENT FOR THE DYNAMIC AUTOMATIC LOOP TYPEWRITER
-        const loopStringTitle = "Subject Matter Expert & Regional Technical Coordinator | STEM Operations Executive.";
+        /* ==========================================================================
+           1. ISOLATED INFINITE LOOP TYPEWRITER
+           ========================================================================== */
+        const typewriterText = "Subject Matter Expert & Regional Technical Coordinator | STEM Operations Executive.";
+        const mountPoint = document.getElementById("isolatedTypewriter");
+        
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        // Timing Configuration (in milliseconds)
+        const typingSpeed = 50;
+        const deletingSpeed = 20;
+        const pauseBeforeDelete = 3500; // Hold the text for 3.5 seconds
+        const pauseBeforeRestart = 800; // Pause before typing again
 
-        let stringCharIndex = 0;
-        let isDeletingProcess = false;
-        const typewriterMountPoint = document.getElementById("loopTypewriterMount");
+        function executeTypewriterLoop() {
+            if (!isDeleting) {
+                // Typing logic
+                mountPoint.textContent = typewriterText.substring(0, charIndex + 1);
+                charIndex++;
 
-        const typingSpeedCounter = 55;     // Velocity speed code delay inside milliseconds
-        const erasingSpeedCounter = 15;    // Deletion erase speed counter inside milliseconds
-        const pauseVisibleDuration = 3200; // Static freeze time buffer showing title text inside milliseconds
-
-        function runTargetedTypewriterRoutine() {
-            if (!isDeletingProcess) {
-                // Character inclusion array expansion tracking
-                typewriterMountPoint.textContent = loopStringTitle.substring(0, stringCharIndex + 1);
-                stringCharIndex++;
-
-                if (stringCharIndex === loopStringTitle.length) {
-                    // Maximum parameters matched, freeze text block visible before starting deletion loop
-                    isDeletingProcess = true;
-                    setTimeout(runTargetedTypewriterRoutine, pauseVisibleDuration);
+                if (charIndex === typewriterText.length) {
+                    isDeleting = true;
+                    setTimeout(executeTypewriterLoop, pauseBeforeDelete);
                 } else {
-                    setTimeout(runTargetedTypewriterRoutine, typingSpeedCounter);
+                    setTimeout(executeTypewriterLoop, typingSpeed);
                 }
             } else {
-                // Character subtraction deletion state
-                typewriterMountPoint.textContent = loopStringTitle.substring(0, stringCharIndex - 1);
-                stringCharIndex--;
+                // Deleting logic
+                mountPoint.textContent = typewriterText.substring(0, charIndex - 1);
+                charIndex--;
 
-                if (stringCharIndex === 0) {
-                    // Eraser parameters completely finalized, flip variable switch states
-                    isDeletingProcess = false;
-                    setTimeout(runTargetedTypewriterRoutine, 500); // Quick sleep buffer before re-typing string
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    setTimeout(executeTypewriterLoop, pauseBeforeRestart);
                 } else {
-                    setTimeout(runTargetedTypewriterRoutine, erasingSpeedCounter);
+                    setTimeout(executeTypewriterLoop, deletingSpeed);
                 }
             }
         }
 
-        // TABS MANAGER INTERFACE VIEW PANEL SWITCH CONTROLLER
-        function executeWorkspaceTabSwitch(targetPanelId) {
-            const architecturalPanels = document.querySelectorAll('.view-pane-segment');
-            architecturalPanels.forEach(panel => panel.classList.remove('active-pane'));
-
-            const buttonSelectNodes = document.querySelectorAll('.console-tab-btn');
-            workspaceButtons = buttonSelectNodes; 
-            workspaceButtons.forEach(btn => {
-                btn.classList.remove('text-sky-700', 'border-sky-500', 'bg-white/80');
-                btn.classList.add('text-slate-400', 'border-transparent');
+        /* ==========================================================================
+           2. PREMIUM 3D TILT EFFECT ON HOVER
+           ========================================================================== */
+        const tiltCards = document.querySelectorAll('.tilt-effect');
+        
+        tiltCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left; // X position within the element
+                const y = e.clientY - rect.top;  // Y position within the element
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                // Calculate rotation (max 5 degrees for a subtle, premium feel)
+                const rotateX = ((y - centerY) / centerY) * -5;
+                const rotateY = ((x - centerX) / centerX) * 5;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                card.style.transition = 'none'; // Remove transition for smooth tracking
             });
-
-            document.getElementById(targetPanelId).classList.add('active-pane');
             
-            const currentTabTriggerBtn = document.getElementById('btn-' + targetPanelId);
-            currentTabTriggerBtn.classList.remove('text-slate-400', 'border-transparent');
-            currentTabTriggerBtn.classList.add('text-sky-700', 'border-sky-500', 'bg-white/80');
-        }
+            card.addEventListener('mouseleave', () => {
+                // Reset smoothly when mouse leaves
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                card.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+            });
+            
+            card.addEventListener('mouseenter', () => {
+                // Re-enable smooth tracking instantly
+                card.style.transition = 'transform 0.1s ease-out';
+            });
+        });
 
-        // SCROLL-DRIVEN FLUID CONTENT REVEAL INTERSECTION OBSERVER
-        const scrollAnimatorObserver = new IntersectionObserver((entries) => {
+        /* ==========================================================================
+           3. SCROLL REVEAL INTERSECTION OBSERVER
+           ========================================================================== */
+        const scrollObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    entry.target.classList.add('is-visible');
+                    // Optional: Unobserve after revealing to only trigger once
+                    // scrollObserver.unobserve(entry.target); 
                 }
             });
         }, {
-            threshold: 0.08 // Fires animation sequence when 8% of card layout enters viewpoint bounds
+            threshold: 0.1, // Trigger when 10% of the element is visible
+            rootMargin: "0px 0px -50px 0px"
         });
 
-        // Initialize script logic routine processes
-        document.addEventListener("DOMContentLoaded", function() {
-            // Spin up the primary loop typewriter engine
-            setTimeout(runTargetedTypewriterRoutine, 600);
-
-            // Bind observer actions to layout cards tracking smooth animations
-            const scalableContentCards = document.querySelectorAll('.animate-on-scroll');
-            scalableContentCards.forEach(card => scrollAnimatorObserver.observe(card));
+        // Initialize all scripts after DOM loads
+        document.addEventListener("DOMContentLoaded", () => {
+            // Start Typewriter
+            setTimeout(executeTypewriterLoop, 800);
+            
+            // Start Scroll Observer
+            const revealElements = document.querySelectorAll('.reveal-on-scroll');
+            revealElements.forEach(el => scrollObserver.observe(el));
         });
     </script>
 
