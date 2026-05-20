@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vengadeshperumal Thangaraj | Executive Technology Operations Hub</title>
+    <title>Vengadeshperumal Thangaraj | Premier Technology Operations Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -11,117 +11,128 @@
     <style>
         body {
             font-family: 'Fira Code', monospace;
-            background-color: #05070f;
+            background-color: #020409;
             color: #e2e8f0;
+            overflow-x: hidden;
         }
         .font-header {
             font-family: 'Space Grotesk', sans-serif;
         }
-        /* Custom high-end dashboard borders */
-        .panel-border {
-            border: 1px solid rgba(99, 102, 241, 0.15);
+        /* Specialized UI structural parameters */
+        .mainframe-border {
+            border: 1px solid rgba(99, 102, 241, 0.18);
         }
-        .active-border {
+        .active-glow-cyan {
             border-color: #06b6d4;
-            box-shadow: 0 0 20px rgba(6, 182, 212, 0.15);
+            box-shadow: 0 0 25px rgba(6, 182, 212, 0.2);
         }
-        .glow-card {
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        /* Custom card movement transitions */
+        .motion-card {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .glow-card:hover {
+        .motion-card:hover {
             border-color: #8b5cf6;
-            background-color: #090d1a;
-            box-shadow: 0 0 25px rgba(139, 92, 246, 0.1);
+            background-color: #060914;
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(139, 92, 246, 0.15);
         }
-        /* Custom styled scrollbars */
+        /* Custom scrollbar configurations */
         ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #05070f;
+            background: #020409;
         }
         ::-webkit-scrollbar-thumb {
-            background: #1e1b4b;
+            background: #121420;
             border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         ::-webkit-scrollbar-thumb:hover {
             background: #06b6d4;
         }
-        /* Caret typing animation indicator */
-        .typewriter-caret::after {
-            content: '_';
-            animation: blink 0.9s infinite;
+        /* Infinite caret indicator animation */
+        .loop-cursor::after {
+            content: '█';
+            animation: terminalBlink 0.8s steps(2, start) infinite;
             color: #06b6d4;
+            margin-left: 4px;
         }
-        @keyframes blink {
+        @keyframes terminalBlink {
             0%, 100% { opacity: 1; }
             50% { opacity: 0; }
         }
-        .tab-content {
+        .tab-panel-frame {
             display: none;
         }
-        .tab-content.active {
+        .tab-panel-frame.active-frame {
             display: block;
+            animation: contentFade 0.4s ease-out forwards;
+        }
+        @keyframes contentFade {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
-<body class="selection:bg-cyan-500 selection:text-black antialiased p-4 md:p-8 min-h-screen">
+<body class="selection:bg-cyan-500 selection:text-black antialiased p-3 md:p-6 lg:p-8 min-h-screen">
 
-    <div class="max-w-[95rem] mx-auto space-y-6">
+    <div class="max-w-[98rem] mx-auto space-y-6">
         
-        <header class="panel-border rounded-2xl p-8 bg-[#090d1f]/80 backdrop-blur-md flex flex-col xl:flex-row justify-between items-start xl:items-center gap-6 relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-purple-500 via-indigo-500 to-cyan-500"></div>
+        <header class="mainframe-border rounded-2xl p-6 md:p-10 bg-[#040712]/90 backdrop-blur-md flex flex-col xl:flex-row justify-between items-start xl:items-center gap-6 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500"></div>
             
-            <div class="space-y-2">
-                <div class="text-[10px] uppercase tracking-[0.3em] text-indigo-400 font-bold flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span> SYSTEM STATUS: ONLINE // DATA_DECK_ACTIVE
+            <div class="space-y-3 w-full xl:max-w-5xl">
+                <div class="text-[10px] uppercase tracking-[0.35em] text-purple-400 font-bold flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span> LOGISTICS STATUS: SYSTEM_ONLINE // TERMINAL_ACTIVE
                 </div>
-                <h1 class="font-header text-3xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white uppercase leading-none">
+                <h1 class="font-header text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white uppercase leading-none">
                     VENGADESHPERUMAL THANGARAJ
                 </h1>
-                <div class="text-xs md:text-sm text-cyan-400 font-medium tracking-wide mt-1 min-h-[1.5rem]">
-                    &gt; <span id="typewriterOutput" class="typewriter-caret"></span>
+                
+                <div class="text-xs md:text-sm lg:text-base text-cyan-400 font-medium tracking-wide min-h-[2rem] flex items-center font-code">
+                    <span>&gt;&nbsp;</span><span id="loopTypewriterMount" class="loop-cursor"></span>
                 </div>
             </div>
 
-            <div class="flex flex-wrap gap-4 font-bold text-xs">
-                <div class="px-4 py-2 bg-[#0d122c] border border-zinc-800 rounded-lg text-zinc-400">
-                    REF_NODE: <span class="text-white">2026//EXEC</span>
+            <div class="flex flex-wrap xl:flex-col gap-3 font-bold text-xs w-full xl:w-auto xl:items-end">
+                <div class="px-4 py-2 bg-[#080d1a] border border-zinc-900 rounded-lg text-zinc-500 text-[11px] uppercase tracking-wider font-code">
+                    NODE_ID: <span class="text-zinc-300">2026//STRAT_EXEC</span>
                 </div>
-                <a href="mailto:venkatl.info@gmail.com" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 rounded-xl uppercase tracking-widest text-white transition-all shadow-lg shadow-purple-950/40 flex items-center gap-2">
-                    Connect Uplink <i class="fa-solid fa-satellite-dish animate-bounce"></i>
+                <a href="mailto:venkatl.info@gmail.com" class="px-6 py-3.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 rounded-xl uppercase tracking-widest text-white transition-all shadow-xl shadow-purple-950/40 flex items-center gap-3">
+                    Secure Target Link <i class="fa-solid fa-satellite-dish animate-pulse text-sm"></i>
                 </a>
             </div>
         </header>
 
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="panel-border bg-[#070a14] p-6 rounded-xl flex items-center gap-5">
-                <div class="w-12 h-12 rounded-xl bg-purple-950/60 flex items-center justify-center text-purple-400 border border-purple-900 text-lg"><i class="fa-solid fa-network-wired"></i></div>
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="mainframe-border bg-[#03060f] p-6 rounded-2xl flex items-center gap-5 motion-card">
+                <div class="w-12 h-12 rounded-xl bg-purple-950/50 flex items-center justify-center text-purple-400 border border-purple-900/60 text-lg"><i class="fa-solid fa-network-wired"></i></div>
                 <div>
-                    <span class="text-2xl font-bold font-header text-white block">11</span>
-                    <span class="text-[10px] uppercase tracking-widest text-zinc-500">Campuses Governed</span>
+                    <span class="text-3xl font-bold font-header text-white block leading-none mb-1">11</span>
+                    <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold font-code">Campuses Governed</span>
                 </div>
             </div>
-            <div class="panel-border bg-[#070a14] p-6 rounded-xl flex items-center gap-5">
-                <div class="w-12 h-12 rounded-xl bg-indigo-950/60 flex items-center justify-center text-indigo-400 border border-indigo-900 text-lg"><i class="fa-solid fa-users-gear"></i></div>
+            <div class="mainframe-border bg-[#03060f] p-6 rounded-2xl flex items-center gap-5 motion-card">
+                <div class="w-12 h-12 rounded-xl bg-indigo-950/50 flex items-center justify-center text-indigo-400 border border-indigo-900/60 text-lg"><i class="fa-solid fa-users-gear"></i></div>
                 <div>
-                    <span class="text-2xl font-bold font-header text-purple-400 block">50+</span>
-                    <span class="text-[10px] uppercase tracking-widest text-zinc-500">Faculty Managed</span>
+                    <span class="text-3xl font-bold font-header text-purple-400 block leading-none mb-1">50+</span>
+                    <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold font-code">Faculty Managed</span>
                 </div>
             </div>
-            <div class="panel-border bg-[#070a14] p-6 rounded-xl flex items-center gap-5">
-                <div class="w-12 h-12 rounded-xl bg-cyan-950/60 flex items-center justify-center text-cyan-400 border border-cyan-900 text-lg"><i class="fa-solid fa-diagram-project"></i></div>
+            <div class="mainframe-border bg-[#03060f] p-6 rounded-2xl flex items-center gap-5 motion-card">
+                <div class="w-12 h-12 rounded-xl bg-cyan-950/50 flex items-center justify-center text-cyan-400 border border-cyan-900/60 text-lg"><i class="fa-solid fa-diagram-project"></i></div>
                 <div>
-                    <span class="text-2xl font-bold font-header text-cyan-400 block">100+</span>
-                    <span class="text-[10px] uppercase tracking-widest text-zinc-500">STEM Blueprints Deployed</span>
+                    <span class="text-3xl font-bold font-header text-cyan-400 block leading-none mb-1">100+</span>
+                    <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold font-code">STEM Solutions Deployed</span>
                 </div>
             </div>
-            <div class="panel-border bg-[#070a14] p-6 rounded-xl flex items-center gap-5">
-                <div class="w-12 h-12 rounded-xl bg-emerald-950/60 flex items-center justify-center text-emerald-400 border border-emerald-900 text-lg"><i class="fa-solid fa-business-time"></i></div>
+            <div class="mainframe-border bg-[#03060f] p-6 rounded-2xl flex items-center gap-5 motion-card">
+                <div class="w-12 h-12 rounded-xl bg-emerald-950/50 flex items-center justify-center text-emerald-400 border border-emerald-900/60 text-lg"><i class="fa-solid fa-business-time"></i></div>
                 <div>
-                    <span class="text-2xl font-bold font-header text-emerald-400 block">8.5+ Yrs</span>
-                    <span class="text-[10px] uppercase tracking-widest text-zinc-500">Progressive Leadership</span>
+                    <span class="text-3xl font-bold font-header text-emerald-400 block leading-none mb-1">8.5+ Yrs</span>
+                    <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold font-code">Active Leadership</span>
                 </div>
             </div>
         </section>
@@ -129,101 +140,106 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
             
             <aside class="lg:col-span-4 space-y-6">
-                <div class="panel-border rounded-2xl p-6 bg-[#070a14] space-y-6">
-                    <div class="text-[11px] font-bold text-zinc-500 uppercase border-b border-zinc-900 pb-3">// TELEMETRY_VARIABLES</div>
-                    
-                    <div class="space-y-4 text-xs">
-                        <div class="p-3 bg-black/40 border border-zinc-900 rounded-lg flex justify-between items-center">
-                            <span class="text-zinc-500 uppercase">Geographic Hub:</span>
-                            <span class="text-white font-bold text-right">Tamil Nadu, India</span>
+                
+                <div class="mainframe-border rounded-2xl p-6 bg-[#03060f] space-y-4">
+                    <div class="text-[11px] font-bold text-zinc-500 font-code uppercase border-b border-zinc-900 pb-3 flex justify-between items-center">
+                        <span>// TELEMETRY_VARIABLES_LOG</span>
+                        <i class="fa-solid fa-sliders text-zinc-600"></i>
+                    </div>
+                    <div class="space-y-3 text-xs font-code">
+                        <div class="p-3 bg-black/40 border border-zinc-900 rounded-xl flex justify-between items-center">
+                            <span class="text-zinc-600 uppercase">Region:</span>
+                            <span class="text-zinc-200 font-bold text-right">Tamil Nadu, India</span>
                         </div>
-                        <div class="p-3 bg-black/40 border border-zinc-900 rounded-lg flex justify-between items-center">
-                            <span class="text-zinc-500 uppercase">Contact Core:</span>
-                            <span class="text-white font-bold text-right">+91 85266 28310</span>
+                        <div class="p-3 bg-black/40 border border-zinc-900 rounded-xl flex justify-between items-center">
+                            <span class="text-zinc-600 uppercase">Secure Line:</span>
+                            <span class="text-zinc-200 font-bold text-right">+91 85266 28310</span>
                         </div>
-                        <div class="p-3 bg-black/40 border border-zinc-900 rounded-lg flex justify-between items-center">
-                            <span class="text-zinc-500 uppercase">Secure Path:</span>
-                            <span class="text-cyan-400 font-bold text-right lowercase select-all">venkatl.info@gmail.com</span>
+                        <div class="p-3 bg-black/40 border border-zinc-900 rounded-xl flex justify-between items-center overflow-hidden">
+                            <span class="text-zinc-600 uppercase mr-2">Route_Path:</span>
+                            <span class="text-cyan-400 font-bold truncate lowercase select-all">venkatl.info@gmail.com</span>
                         </div>
-                        <div class="p-3 bg-black/40 border border-zinc-900 rounded-lg flex justify-between items-center">
-                            <span class="text-zinc-500 uppercase">Linguistics:</span>
+                        <div class="p-3 bg-black/40 border border-zinc-900 rounded-xl flex justify-between items-center">
+                            <span class="text-zinc-600 uppercase">Linguistics:</span>
                             <span class="text-purple-400 font-bold text-right">English, Tamil, Kannada</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="panel-border rounded-2xl p-6 bg-[#070a14] space-y-4">
-                    <div class="text-[11px] font-bold text-zinc-500 uppercase border-b border-zinc-900 pb-3">// SYSTEM_CAPABILITIES_INDEX</div>
-                    
+                <div class="mainframe-border rounded-2xl p-6 bg-[#03060f] space-y-4">
+                    <div class="text-[11px] font-bold text-zinc-500 font-code uppercase border-b border-zinc-900 pb-3 flex justify-between items-center">
+                        <span>// CAPABILITIES_SPEC_INDEX</span>
+                        <i class="fa-solid fa-shield-halved text-zinc-600"></i>
+                    </div>
                     <div class="space-y-3">
-                        <div class="p-4 rounded-xl border border-zinc-900 bg-black/20 text-xs space-y-1.5">
-                            <span class="text-purple-400 font-bold block uppercase">[01] OPERATIONS GOVERNANCE</span>
-                            <p class="text-zinc-400 font-light leading-relaxed">Multi-Center Governance, Stakeholder Relations, Faculty Recruitment, KPI Tracking dashboards.</p>
+                        <div class="p-4 rounded-xl border border-zinc-900/60 bg-black/20 text-xs space-y-2 motion-card">
+                            <span class="text-purple-400 font-bold block uppercase font-code">[01] Operations Governance</span>
+                            <p class="text-zinc-400 font-light leading-relaxed">Multi-Center Operations Governance, Institutional Stakeholder Relations, Faculty Recruitment & Training, Resource Optimization, Academic Auditing & KPI Tracking.</p>
                         </div>
-                        <div class="p-4 rounded-xl border border-zinc-900 bg-black/20 text-xs space-y-1.5">
-                            <span class="text-cyan-400 font-bold block uppercase">[02] CURRICULUM STRATEGY</span>
-                            <p class="text-zinc-400 font-light leading-relaxed">End-to-End Instructional Design, K-10 Educational Blueprints, STEM Hardware mapping.</p>
+                        <div class="p-4 rounded-xl border border-zinc-900/60 bg-black/20 text-xs space-y-2 motion-card">
+                            <span class="text-cyan-400 font-bold block uppercase font-code">[02] Product & Curriculum Strategy</span>
+                            <p class="text-zinc-400 font-light leading-relaxed">End-to-End Instructional Design (K-10 Frameworks), Specialized STEM/Robotics Integration, Assessment Frameworks blueprints rollout.</p>
                         </div>
-                        <div class="p-4 rounded-xl border border-zinc-900 bg-black/20 text-xs space-y-1.5">
-                            <span class="text-indigo-400 font-bold block uppercase">[03] HARDWARE EMULATION</span>
-                            <p class="text-zinc-400 font-light leading-relaxed">Embedded Logic Processing architectures (Arduino, ESP32 Modules), native C/C++ configurations.</p>
+                        <div class="p-4 rounded-xl border border-zinc-900/60 bg-black/20 text-xs space-y-2 motion-card">
+                            <span class="text-indigo-400 font-bold block uppercase font-code">[03] Technical Architecture</span>
+                            <p class="text-zinc-400 font-light leading-relaxed">Embedded Systems & Hardware Integration (Arduino, ESP32 Modules), native C/C++ Programming execution, and Machine Learning layouts.</p>
                         </div>
-                        <div class="p-4 rounded-xl border border-zinc-900 bg-black/20 text-xs space-y-1.5">
-                            <span class="text-purple-400 font-bold block uppercase">[04] IMMERSIVE XR TECH</span>
-                            <p class="text-zinc-400 font-light leading-relaxed">XR Environment design optimization (Unity Engine, AR/VR walkthrough models), Game Design frameworks.</p>
+                        <div class="p-4 rounded-xl border border-zinc-900/60 bg-black/20 text-xs space-y-2 motion-card">
+                            <span class="text-purple-400 font-bold block uppercase font-code">[04] Immersive Media Oversight</span>
+                            <p class="text-zinc-400 font-light leading-relaxed">XR Environments development oversight (Unity Engine, AR/VR Development configurations), Game Design frameworks, and multimedia graphics.</p>
                         </div>
                     </div>
                 </div>
             </aside>
 
-            <main class="lg:col-span-8 panel-border rounded-2xl bg-[#070a14] overflow-hidden flex flex-col justify-between">
+            <main class="lg:col-span-8 mainframe-border rounded-2xl bg-[#03060f] overflow-hidden flex flex-col justify-between">
                 
-                <div class="flex flex-wrap border-b border-zinc-900 bg-[#090d1f]/60 font-bold text-xs uppercase tracking-wider">
-                    <button onclick="switchTab('tab-overview')" id="btn-tab-overview" class="tab-btn px-6 py-4 text-white border-b-2 border-cyan-400 bg-black/40 transition-all flex items-center gap-2">
+                <div class="flex flex-wrap border-b border-zinc-900 bg-[#050917]/80 font-bold font-code text-xs uppercase tracking-wider">
+                    <button onclick="changeActiveTab('panel-overview')" id="btn-panel-overview" class="navigation-tab-toggle px-6 py-4 text-white border-b-2 border-cyan-400 bg-black/40 transition-all duration-300 flex items-center gap-2">
                         <i class="fa-solid fa-address-card text-cyan-400"></i> 01 // OVERVIEW
                     </button>
-                    <button onclick="switchTab('tab-experience')" id="btn-tab-experience" class="tab-btn px-6 py-4 text-zinc-500 hover:text-white border-b-2 border-transparent transition-all flex items-center gap-2">
-                        <i class="fa-solid fa-timeline"></i> 02 // EXPERIENCE
+                    <button onclick="changeActiveTab('panel-experience')" id="btn-panel-experience" class="navigation-tab-toggle px-6 py-4 text-zinc-500 hover:text-white border-b-2 border-transparent transition-all duration-300 flex items-center gap-2">
+                        <i class="fa-solid fa-timeline"></i> 02 // CHRONOLOGY
                     </button>
-                    <button onclick="switchTab('tab-projects')" id="btn-tab-projects" class="tab-btn px-6 py-4 text-zinc-500 hover:text-white border-b-2 border-transparent transition-all flex items-center gap-2">
-                        <i class="fa-solid fa-cubes"></i> 03 // DEPLOYMENTS
+                    <button onclick="changeActiveTab('panel-portfolio')" id="btn-panel-portfolio" class="navigation-tab-toggle px-6 py-4 text-zinc-500 hover:text-white border-b-2 border-transparent transition-all duration-300 flex items-center gap-2">
+                        <i class="fa-solid fa-cubes"></i> 03 // INITIATIVES
                     </button>
-                    <button onclick="switchTab('tab-specs')" id="btn-tab-specs" class="tab-btn px-6 py-4 text-zinc-500 hover:text-white border-b-2 border-transparent transition-all flex items-center gap-2">
+                    <button onclick="changeActiveTab('panel-specs')" id="btn-panel-specs" class="navigation-tab-toggle px-6 py-4 text-zinc-500 hover:text-white border-b-2 border-transparent transition-all duration-300 flex items-center gap-2">
                         <i class="fa-solid fa-gears"></i> 04 // TECH_MATRIX
                     </button>
                 </div>
 
-                <div class="p-6 md:p-8 space-y-6 overflow-y-auto max-h-[75vh] flex-grow">
+                <div class="p-6 md:p-8 space-y-6 overflow-y-auto max-h-[78vh] flex-grow">
                     
-                    <div id="tab-overview" class="tab-content active space-y-6">
-                        <div class="text-[10px] font-bold text-zinc-600 uppercase tracking-widest">[ FILE_LOG // PROFILE_NARRATIVE ]</div>
-                        <h2 class="font-header text-xl md:text-2xl font-bold uppercase text-white">Multi-Center Academic Strategy & Governance Strategy</h2>
+                    <div id="panel-overview" class="tab-panel-frame active-frame space-y-6">
+                        <div class="text-[10px] font-bold text-zinc-600 font-code uppercase tracking-widest">[ SYSTEM_LOG // BRIEFING_NARRATIVE ]</div>
+                        <h2 class="font-header text-xl md:text-3xl font-bold text-white uppercase tracking-tight">Academic Strategy Operations & Corporate Governance</h2>
                         <div class="h-[1px] w-full bg-zinc-900"></div>
                         <p class="text-zinc-400 text-sm font-light leading-relaxed">
-                            Dynamic, results-driven STEM Executive with over 8.5 years of progressive leadership experience driving multi-center academic operations, curriculum strategy, and technical product delivery within the robotics and digital media education sectors[cite: 5]. 
+                            Dynamic, results-driven STEM Executive with over 8.5 years of progressive leadership experience driving multi-center academic operations, curriculum strategy, and technical product delivery within the robotics and digital media education sectors[cite: 5].
                         </p>
                         <p class="text-zinc-400 text-sm font-light leading-relaxed">
                             Proven track record as a Regional Coordinator directing operations across 11 institutional campuses and governing high-performing teams of over 50 faculty members[cite: 6]. Expert in cross-functional leadership, institutional stakeholder management, and the end-to-end R&D of highly scalable K-10 robotics, AI, and AR/VR educational programs[cite: 7].
                         </p>
-                        
-                        <div class="p-4 border border-indigo-950/60 bg-indigo-950/10 rounded-xl text-xs text-indigo-300 flex items-start gap-3">
-                            <i class="fa-solid fa-circle-nodes text-base pt-0.5 animate-pulse"></i>
-                            <p class="leading-relaxed">System architecture configured to manage distributed network locations, auditing structural training frameworks and optimizing multi-tier faculty output maps flawlessly.</p>
+                        <div class="p-5 border border-purple-950/60 bg-purple-950/10 rounded-2xl text-xs text-purple-300 flex items-start gap-4">
+                            <i class="fa-solid fa-circle-nodes text-lg pt-0.5 text-purple-400 animate-pulse"></i>
+                            <p class="leading-relaxed font-code">Governance engine configured to standardize regional training operations, auditing multi-center academic parameters and tracking technical resource optimizations continuously.</p>
                         </div>
                     </div>
 
-                    <div id="tab-experience" class="tab-content space-y-8">
-                        <div class="text-[10px] font-bold text-zinc-600 uppercase tracking-widest">[ FILE_LOG // CHRONOLOGICAL_TIMELINE ]</div>
+                    <div id="panel-experience" class="tab-panel-frame space-y-8">
+                        <div class="text-[10px] font-bold text-zinc-600 font-code uppercase tracking-widest">[ SYSTEM_LOG // HISTORY_RECORDS ]</div>
                         
                         <div class="space-y-6 border-l border-zinc-900 pl-6 ml-2 relative">
+                            
                             <div class="space-y-2 relative">
                                 <div class="absolute -left-[30.5px] top-1 w-2 h-2 rounded-full bg-cyan-400 shadow-md shadow-cyan-400/50"></div>
                                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                                     <h3 class="font-header font-bold text-base uppercase text-white tracking-wide">Regional Technical Coordinator & SME</h3>
-                                    <span class="text-[10px] font-bold text-purple-400 border border-purple-950 px-2 rounded-md bg-purple-950/20 py-0.5 whitespace-nowrap">FEB 2022 - PRESENT</span>
+                                    <span class="text-[10px] font-bold font-code text-purple-400 border border-purple-950 px-2.5 py-0.5 rounded-md bg-purple-950/20 whitespace-nowrap">FEB 2022 - PRESENT [cite: 16]</span>
                                 </div>
-                                <div class="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">IMAGE INFOTAINMENT LIMITED [cite: 14, 15, 16]</div>
-                                <ul class="text-xs text-zinc-400 space-y-2 pt-2 font-light">
+                                <div class="text-[10px] text-zinc-500 font-bold uppercase tracking-wider font-code">IMAGE INFOTAINMENT LIMITED [cite: 14]</div>
+                                <ul class="text-xs md:text-sm text-zinc-400 space-y-3 pt-2 font-light leading-relaxed">
                                     <li>• <strong class="text-zinc-300">Multi-Center Operational Governance:</strong> Direct technical and educational operations across 11 school partner centers, ensuring standardized delivery compliance and academic excellence[cite: 17].</li>
                                     <li>• <strong class="text-zinc-300">Team Leadership & Faculty Management:</strong> Oversee, mentor, and evaluate a high-performing regional team of 50+ faculty members; implement performance benchmarks and faculty development programs[cite: 18, 19].</li>
                                     <li>• <strong class="text-zinc-300">Curriculum & Product Architecture:</strong> Spearhead the comprehensive research, structural design, and rollout of cutting-edge educational modules covering Mobile App Development, Robotics, Artificial Intelligence, and AR/VR[cite: 20].</li>
@@ -234,135 +250,136 @@
                             <div class="space-y-2 relative">
                                 <div class="absolute -left-[30.5px] top-1 w-2 h-2 rounded-full bg-zinc-800"></div>
                                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                                    <h3 class="font-header font-bold text-base uppercase text-zinc-300">Program Coordinator (Team Leader)</h3>
-                                    <span class="text-[10px] font-bold text-zinc-500 border border-zinc-900 px-2 rounded-md bg-black py-0.5 whitespace-nowrap">MAY 2019 - JAN 2022</span>
+                                    <h3 class="font-header font-bold text-base uppercase text-zinc-300 tracking-wide">Program Coordinator (Team Leader)</h3>
+                                    <span class="text-[10px] font-bold font-code text-zinc-500 border border-zinc-900 px-2.5 py-0.5 rounded-md bg-black whitespace-nowrap">MAY 2019 - JAN 2022 [cite: 22]</span>
                                 </div>
-                                <div class="text-[10px] text-zinc-600 font-bold uppercase tracking-wider">IMAGE INFOTAINMENT LIMITED [cite: 14, 15, 22]</div>
-                                <p class="text-xs text-zinc-400 font-light leading-relaxed">
-                                    <strong class="text-zinc-300">Team & Project Management:</strong> Managed a core team of 4 senior technical educators while supervising instructional pathways and project pipelines for student cohorts aged 10 and above[cite: 23]. Maintained end-to-end academic auditing documentation and logs across assigned divisions[cite: 24].
+                                <div class="text-[10px] text-zinc-600 font-bold uppercase tracking-wider font-code">IMAGE INFOTAINMENT LIMITED [cite: 14]</div>
+                                <p class="text-xs md:text-sm text-zinc-400 font-light leading-relaxed pt-1">
+                                    <strong class="text-zinc-300">Team & Project Management:</strong> Managed a core team of 4 senior educators while supervising instructional pathways and project pipelines for student cohorts aged 10 and above[cite: 23]. Maintained end-to-end academic documentation and audit-ready operational reports across assigned divisions[cite: 24].
                                 </p>
                             </div>
 
                             <div class="space-y-2 relative">
                                 <div class="absolute -left-[30.5px] top-1 w-2 h-2 rounded-full bg-zinc-800"></div>
                                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                                    <h3 class="font-header font-bold text-base uppercase text-zinc-300">Programming & Graphic Design Faculty</h3>
-                                    <span class="text-[10px] font-bold text-zinc-500 border border-zinc-900 px-2 rounded-md bg-black py-0.5 whitespace-nowrap">DEC 2017 - APR 2019</span>
+                                    <h3 class="font-header font-bold text-base uppercase text-zinc-300 tracking-wide">Programming & Graphic Design Faculty</h3>
+                                    <span class="text-[10px] font-bold font-code text-zinc-500 border border-zinc-900 px-2.5 py-0.5 rounded-md bg-black whitespace-nowrap">DEC 2017 - APR 2019 [cite: 25]</span>
                                 </div>
-                                <div class="text-[10px] text-zinc-600 font-bold uppercase tracking-wider">IMAGE INFOTAINMENT LIMITED [cite: 14, 15, 25]</div>
-                                <p class="text-xs text-zinc-400 font-light">
-                                    <strong class="text-zinc-300">Instructional Delivery:</strong> Executed structural pedagogy and deep linear processing workflows centered around computer programming foundations, syntax parameters, and digital graphic design structures to student groups aged 10+[cite: 26].
+                                <div class="text-[10px] text-zinc-600 font-bold uppercase tracking-wider font-code">IMAGE INFOTAINMENT LIMITED [cite: 14]</div>
+                                <p class="text-xs md:text-sm text-zinc-400 font-light leading-relaxed pt-1">
+                                    <strong class="text-zinc-300">Instructional Delivery:</strong> Delivered foundational and advanced instruction in core programming concepts and graphic design workflows to students aged 10+[cite: 26].
                                 </p>
                             </div>
+
                         </div>
                     </div>
 
-                    <div id="tab-projects" class="tab-content space-y-6">
-                        <div class="text-[10px] font-bold text-zinc-600 uppercase tracking-widest">[ FILE_LOG // CURRICULUM_ARRAYS ]</div>
-                        <div class="text-xs text-zinc-400 font-light border-b border-zinc-900 pb-4">
+                    <div id="panel-portfolio" class="tab-panel-frame space-y-6">
+                        <div class="text-[10px] font-bold text-zinc-600 font-code uppercase tracking-widest">[ SYSTEM_LOG // PORTFOLIO_ARRAYS ]</div>
+                        <div class="text-xs text-zinc-400 font-light border-b border-zinc-900 pb-4 leading-relaxed">
                             Directed the conceptualization, system testing, and deployment of 100+ STEM, Robotics, and AI projects across regional school networks, driving experiential learning at scale[cite: 35].
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="p-5 rounded-xl border border-zinc-900 bg-black/40 space-y-4">
+                            <div class="p-5 rounded-xl border border-zinc-900 bg-black/40 space-y-4 motion-card">
                                 <div class="flex justify-between items-center text-purple-400 border-b border-zinc-900 pb-2">
-                                    <span class="text-[10px] font-bold uppercase">[03.A // HARDWARE]</span>
+                                    <span class="font-code text-[10px] font-bold uppercase">[03.A // HARDWARE]</span>
                                     <i class="fa-solid fa-microchip"></i>
                                 </div>
-                                <h4 class="font-header font-bold text-sm text-white uppercase">Robotics & IoT Frameworks</h4>
-                                <div class="text-[11px] text-zinc-400 space-y-1.5 font-light">
+                                <h4 class="font-header font-bold text-sm text-white uppercase tracking-wide">Robotics & IoT Frameworks</h4>
+                                <div class="text-[11px] text-zinc-400 space-y-1.5 font-light leading-relaxed">
                                     <p>• Voice-Controlled Rovers [cite: 36]</p>
                                     <p>• Smart Public Transport Architectures [cite: 36]</p>
                                     <p>• Fire Fighter Systems [cite: 36]</p>
                                     <p>• Smart Home Automation [cite: 36]</p>
                                     <p>• Digital Speed/Height Calculators [cite: 36]</p>
-                                    <p>• Environmental Monitoring Arrays [cite: 36]</p>
+                                    <p>• Environmental Monitoring Systems [cite: 36]</p>
                                 </div>
                             </div>
 
-                            <div class="p-5 rounded-xl border border-zinc-900 bg-black/40 space-y-4">
+                            <div class="p-5 rounded-xl border border-zinc-900 bg-black/40 space-y-4 motion-card">
                                 <div class="flex justify-between items-center text-cyan-400 border-b border-zinc-900 pb-2">
-                                    <span class="text-[10px] font-bold uppercase">[03.B // COGNITIVE]</span>
+                                    <span class="font-code text-[10px] font-bold uppercase">[03.B // INTELLIGENCE]</span>
                                     <i class="fa-solid fa-brain"></i>
                                 </div>
-                                <h4 class="font-header font-bold text-sm text-white uppercase">Artificial Intelligence</h4>
-                                <div class="text-[11px] text-zinc-400 space-y-1.5 font-light">
+                                <h4 class="font-header font-bold text-sm text-white uppercase tracking-wide">Artificial Intelligence</h4>
+                                <div class="text-[11px] text-zinc-400 space-y-1.5 font-light leading-relaxed">
                                     <p>• Image Recognition Infrastructure [cite: 37]</p>
-                                    <p>• Sound Recognition Blueprints [cite: 37]</p>
+                                    <p>• Sound Recognition Frameworks [cite: 37]</p>
                                     <p>• Machine Learning Execution [cite: 37]</p>
-                                    <p>• Teachable Machine Environments [cite: 37]</p>
+                                    <p>• Teachable Machine Deployments [cite: 37]</p>
                                 </div>
                             </div>
 
-                            <div class="p-5 rounded-xl border border-zinc-900 bg-black/40 space-y-4">
+                            <div class="p-5 rounded-xl border border-zinc-900 bg-black/40 space-y-4 motion-card">
                                 <div class="flex justify-between items-center text-indigo-400 border-b border-zinc-900 pb-2">
-                                    <span class="text-[10px] font-bold uppercase">[03.C // XR_TECH]</span>
+                                    <span class="font-code text-[10px] font-bold uppercase">[03.C // IM_ENGINES]</span>
                                     <i class="fa-solid fa-vr-cardboard"></i>
                                 </div>
-                                <h4 class="font-header font-bold text-sm text-white uppercase">Immersive Tech (XR)</h4>
-                                <div class="text-[11px] text-zinc-400 space-y-1.5 font-light">
-                                    <p>• Original Board Game Layouts [cite: 38]</p>
-                                    <p>• Touch & Trigger Logic Assets [cite: 38]</p>
-                                    <p>• VR Spatial Walkthrough Engine [cite: 38]</p>
-                                    <p>• Interactive AR Asset Arrays [cite: 38]</p>
+                                <h4 class="font-header font-bold text-sm text-white uppercase tracking-wide">Immersive Tech (XR)</h4>
+                                <div class="text-[11px] text-zinc-400 space-y-1.5 font-light leading-relaxed">
+                                    <p>• Original Board Game Design [cite: 38]</p>
+                                    <p>• Touch & Trigger Systems [cite: 38]</p>
+                                    <p>• VR Spatial Walkthroughs [cite: 38]</p>
+                                    <p>• Interactive AR Models (e.g., Eye Anatomy, Food Chain) [cite: 38]</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div id="tab-specs" class="tab-content space-y-6">
-                        <div class="text-[10px] font-bold text-zinc-600 uppercase tracking-widest">[ FILE_LOG // TECHNICAL_COMPILATION ]</div>
+                    <div id="panel-specs" class="tab-panel-frame space-y-6">
+                        <div class="text-[10px] font-bold text-zinc-600 font-code uppercase tracking-widest">[ SYSTEM_LOG // MATRIX_SPECIFICATIONS ]</div>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
                             <div class="space-y-4">
-                                <h4 class="font-header font-bold text-xs uppercase text-zinc-400 border-b border-zinc-900 pb-2 tracking-widest">Technical Stack Matrices</h4>
-                                <div class="space-y-4 text-xs font-mono">
+                                <h4 class="font-header font-bold text-xs uppercase text-zinc-400 border-b border-zinc-900 pb-2 tracking-widest font-code">// TECHNICAL STACK</h4>
+                                <div class="space-y-4 text-xs font-code">
                                     <div>
-                                        <span class="text-purple-400 font-bold block text-[10px] uppercase tracking-wide">// HARDWARE INTEGRATION</span>
+                                        <span class="text-purple-400 font-bold block text-[10px] uppercase">// HARDWARE SYSTEMS Integration [cite: 40]</span>
                                         <p class="text-zinc-400 mt-1 leading-relaxed">Arduino Hardware Integration, ESP Module Development, Drone Architectures, Motion Control & Display Systems[cite: 40].</p>
                                     </div>
                                     <div class="w-full h-[1px] bg-zinc-900"></div>
                                     <div>
-                                        <span class="text-cyan-400 font-bold block text-[10px] uppercase tracking-wide">// LANGUAGES & REPOSITORIES</span>
+                                        <span class="text-cyan-400 font-bold block text-[10px] uppercase">// Languages & ENGINES [cite: 41]</span>
                                         <p class="text-zinc-400 mt-1 leading-relaxed">C, C++, Embedded C++, Unity Engine, MIT App Inventor[cite: 41].</p>
                                     </div>
                                     <div class="w-full h-[1px] bg-zinc-900"></div>
                                     <div>
-                                        <span class="text-indigo-400 font-bold block text-[10px] uppercase tracking-wide">// ASSET DIGITAL WORKFLOWS</span>
+                                        <span class="text-indigo-400 font-bold block text-[10px] uppercase">// DESIGN ARCHITECTURES [cite: 42]</span>
                                         <p class="text-zinc-400 mt-1 leading-relaxed">Adobe Illustrator, Adobe Photoshop, Adobe InDesign, Adobe After Effects, Video Editing Suites[cite: 42].</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="space-y-4">
-                                <h4 class="font-header font-bold text-xs uppercase text-zinc-400 border-b border-zinc-900 pb-2 tracking-widest">Credentials Verification Archive</h4>
-                                <div class="space-y-2 text-xs font-mono">
-                                    <div class="p-3 bg-black/40 border border-zinc-900 rounded-lg flex gap-3">
+                                <h4 class="font-header font-bold text-xs uppercase text-zinc-400 border-b border-zinc-900 pb-2 tracking-widest font-code">// VERIFICATION DATA</h4>
+                                <div class="space-y-2 font-code text-xs">
+                                    <div class="p-3 bg-black/40 border border-zinc-900 rounded-xl flex gap-3">
                                         <span class="text-zinc-700 font-bold">[01]</span>
                                         <div>
-                                            <span class="text-white font-bold block uppercase text-[11px]">STEM Instructor Certification</span>
+                                            <span class="text-white font-bold block uppercase text-[11px]">STEM Education Instructor Certification [cite: 44]</span>
                                             <span class="text-[10px] text-purple-400 font-bold">STEM.org [cite: 44]</span>
                                         </div>
                                     </div>
-                                    <div class="p-3 bg-black/40 border border-zinc-900 rounded-lg flex gap-3">
+                                    <div class="p-3 bg-black/40 border border-zinc-900 rounded-xl flex gap-3">
                                         <span class="text-zinc-700 font-bold">[02]</span>
                                         <div>
-                                            <span class="text-white font-bold block uppercase text-[11px]">Robotics & STEM WRO Projects System</span>
-                                            <span class="text-[10px] text-cyan-400 font-bold">India STEM Foundation [cite: 45, 46]</span>
+                                            <span class="text-white font-bold block uppercase text-[11px]">Robotics and STEM [cite: 45]</span>
+                                            <span class="text-[10px] text-cyan-400 font-bold">India STEM Foundation [cite: 45]</span>
                                         </div>
                                     </div>
-                                    <div class="p-3 bg-black/40 border border-zinc-900 rounded-lg flex gap-3">
+                                    <div class="p-3 bg-black/40 border border-zinc-900 rounded-xl flex gap-3">
                                         <span class="text-zinc-700 font-bold">[03]</span>
                                         <div>
-                                            <span class="text-white font-bold block uppercase text-[11px]">Master Trainer Specialization Blueprints</span>
-                                            <span class="text-[10px] text-zinc-500 font-bold">AR/VR Dev, Graphic Design & Technical Systems [cite: 48, 49, 50]</span>
+                                            <span class="text-white font-bold block uppercase text-[11px]">World Robot Olympiad (WRO) Projects [cite: 46]</span>
+                                            <span class="text-[10px] text-zinc-500 font-bold">India STEM Foundation [cite: 46]</span>
                                         </div>
                                     </div>
-                                    <div class="p-3 border border-purple-900/40 bg-purple-950/10 rounded-lg flex gap-3">
-                                        <span class="text-purple-400 font-bold">[GRAD]</span>
+                                    <div class="p-3 border border-purple-900/40 bg-purple-950/10 rounded-xl flex gap-3">
+                                        <span class="text-purple-400 font-bold">[grad]</span>
                                         <div>
-                                            <span class="text-white font-bold block uppercase text-[11px]">B.E. Electronics & Communication Eng</span>
-                                            <span class="text-[10px] text-zinc-400">Vidya Mandir Institute of Technology (2013-2017) [cite: 28, 29]</span>
+                                            <span class="text-white font-bold block uppercase text-[11px]">B.E. in Electronics and Communication Engineering [cite: 28]</span>
+                                            <span class="text-[10px] text-zinc-400 font-medium">Vidya Mandir Institute of Technology (2013-2017) [cite: 28, 29]</span>
                                         </div>
                                     </div>
                                 </div>
@@ -372,31 +389,31 @@
 
                 </div>
 
-                <div class="p-4 border-t border-zinc-900 bg-[#060917]/80 flex flex-wrap justify-between text-[10px] font-mono uppercase tracking-widest text-zinc-600 gap-2">
-                    <span>[ RUNNING_ENV: REGIONAL_CORE_COMPILER ]</span>
-                    <span>[ SECURITY MATRIX LOCKED ]</span>
+                <div class="p-4 border-t border-zinc-900 bg-[#040611] flex flex-wrap justify-between text-[10px] font-mono uppercase tracking-widest text-zinc-600 gap-2 font-code">
+                    <span>[ LOCAL_ENV: REGIONAL_MAIN_FRAME ]</span>
+                    <span>[ TELEMETRY STATUS SECURE ]</span>
                 </div>
             </main>
 
         </div>
 
         <section class="grid grid-cols-1 xl:grid-cols-3 gap-6">
-            <div class="panel-border bg-[#070a14] p-6 rounded-2xl glow-card space-y-3">
-                <div class="text-zinc-700 text-xs font-bold font-mono">[DECK_EXPANSION_NODE_01]</h4>
+            <div class="mainframe-border bg-[#03060f] p-6 rounded-2xl motion-card space-y-3">
+                <div class="text-zinc-700 text-xs font-bold font-code">[NODE_EXP_01]</div>
                 <h4 class="font-header font-bold text-sm text-white uppercase tracking-wider">Multi-Center Academic Operation Strategy</h4>
                 <p class="text-xs text-zinc-400 font-light leading-relaxed">
                     Maintains strict standardization tracking parameters down through multi-tier educational divisions, deploying uniform execution logic schemas to safeguard curriculum excellence benchmarks continuously[cite: 17].
                 </p>
             </div>
-            <div class="panel-border bg-[#070a14] p-6 rounded-2xl glow-card space-y-3">
-                <div class="text-zinc-700 text-xs font-bold font-mono">[DECK_EXPANSION_NODE_02]</h4>
+            <div class="mainframe-border bg-[#03060f] p-6 rounded-2xl motion-card space-y-3">
+                <div class="text-zinc-700 text-xs font-bold font-code">[NODE_EXP_02]</div>
                 <h4 class="font-header font-bold text-sm text-white uppercase tracking-wider">Instructional Program R&D Architectures</h4>
                 <p class="text-xs text-zinc-400 font-light leading-relaxed">
                     Controls structural product design blueprints mapped to evolving interactive technological disciplines, generating highly scalable code modules for algorithmic data systems[cite: 20].
                 </p>
             </div>
-            <div class="panel-border bg-[#070a14] p-6 rounded-2xl glow-card space-y-3">
-                <div class="text-zinc-700 text-xs font-bold font-mono">[DECK_EXPANSION_NODE_03]</h4>
+            <div class="mainframe-border bg-[#03060f] p-6 rounded-2xl motion-card space-y-3">
+                <div class="text-zinc-700 text-xs font-bold font-code">[NODE_EXP_03]</div>
                 <h4 class="font-header font-bold text-sm text-white uppercase tracking-wider">Distributed Resource Governance Models</h4>
                 <p class="text-xs text-zinc-400 font-light leading-relaxed">
                     Manages distributed regional faculty assemblies, enforcing performance auditing milestones and structural training pipelines to optimize deployment resource logic completely[cite: 18, 19].
@@ -404,59 +421,94 @@
             </div>
         </section>
 
-        <footer class="panel-border rounded-2xl p-8 flex flex-col sm:flex-row justify-between items-center text-[10px] font-mono text-zinc-600 uppercase tracking-widest bg-[#070a14] gap-4">
+        <footer class="mainframe-border rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row justify-between items-center text-[10px] font-mono text-zinc-600 uppercase tracking-widest bg-[#03060f] gap-4 font-code">
             <div class="space-y-1 text-center sm:text-left">
-                <p>&copy; 2026 Vengadeshperumal Thangaraj[cite: 1]. Secure Portfolio Architecture Deployment.</p>
-                <p class="text-[9px] text-zinc-700 font-bold">// SECURE UPLINK CHANNELS REGISTERED STATUS SUCCESSFUL.</p>
+                <p>&copy; 2026 Vengadeshperumal Thangaraj. Secure Operational Environment Architecture.</p>
+                <p class="text-[9px] text-zinc-700 font-bold">// SECURE PACKET ROUTING SUCCESSFUL.</p>
             </div>
-            <div class="flex gap-6 text-zinc-500">
-                <span>[ DOB: JULY 21, 1996 [cite: 52] ]</span>
-                <span>[ STATUS: MARRIED [cite: 53] ]</span>
+            <div class="flex flex-wrap justify-center gap-6 text-zinc-500 text-[11px]">
+                <span>[ DOB: JULY 21, 1996 ] [cite: 52]</span>
+                <span>[ GENDER/STATUS: MALE | MARRIED ] [cite: 53]</span>
             </div>
         </footer>
 
     </div>
 
     <script>
-        // TYPEWRITER SCRIPT ENGINE
-        document.addEventListener("DOMContentLoaded", function() {
-            const roleText = "Subject Matter Expert & Regional Technical Coordinator | STEM Operations Executive[cite: 2].";
-            const targetElement = document.getElementById("typewriterOutput");
-            let charIndex = 0;
-            const textTypingSpeed = 40; // Typing pace interval delay in ms
+        // GLOBAL INITIALIZATION VARIABLES FOR THE INFINITE LOOP TYPEWRITER SYSTEM
+        const runningRolesArray = [
+            "Subject Matter Expert & Regional Technical Coordinator | STEM Operations Executive.",
+            "Specialist in Embedded Logic Hardware R&D Platforms (Arduino, ESP32 Modules).",
+            "Curriculum Architect Driving 100+ Scaled STEM, Robotics, and AI Deployments.",
+            "XR Infrastructure Supervisor Managing Unity Engine and AR/VR Walker Systems."
+        ];
 
-            function initiateTypewriterRoutine() {
-                if (charIndex < roleText.length) {
-                    targetElement.textContent += roleText.charAt(charIndex);
-                    charIndex++;
-                    setTimeout(initiateTypewriterRoutine, textTypingSpeed);
+        let arrayIndex = 0;
+        let charIndex = 0;
+        let isDeletingState = false;
+        const typewriterMountPoint = document.getElementById("loopTypewriterMount");
+
+        const paceTypingSpeed = 50;    // Standard keystroke frequency delay in ms
+        const paceErasingSpeed = 25;   // Backspacing cycle frequency delay in ms
+        const durationHoldString = 2500; // Duration to freeze text visible before erasing in ms
+
+        function runInfiniteTypewriterRoutine() {
+            const dynamicCurrentString = runningRolesArray[arrayIndex];
+
+            if (!isDeletingState) {
+                // Typographic character inclusion tracking phase
+                typewriterMountPoint.textContent = dynamicCurrentString.substring(0, charIndex + 1);
+                charIndex++;
+
+                if (charIndex === dynamicCurrentString.length) {
+                    // String complete, activate static hold buffer before shift to backspace loop
+                    isDeletingState = true;
+                    setTimeout(runInfiniteTypewriterRoutine, durationHoldString);
+                } else {
+                    setTimeout(runInfiniteTypewriterRoutine, paceTypingSpeed);
+                }
+            } else {
+                // Character removal subtraction phase
+                typewriterMountPoint.textContent = dynamicCurrentString.substring(0, charIndex - 1);
+                charIndex--;
+
+                if (charIndex === 0) {
+                    // Backspace sequence finalized, cycle tracking array pointer index forward
+                    isDeletingState = false;
+                    arrayIndex = (arrayIndex + 1) % runningRolesArray.length;
+                    setTimeout(runInfiniteTypewriterRoutine, 400); // Small reset buffer before re-typing
+                } else {
+                    setTimeout(runInfiniteTypewriterRoutine, paceErasingSpeed);
                 }
             }
-            // Fire typewriter after brief initialization delay
-            setTimeout(initiateTypewriterRoutine, 500);
-        });
+        }
 
-        // TAB NAVIGATION CONTROLLER INTERACTIVE ENGINE
-        function switchTab(selectedTabId) {
-            // Select and deactivate all structural tab content layouts
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.classList.remove('active'));
+        // CONTROL TOGGLE ENGINE FOR DATA FRAME TABS
+        function changeActiveTab(targetPanelId) {
+            // Select and deactivate all hidden console visual panels
+            const structuralFrames = document.querySelectorAll('.tab-panel-frame');
+            structuralFrames.forEach(frame => frame.classList.remove('active-frame'));
 
-            // Reset navigation control toggle buttons styles
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(button => {
-                button.classList.remove('text-white', 'border-cyan-400', 'bg-black/40');
-                button.classList.add('text-zinc-500', 'border-transparent');
+            // Reset selection style identifiers on button group elements
+            const toggleButtons = document.querySelectorAll('.navigation-tab-toggle');
+            toggleButtons.forEach(btn => {
+                btn.classList.remove('text-white', 'border-cyan-400', 'bg-black/40');
+                btn.classList.add('text-zinc-500', 'border-transparent');
             });
 
-            // Target and trigger visibility parameters for active frame choice
-            document.getElementById(selectedTabId).classList.add('active');
+            // Make the chosen tab pane target visible with animation styling
+            document.getElementById(targetPanelId).classList.add('active-frame');
             
-            // Apply crisp white-neon highlighting states to selected target toggle button
-            const activeLinkButton = document.getElementById('btn-' + selectedTabId);
-            activeLinkButton.classList.remove('text-zinc-500', 'border-transparent');
-            activeLinkButton.classList.add('text-white', 'border-cyan-400', 'bg-black/40');
+            // Reapply high-contrast focus lines onto active triggering button layout node
+            const singleFocusBtn = document.getElementById('btn-' + targetPanelId);
+            singleFocusBtn.classList.remove('text-zinc-500', 'border-transparent');
+            singleFocusBtn.classList.add('text-white', 'border-cyan-400', 'bg-black/40');
         }
+
+        // Initialize script logic routine processes
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(runInfiniteTypewriterRoutine, 600);
+        });
     </script>
 
 </body>
