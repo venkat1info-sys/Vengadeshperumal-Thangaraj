@@ -9,29 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #ffffff 100%); 
-            color: #1e293b; 
-        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #ffffff 100%); color: #1e293b; }
         .font-display { font-family: 'Space Grotesk', sans-serif; }
         .glass-panel { background: rgba(255, 255, 255, 0.9); border: 1px solid #e2e8f0; border-radius: 1.5rem; }
         .sticky-nav { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
-        .gradient-text {
-            background: linear-gradient(to right, #0284c7, #4f46e5);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        /* Animation for skills section */
-        .animate-fade-in-up {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease-out;
-        }
-        .animate-fade-in-up.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .gradient-text { background: linear-gradient(to right, #0284c7, #4f46e5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .animate-fade-in-up { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .animate-fade-in-up.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body class="p-4 md:p-12">
@@ -47,18 +31,21 @@
 
     <div class="max-w-6xl mx-auto space-y-8">
         
-        <header class="glass-panel p-10 border-t-4 border-sky-500">
-            <h1 class="font-display text-4xl md:text-5xl font-bold uppercase gradient-text">
-                VENGADESHPERUMAL THANGARAJ
-            </h1>
-            <p id="typewriter" class="text-sky-700 font-bold text-sm mt-2 font-mono min-h-[1.5rem]"></p>
-            <p class="text-xs text-slate-500 mt-4"><i class="fa-solid fa-location-dot text-sky-500 mr-2"></i> Komarapalayam, Namakkal District, Tamil Nadu | <i class="fa-solid fa-phone text-sky-500 mr-2 ml-4"></i> +91 85266 28310 | <i class="fa-solid fa-envelope text-sky-500 mr-2 ml-4"></i> venkatl.info@gmail.com</p>
+        <header class="glass-panel p-10 border-t-4 border-sky-500 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div>
+                <h1 class="font-display text-4xl md:text-5xl font-bold uppercase gradient-text">VENGADESHPERUMAL THANGARAJ</h1>
+                <p id="typewriter" class="text-sky-700 font-bold text-sm mt-2 font-mono min-h-[1.5rem]"></p>
+                <p class="text-xs text-slate-500 mt-4"><i class="fa-solid fa-location-dot text-sky-500 mr-2"></i> Komarapalayam, Namakkal District, Tamil Nadu | <i class="fa-solid fa-phone text-sky-500 mr-2 ml-4"></i> +91 85266 28310 | <i class="fa-solid fa-envelope text-sky-500 mr-2 ml-4"></i> venkatl.info@gmail.com</p>
+            </div>
+            <a href="https://drive.google.com/file/d/1u3f-diBEupHsiVNl_MidWZydSpgowHNH/view?usp=sharing" target="_blank" class="bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 rounded-lg font-bold text-xs uppercase tracking-widest transition-colors flex items-center gap-2 shadow-lg">
+                <i class="fa-solid fa-download"></i> Download CV
+            </a>
         </header>
 
         <section id="about" class="glass-panel p-10">
             <h2 class="font-display text-lg font-bold uppercase mb-4 text-sky-800">Executive Profile</h2>
             <p class="text-sm text-slate-600 leading-relaxed font-light">
-                Dynamic, results-driven STEM Executive with over 8.5 years of progressive leadership experience driving multi-center academic operations, curriculum strategy, and technical product delivery within the robotics and digital media education sectors. Proven track record as a Regional Coordinator directing operations across 11 institutional campuses and governing high-performing teams of over 50 faculty members. Expert in cross-functional leadership, institutional stakeholder management, and the end-to-end R&D of highly scalable K-10 robotics, AI, and AR/VR educational programs.
+                Dynamic, results-driven STEM Executive with over 8.5 years of progressive leadership experience driving multi-center academic operations, curriculum strategy, and technical product delivery. Proven track record directing operations across 11 institutional campuses and governing high-performing teams of over 50 faculty members. Expert in cross-functional leadership and end-to-end R&D of scalable K-10 robotics, AI, and AR/VR educational programs.
             </p>
         </section>
 
@@ -66,16 +53,16 @@
             <h2 class="font-display text-lg font-bold uppercase mb-8 text-sky-800">Professional History</h2>
             <div class="space-y-8">
                 <div>
-                    <h3 class="font-bold text-slate-900">Regional Technical Coordinator & SME | Image Infotainment Limited</h3>
+                    <h3 class="font-bold text-slate-900">Regional Technical Coordinator & SME | Image Infotainment Ltd.</h3>
                     <p class="text-[10px] text-slate-500 mb-3 font-mono uppercase">Feb 2022 - Present</p>
                     <ul class="text-sm text-slate-600 list-disc ml-5 space-y-1">
-                        <li>Direct operations across 11 school partner centers ensuring delivery compliance.</li>
+                        <li>Direct operations across 11 school partner centers ensuring compliance.</li>
                         <li>Oversee, mentor, and evaluate a regional team of 50+ faculty members.</li>
                         <li>Spearhead R&D of modules in Robotics, AI, and AR/VR.</li>
                     </ul>
                 </div>
                 <div class="border-t border-slate-100 pt-6">
-                    <h3 class="font-bold text-slate-900">Program Coordinator (Team Leader) | Image Infotainment Limited</h3>
+                    <h3 class="font-bold text-slate-900">Program Coordinator (Team Leader) | Image Infotainment Ltd.</h3>
                     <p class="text-[10px] text-slate-500 mb-3 font-mono uppercase">May 2019 - Jan 2022</p>
                     <ul class="text-sm text-slate-600 list-disc ml-5 space-y-1">
                         <li>Managed core team of 4 senior educators supervising instructional pathways.</li>
@@ -86,7 +73,7 @@
         </section>
 
         <section id="projects" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="glass-panel p-6">
+            <div class="glass-panel p-6 shadow-sm border border-slate-100">
                 <h3 class="font-display font-bold text-sky-800 mb-4 uppercase text-sm">Robotics & IoT</h3>
                 <ul class="text-xs text-slate-600 font-light space-y-2">
                     <li>• Voice-Controlled Rovers</li>
@@ -94,7 +81,7 @@
                     <li>• Fire Fighter Frameworks</li>
                 </ul>
             </div>
-            <div class="glass-panel p-6">
+            <div class="glass-panel p-6 shadow-sm border border-slate-100">
                 <h3 class="font-display font-bold text-sky-800 mb-4 uppercase text-sm">AI & Cognitive Logic</h3>
                 <ul class="text-xs text-slate-600 font-light space-y-2">
                     <li>• Image Recognition</li>
@@ -102,7 +89,7 @@
                     <li>• Machine Learning Engines</li>
                 </ul>
             </div>
-            <div class="glass-panel p-6">
+            <div class="glass-panel p-6 shadow-sm border border-slate-100">
                 <h3 class="font-display font-bold text-sky-800 mb-4 uppercase text-sm">XR & Immersive Tech</h3>
                 <ul class="text-xs text-slate-600 font-light space-y-2">
                     <li>• VR Walkthroughs</li>
@@ -117,21 +104,15 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                     <h4 class="font-bold text-xs uppercase text-slate-500 border-b pb-2 mb-4">Creative & Design Software</h4>
-                    <ul class="text-sm text-slate-600 space-y-2">
-                        <li>• Adobe Photoshop (Advanced Image Editing)</li>
-                        <li>• Adobe Illustrator (Vector Graphics)</li>
-                        <li>• Adobe After Effects (Motion Graphics & VFX)</li>
-                        <li>• Adobe InDesign (Layout & Publishing)</li>
-                        <li>• Premiere Pro (Video Production)</li>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• Adobe Photoshop | Illustrator | After Effects | InDesign | Premiere Pro</li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-bold text-xs uppercase text-slate-500 border-b pb-2 mb-4">Development & Engineering</h4>
-                    <ul class="text-sm text-slate-600 space-y-2">
-                        <li>• Programming: C, C++, Embedded C, Python</li>
-                        <li>• Engines: Unity 3D (AR/VR/XR Development)</li>
-                        <li>• IoT Platforms: Arduino IDE, ESP32 Programming</li>
-                        <li>• Tools: MIT App Inventor, Drone Flight Control Logic</li>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• Languages: C, C++, Embedded C, Python</li>
+                        <li>• Engines: Unity 3D, Arduino IDE, ESP32, MIT App Inventor</li>
                     </ul>
                 </div>
             </div>
@@ -139,7 +120,6 @@
     </div>
 
     <script>
-        // TYPEWRITER ENGINE
         const role = "Subject Matter Expert & Regional Technical Coordinator | STEM Operations Executive.";
         const el = document.getElementById("typewriter");
         let i = 0, deleting = false;
@@ -158,11 +138,8 @@
         }
         loop();
 
-        // SCROLL ANIMATION
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
         });
         observer.observe(document.querySelector('.animate-fade-in-up'));
     </script>
