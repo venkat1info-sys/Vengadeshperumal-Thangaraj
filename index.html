@@ -29,7 +29,7 @@
         .skill-fill { height: 100%; background: linear-gradient(90deg, #0284c7, #4f46e5); transition: width 1.5s ease-out; }
 
         /* Modal Animation Wrapper */
-        @keyframes scaleUp { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+        @keyframes scaleUp { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
         .modal-anim { animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 
         /* Progress Bar Animation for Popup Modal */
@@ -213,70 +213,70 @@
     <div id="popupModal" class="fixed inset-0 z-[2000] hidden items-center justify-center p-4">
         <div onclick="closeModal()" class="absolute inset-0 bg-slate-900/40 backdrop-blur-md"></div>
         
-        <div class="bg-white/95 border border-slate-200 shadow-2xl rounded-3xl max-w-4xl w-full relative modal-anim max-h-[85vh] overflow-y-auto overflow-x-hidden">
+        <div class="bg-white/95 border border-slate-200 shadow-2xl rounded-3xl max-w-4xl w-full relative modal-anim max-h-[90vh] flex flex-col overflow-hidden">
             
-            <div class="w-full h-1.5 bg-slate-100 sticky top-0 left-0 z-50">
+            <div class="w-full h-1.5 bg-slate-100 shrink-0">
                 <div id="modalProgressBar" class="modal-progress-fill"></div>
             </div>
 
-            <div class="p-8 md:p-10">
+            <div class="p-6 md:p-8 pb-4 border-b border-slate-100 relative shrink-0 flex items-center gap-3">
+                <i class="fa-solid fa-fire-extinguisher text-rose-500 text-xl"></i>
+                <div>
+                    <h3 class="font-display font-bold text-xl text-slate-900 uppercase leading-none">Autonomous Fire-Fighting Robot</h3>
+                    <p class="font-mono text-[10px] uppercase text-sky-600 font-bold tracking-wider mt-1.5">Grade 8 STEM Curriculum Documentation</p>
+                </div>
                 <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 transition-colors p-2 text-lg">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
+            </div>
+
+            <div class="p-6 md:p-8 space-y-6 text-xs text-slate-600 leading-relaxed font-light overflow-y-auto">
                 
-                <div class="flex items-center gap-3 border-b pb-4 mb-6">
-                    <i class="fa-solid fa-fire-extinguisher text-rose-500 text-xl"></i>
-                    <div>
-                        <h3 class="font-display font-bold text-xl text-slate-900 uppercase">Autonomous Fire-Fighting Robot</h3>
-                        <p class="font-mono text-[10px] uppercase text-sky-600 font-bold tracking-wider mt-0.5">Grade 8 STEM Curriculum Documentation</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                    <div class="bg-slate-50/50 p-4 rounded-xl border border-slate-100">
+                        <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[10px] mb-2 text-sky-700 font-mono">// Project Overview</h5>
+                        <p>The Autonomous Fire-Fighting Robot is an automated, mobile robotic vehicle designed as a hands-on learning project for Grade 8 students. Built on a custom, lightweight corrugated sheet chassis, the vehicle autonomously roams or patrols an area to seek out and extinguish small fires. When the onboard flame sensor detects a fire, the robot automatically navigates directly to the location of the hazard, halts at a safe distance, and activates an integrated water pump to extinguish the flame. This project serves as a middle school capstone that bridges theoretical physical sciences with applied robotics and coding.</p>
+                    </div>
+                    <div class="bg-slate-50/50 p-4 rounded-xl border border-slate-100 h-full">
+                        <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[10px] mb-2 text-sky-700 font-mono">// Working Process</h5>
+                        <ul class="space-y-2">
+                            <li><strong class="font-semibold text-slate-800">Environmental Scanning:</strong> The robot operates as a mobile vehicle, patrolling an area while its flame sensor continuously scans the environment for infrared light signatures emitted by fire.</li>
+                            <li><strong class="font-semibold text-slate-800">Autonomous Movement:</strong> The moment a fire is detected, the microcontroller processes the sensor data and automatically drives the vehicle forward, navigating directly toward the source of the flame.</li>
+                            <li><strong class="font-semibold text-slate-800">Proximity Halt:</strong> To ensure safety, the robot is programmed to stop automatically at a predetermined, safe distance from the heat source.</li>
+                            <li><strong class="font-semibold text-slate-800">Extinguishing Protocol:</strong> Once halted, the robot triggers the onboard water pump, shooting a stream of water at the flame. The pump runs continuously until the sensor confirms the fire is out, after which the robot resets.</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="space-y-6 text-xs text-slate-600 leading-relaxed font-light">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="space-y-2">
-                            <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[11px]">// Project Overview</h5>
-                            <p>The Autonomous Fire-Fighting Robot is an automated, mobile robotic vehicle designed as a hands-on learning project for Grade 8 students. Built on a custom, lightweight corrugated sheet chassis, the vehicle autonomously roams or patrols an area to seek out and extinguish small fires. When the onboard flame sensor detects a fire, the robot automatically navigates directly to the location of the hazard, halts at a safe distance, and activates an integrated water pump to extinguish the flame. This project serves as a middle school capstone that bridges theoretical physical sciences with applied robotics and coding.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 border-t border-dashed border-slate-200">
+                    <div class="space-y-3">
+                        <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[10px] text-indigo-700 font-mono">// Academic Outcomes</h5>
+                        <div class="bg-white p-3 rounded-lg border border-slate-100 shadow-xs">
+                            <span class="block font-semibold text-slate-800 text-[11px] mb-0.5">Scientific Application</span>
+                            <p>Ability to explain the mechanical and chemical processes involved in fire suppression and energy conversion.</p>
                         </div>
-                        <div class="space-y-2">
-                            <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[11px]">// Working Process</h5>
-                            <p><strong class="font-semibold text-slate-800">Environmental Scanning:</strong> The robot operates as a mobile vehicle, patrolling an area while its flame sensor continuously scans the environment for infrared light signatures emitted by fire.</p>
-                            <p><strong class="font-semibold text-slate-800">Autonomous Movement:</strong> The moment a fire is detected, the microcontroller processes the sensor data and automatically drives the vehicle forward, navigating directly toward the source of the flame.</p>
-                            <p><strong class="font-semibold text-slate-800">Proximity Halt:</strong> To ensure safety, the robot is programmed to stop automatically at a predetermined, safe distance from the heat source.</p>
-                            <p><strong class="font-semibold text-slate-800">Extinguishing Protocol:</strong> Once halted, the robot triggers the onboard water pump, shooting a stream of water at the flame. The pump runs continuously until the sensor confirms the fire is out, after which the robot resets.</p>
+                        <div class="bg-white p-3 rounded-lg border border-slate-100 shadow-xs">
+                            <span class="block font-semibold text-slate-800 text-[11px] mb-0.5">Practical Physics</span>
+                            <p>Understanding how electrical energy converts into mechanical energy (propelling the vehicle) and fluid pressure (pumping water).</p>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg border border-slate-100 shadow-xs">
+                            <span class="block font-semibold text-slate-800 text-[11px] mb-0.5">Mathematical Design</span>
+                            <p>Applying measurement, spatial reasoning, and geometric alignment to construct a balanced, functional vehicle chassis.</p>
                         </div>
                     </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-dashed border-slate-200">
-                        <div class="space-y-3">
-                            <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[11px]">// Academic Outcomes</h5>
-                            <div>
-                                <span class="block font-semibold text-slate-800 text-[11px]">Scientific Application:</span>
-                                <p>Ability to explain the mechanical and chemical processes involved in fire suppression and energy conversion.</p>
-                            </div>
-                            <div>
-                                <span class="block font-semibold text-slate-800 text-[11px]">Practical Physics:</span>
-                                <p>Understanding how electrical energy converts into mechanical energy (propelling the vehicle) and fluid pressure (pumping water).</p>
-                            </div>
-                            <div>
-                                <span class="block font-semibold text-slate-800 text-[11px]">Mathematical Design:</span>
-                                <p>Applying measurement, spatial reasoning, and geometric alignment to construct a balanced, functional vehicle chassis.</p>
-                            </div>
+                    <div class="space-y-3">
+                        <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[10px] text-indigo-700 font-mono">// Technical Outcomes</h5>
+                        <div class="bg-white p-3 rounded-lg border border-slate-100 shadow-xs">
+                            <span class="block font-semibold text-slate-800 text-[11px] mb-0.5">Circuit Architecture</span>
+                            <p>Understanding how to safely interface low-power logic systems (microcontrollers and sensors) with high-power mechanical systems (driving motors and pumps).</p>
                         </div>
-                        <div class="space-y-3">
-                            <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[11px]">// Technical Outcomes</h5>
-                            <div>
-                                <span class="block font-semibold text-slate-800 text-[11px]">Circuit Architecture:</span>
-                                <p>Understanding how to safely interface low-power logic systems (microcontrollers and sensors) with high-power mechanical systems (driving motors and pumps).</p>
-                            </div>
-                            <div>
-                                <span class="block font-semibold text-slate-800 text-[11px]">Algorithmic Thinking:</span>
-                                <p>Developing conditional logical structures (If/Else statements) to govern autonomous machine behavior based on real-time sensor feedback.</p>
-                            </div>
-                            <div>
-                                <span class="block font-semibold text-slate-800 text-[11px]">Hardware-Software Integration:</span>
-                                <p>Gaining foundational experience in the complete engineering lifecycle—moving a project from raw material fabrication to functional code execution.</p>
-                            </div>
+                        <div class="bg-white p-3 rounded-lg border border-slate-100 shadow-xs">
+                            <span class="block font-semibold text-slate-800 text-[11px] mb-0.5">Algorithmic Thinking</span>
+                            <p>Developing conditional logical structures (If/Else statements) to govern autonomous machine behavior based on real-time sensor feedback.</p>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg border border-slate-100 shadow-xs">
+                            <span class="block font-semibold text-slate-800 text-[11px] mb-0.5">Hardware-Software Integration</span>
+                            <p>Gaining foundational experience in the complete engineering lifecycle—moving a project from raw material fabrication to functional code execution.</p>
                         </div>
                     </div>
                 </div>
@@ -317,10 +317,10 @@
 
             // Reset and trigger CSS animation execution pipeline for progress bar fill tracking
             progressBar.classList.remove("modal-progress-active");
-            void progressBar.offsetWidth; // Trigger reflow layout check
+            void progressBar.offsetWidth; 
             progressBar.classList.add("modal-progress-active");
 
-            // Set to exactly 20,000ms (20 seconds)
+            // Automated timer closure handle running precisely for 20,000ms (20s)
             modalAutoCloseTimeout = setTimeout(() => {
                 closeModal();
             }, 20000); 
@@ -334,7 +334,7 @@
             modal.classList.remove("flex");
             document.body.style.overflow = "auto";
 
-            // Clean progress fill trace layouts and kill countdown handles smoothly
+            // Clean layout trace allocations cleanly
             progressBar.classList.remove("modal-progress-active");
             clearTimeout(modalAutoCloseTimeout);
         }
