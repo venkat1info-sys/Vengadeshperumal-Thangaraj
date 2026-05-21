@@ -35,7 +35,7 @@
                         background-color 0.3s ease;
         }
         .interactive-project-card:hover {
-            transform: translateY(-6px) scale(1.02);
+            transform: translateY(-6px) scale(1.01);
             box-shadow: 0 20px 25px -5px rgba(2, 132, 199, 0.1), 0 10px 10px -5px rgba(2, 132, 199, 0.04);
             background-color: rgb(255, 255, 255);
             cursor: pointer;
@@ -185,71 +185,96 @@
 
         <section id="projects" class="glass-panel p-10 card-shadow">
             <h2 class="font-display text-lg font-bold uppercase mb-10 text-sky-800 border-b border-sky-100 pb-2">Technical Projects & Initiatives</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 
-                <div onclick="openModal('firefighting')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm md:col-span-2 lg:col-span-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div onclick="openModal('firefighting')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
                     <div>
                         <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Autonomous Fire-Fighting Robot</h4>
                         <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 STEM Curriculum Capstone</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light max-w-4xl">
+                        <p class="text-xs text-slate-600 leading-relaxed font-light">
                             Built on a custom lightweight chassis, this vehicle autonomously patrols an area to seek out hazards, stopping safely at a distance to extinguish small flames with an integrated pump.
                         </p>
                     </div>
-                    <button class="shrink-0 bg-sky-50 text-sky-600 pointer-events-none px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                        Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                    </button>
+                    <div class="flex justify-end">
+                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </button>
+                    </div>
                 </div>
 
-                <div onclick="openModal('rescuer')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm md:col-span-2 lg:col-span-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div onclick="openModal('rescuer')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
                     <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Autonomous Rescuer Robot (Edge-Detection Vehicle)</h4>
+                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Autonomous Rescuer Robot</h4>
                         <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 7 STEM Curriculum</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light max-w-4xl">
+                        <p class="text-xs text-slate-600 leading-relaxed font-light">
                             Engineered with an extended overhead sensor arm to navigate flat surfaces safely, identifying cliffs or voids and instantly triggering reverse-evasion maneuvers.
                         </p>
                     </div>
-                    <button class="shrink-0 bg-sky-50 text-sky-600 pointer-events-none px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                        Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                    </button>
+                    <div class="flex justify-end">
+                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </button>
+                    </div>
                 </div>
 
-                <div onclick="openModal('transport')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm md:col-span-2 lg:col-span-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div onclick="openModal('transport')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
                     <div>
                         <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Autonomous Public Transport System</h4>
                         <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Advanced Tracker Project</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light max-w-4xl">
+                        <p class="text-xs text-slate-600 leading-relaxed font-light">
                             An automated line-follower mass-transit model featuring precision scheduled stops, servo-driven linkage doors, and front-facing safety radar arrays.
                         </p>
                     </div>
-                    <button class="shrink-0 bg-sky-50 text-sky-600 pointer-events-none px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                        Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                    </button>
+                    <div class="flex justify-end">
+                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </button>
+                    </div>
                 </div>
 
-                <div onclick="openModal('floorcleaner')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm md:col-span-2 lg:col-span-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div onclick="openModal('floorcleaner')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
                     <div>
-                        <h4 class="font-bold text-sm mb-3 text-sky-700">Smart Floor Cleaner (App-Controlled Mop Bot)</h4>
+                        <h4 class="font-bold text-sm mb-3 text-sky-700">Smart Floor Cleaner (Mop Bot)</h4>
                         <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Engineering & Software Framework</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light max-w-4xl">
+                        <p class="text-xs text-slate-600 leading-relaxed font-light">
                             A complex 5-motor drive utility system integrated with custom block-based Android smartphone apps over serial wireless Bluetooth modules.
                         </p>
                     </div>
-                    <button class="shrink-0 bg-sky-50 text-sky-600 pointer-events-none px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                        Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                    </button>
+                    <div class="flex justify-end">
+                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </button>
+                    </div>
                 </div>
 
-                <div onclick="openModal('aeroguard')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm md:col-span-2 lg:col-span-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div onclick="openModal('aeroguard')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
                     <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">AeroGuard: Bluetooth-Enabled Smoke & Gas Monitor</h4>
+                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">AeroGuard: Smoke & Gas Monitor</h4>
                         <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Environmental Safety Curriculum</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light max-w-4xl">
+                        <p class="text-xs text-slate-600 leading-relaxed font-light">
                             A wireless smart monitor architecture leveraging MQ2 sensors and Bluetooth modules to activate multi-stage local and smartphone notification safety arrays.
                         </p>
                     </div>
-                    <button class="shrink-0 bg-sky-50 text-sky-600 pointer-events-none px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                        Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                    </button>
+                    <div class="flex justify-end">
+                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div onclick="openModal('agroshield')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
+                    <div>
+                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">AgroShield: Smart Crop Protection System</h4>
+                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Agritech & Wildlife Deterrent Curriculum</p>
+                        <p class="text-xs text-slate-600 leading-relaxed font-light">
+                            An automated wildlife deterrent pairing PIR motion sensors with servo mechanical kinetic puppets and real-time Bluetooth telemetry status feeds.
+                        </p>
+                    </div>
+                    <div class="flex justify-end">
+                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm">
@@ -406,6 +431,22 @@
                 technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Wireless Telemetry:</strong> Managing data payload transmissions from an embedded hardware node to an external phone runtime framework.</div>
                             <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Advanced Block App Logic:</strong> Creating persistent event listeners inside MIT App Inventor to handle real-time background streams.</div>
                             <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Audio Hardware Control:</strong> Interfacing low-power audio sound frequency devices via localized pulse width or signal modulations.</div>`
+            },
+            agroshield: {
+                title: "AgroShield: Smart Crop Protection System",
+                subtitle: "Grade 8 Agritech & Wildlife Deterrent Curriculum",
+                icon: "fa-seedling text-emerald-600",
+                overview: "AgroShield is an interactive agritech project designed as an advanced hardware, software, and craft integration curriculum for Grade 8 students. Students apply their creative and engineering skills to construct a detailed crop field miniature using corrugated sheets and colored papers. The core system is an automated, wireless wildlife deterrent mechanism. When an intruding animal enters the crop field, a Passive Infrared (PIR) sensor instantly captures the movement. This triggers an onboard servo motor fitted with a custom mechanical puppet to swing rapidly left and right, creating a kinetic distraction to scare the animal away. Simultaneously, the system leverages a dual-platform curriculum where students build a companion smartphone application using MIT App Inventor; the hardware transmits an instant wireless alert via an HC-05 Bluetooth module, notifying the farmer on their mobile device that an intrusion has occurred.",
+                process: `<p><strong class="font-semibold text-slate-800">Intrusion Monitoring:</strong> System stays on guard with a PIR sensor actively monitoring the field perimeter for changes in infrared body emissions.</p>
+                          <p><strong class="font-semibold text-slate-800">Local Deterrent Activation:</strong> Processing instant trigger events to actuate the high-torque servo loop sequence.</p>
+                          <p><strong class="font-semibold text-slate-800">Kinetic Distraction:</strong> Automatically drives servo horns back and forth between 0° and 180° to actuate predator puppets and visual deterrent vectors.</p>
+                          <p><strong class="font-semibold text-slate-800">Wireless Alert Telemetry:</strong> Seamlessly pushes a real-time data status package over serial parameters via an HC-05 module to alert connected phone layouts immediately.</p>`,
+                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Agritech & Ecology:</strong> Balancing modern crop scaling issues with clean, humane non-lethal pest management practices.</div>
+                           <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Biomedical Physics (IR):</strong> Mastery of thermal wave emission physics and tracking motion shifts across ambient radiation parameters.</div>
+                           <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Spatial Fabrication:</strong> Engineering precision mechanical dimensions to scale realistic fields down onto craft sheet structures.</div>`,
+                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Kinematic Servo Control:</strong> Tuning angular boundaries, sweeping interval delays, and rotational constraints using servo libraries.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Event Application Logic:</strong> Mapping string sequence checks inside MIT App Inventor blocks to trigger real-time color changes or security alerts.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Wireless Node Networking:</strong> Serial streaming configurations allowing offline sensor devices to securely pipe data payloads directly into a connected smartphone ecosystem.</div>`
             }
         };
 
