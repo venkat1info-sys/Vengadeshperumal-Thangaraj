@@ -27,6 +27,10 @@
         /* Skill Bar Animation */
         .skill-bar { height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden; }
         .skill-fill { height: 100%; background: linear-gradient(90deg, #0284c7, #4f46e5); transition: width 1.5s ease-out; }
+
+        /* Smooth Reveal Animation */
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .expand-anim { animation: fadeInDown 0.4s ease-out forwards; }
     </style>
 </head>
 <body class="p-4 md:p-6 lg:p-10">
@@ -108,23 +112,39 @@
             <h2 class="font-display text-lg font-bold uppercase mb-10 text-sky-800 border-b border-sky-100 pb-2">Technical Projects & Initiatives</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <div class="p-6 bg-white/50 rounded-2xl border border-slate-100 hover:bg-white transition-colors shadow-sm md:col-span-2 lg:col-span-3 flex flex-col md:flex-row gap-6">
-                    <div class="md:w-1/3 border-b md:border-b-0 md:border-r border-slate-200 pb-4 md:pb-0 md:pr-6">
-                        <h4 class="font-bold text-base mb-2 text-sky-700 uppercase tracking-wide">Autonomous Fire-Fighting Robot</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-3">Grade 8 STEM Curriculum</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
-                            Built using an Arduino Uno microcontroller and a custom corrugated sheet chassis, this project serves as an engaging, real-world model of how automated robotics operate in hazardous environments to improve human safety.
-                        </p>
+                <div class="p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm md:col-span-2 lg:col-span-3 transition-all duration-300">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                        <div>
+                            <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Autonomous Fire-Fighting Robot</h4>
+                            <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 STEM Curriculum</p>
+                            <p class="text-xs text-slate-600 leading-relaxed font-light max-w-3xl">
+                                Built using an Arduino Uno microcontroller and a custom corrugated sheet chassis, this project serves as an engaging, real-world model of how automated robotics operate in hazardous environments to improve human safety.
+                            </p>
+                        </div>
+                        <button onclick="toggleDetails()" id="readMoreBtn" class="shrink-0 bg-sky-50 text-sky-600 hover:bg-sky-600 hover:text-white px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-2 border border-sky-100">
+                            Read More <i id="btnIcon" class="fa-solid fa-chevron-down"></i>
+                        </button>
                     </div>
-                    <div class="md:w-2/3">
-                        <h4 class="font-bold text-xs uppercase text-slate-800 mb-3">Learning Outcomes</h4>
-                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 text-xs text-slate-600 font-light">
-                            <li><strong class="font-semibold text-slate-800">Microcontroller Basics:</strong> Arduino Uno processing logic.</li>
-                            <li><strong class="font-semibold text-slate-800">Sensor Logic:</strong> Converting infrared data to digital signals.</li>
-                            <li><strong class="font-semibold text-slate-800">Power vs. Logic:</strong> Safely managing L298 motor drivers.</li>
-                            <li><strong class="font-semibold text-slate-800">Conditional Code:</strong> If/else statements for autonomy.</li>
-                            <li><strong class="font-semibold text-slate-800">Fabrication:</strong> Practical mechanical engineering & chassis building.</li>
-                        </ul>
+                    
+                    <div id="projectDetails" class="hidden mt-6 pt-6 border-t border-slate-200">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 expand-anim">
+                            <div>
+                                <h4 class="font-bold text-xs uppercase text-slate-800 mb-3">Project Overview</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-light">
+                                    Developed specifically for Grade 8 students, the Autonomous Fire-Fighting Robot is a hands-on introduction to smart, self-guided vehicles. Built using an Arduino Uno microcontroller and a custom corrugated sheet chassis, this project challenges students to integrate sensors, motor control, and logic-based programming.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xs uppercase text-slate-800 mb-3">Learning Outcomes</h4>
+                                <ul class="grid grid-cols-1 gap-y-2 text-xs text-slate-600 font-light">
+                                    <li><strong class="font-semibold text-slate-800">Microcontroller Basics:</strong> Arduino Uno processing logic.</li>
+                                    <li><strong class="font-semibold text-slate-800">Sensor Logic:</strong> Converting infrared data to digital signals.</li>
+                                    <li><strong class="font-semibold text-slate-800">Power vs. Logic:</strong> Safely managing L298 motor drivers.</li>
+                                    <li><strong class="font-semibold text-slate-800">Conditional Code:</strong> If/else statements for autonomy.</li>
+                                    <li><strong class="font-semibold text-slate-800">Fabrication:</strong> Practical mechanical engineering & chassis building.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -179,6 +199,7 @@
     </div>
 
     <script>
+        // TYPEWRITER ENGINE
         const role = "Subject Matter Expert & Regional Technical Coordinator | STEM Operations Executive.";
         const el = document.getElementById("typewriter");
         let i = 0, deleting = false;
@@ -196,6 +217,20 @@
             }
         }
         loop();
+
+        // READ MORE TOGGLE FUNCTION
+        function toggleDetails() {
+            const detailsDiv = document.getElementById("projectDetails");
+            const btn = document.getElementById("readMoreBtn");
+            
+            if (detailsDiv.classList.contains("hidden")) {
+                detailsDiv.classList.remove("hidden");
+                btn.innerHTML = 'Read Less <i class="fa-solid fa-chevron-up"></i>';
+            } else {
+                detailsDiv.classList.add("hidden");
+                btn.innerHTML = 'Read More <i class="fa-solid fa-chevron-down"></i>';
+            }
+        }
     </script>
 </body>
 </html>
