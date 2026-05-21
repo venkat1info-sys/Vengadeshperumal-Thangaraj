@@ -28,6 +28,25 @@
         .skill-bar { height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden; }
         .skill-fill { height: 100%; background: linear-gradient(90deg, #0284c7, #4f46e5); transition: width 1.5s ease-out; }
 
+        /* Project Card Interactive Hover Logic Engine */
+        .interactive-project-card {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                        background-color 0.3s ease;
+        }
+        .interactive-project-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(2, 132, 199, 0.1), 0 10px 10px -5px rgba(2, 132, 199, 0.04);
+            background-color: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+        .interactive-project-card h4 {
+            transition: color 0.3s ease;
+        }
+        .interactive-project-card:hover h4 {
+            color: #4f46e5;
+        }
+
         /* Modal Animation Wrapper */
         @keyframes scaleUp { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
         .modal-anim { animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
@@ -169,7 +188,7 @@
             <h2 class="font-display text-lg font-bold uppercase mb-10 text-sky-800 border-b border-sky-100 pb-2">Technical Projects & Initiatives</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <div class="p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm md:col-span-2 lg:col-span-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:bg-white transition-colors duration-350">
+                <div onclick="openModal()" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm md:col-span-2 lg:col-span-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div>
                         <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Autonomous Fire-Fighting Robot</h4>
                         <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 STEM Curriculum Capstone</p>
@@ -177,32 +196,32 @@
                             Built on a custom, lightweight corrugated sheet chassis, this autonomous vehicle is designed as an experiential middle school capstone that effectively bridges theoretical physical sciences with applied robotics and core conditional coding structures.
                         </p>
                     </div>
-                    <button onclick="openModal()" class="shrink-0 bg-sky-50 text-sky-600 hover:bg-sky-600 hover:text-white px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-2 border border-sky-100">
+                    <button class="shrink-0 bg-sky-50 text-sky-600 pointer-events-none px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
                         Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                     </button>
                 </div>
 
-                <div class="p-6 bg-white/50 rounded-2xl border border-slate-100 hover:bg-white transition-colors shadow-sm">
+                <div class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm">
                     <h4 class="font-bold text-sm mb-3 text-sky-700">Atomic Structure AI</h4>
                     <p class="text-xs text-slate-600 leading-relaxed font-light">Web-based AI application designed to identify and analyze chemical elements from hand-drawn sketches of atomic structures.</p>
                 </div>
-                <div class="p-6 bg-white/50 rounded-2xl border border-slate-100 hover:bg-white transition-colors shadow-sm">
+                <div class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm">
                     <h4 class="font-bold text-sm mb-3 text-sky-700">Educational Game Design</h4>
                     <p class="text-xs text-slate-600 leading-relaxed font-light">Developed physical curriculum assets, including a Periodic Table building game and a pentagon-shaped Indian Exports board game.</p>
                 </div>
-                <div class="p-6 bg-white/50 rounded-2xl border border-slate-100 hover:bg-white transition-colors shadow-sm">
+                <div class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm">
                     <h4 class="font-bold text-sm mb-3 text-sky-700">Cognitive AI Logic</h4>
                     <p class="text-xs text-slate-600 leading-relaxed font-light">Executed sound pattern classification, advanced image recognition logic, and custom Teachable Machine integration for student deployment.</p>
                 </div>
-                <div class="p-6 bg-white/50 rounded-2xl border border-slate-100 hover:bg-white transition-colors shadow-sm">
+                <div class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm">
                     <h4 class="font-bold text-sm mb-3 text-sky-700">XR Immersive Tech</h4>
                     <p class="text-xs text-slate-600 leading-relaxed font-light">Developed interactive AR biological models (Eye Anatomy/Food Chains), touch-trigger systems, and VR spatial walkthroughs.</p>
                 </div>
-                <div class="p-6 bg-white/50 rounded-2xl border border-slate-100 hover:bg-white transition-colors shadow-sm">
+                <div class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm">
                     <h4 class="font-bold text-sm mb-3 text-sky-700">Smart IoT & Robotics</h4>
                     <p class="text-xs text-slate-600 leading-relaxed font-light">Engineered voice-controlled rovers, smart home automation modules, and environmental monitoring arrays for K-10 testing.</p>
                 </div>
-                <div class="p-6 bg-white/50 rounded-2xl border border-slate-100 hover:bg-white transition-colors shadow-sm">
+                <div class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm">
                     <h4 class="font-bold text-sm mb-3 text-sky-700">Digital Media & Content</h4>
                     <p class="text-xs text-slate-600 leading-relaxed font-light">Curated storytelling frameworks and educational scripts for digital content, supported by professional audio and video pipelines.</p>
                 </div>
@@ -212,13 +231,10 @@
 
     <div id="popupModal" class="fixed inset-0 z-[2000] hidden items-center justify-center p-4">
         <div onclick="closeModal()" class="absolute inset-0 bg-slate-900/40 backdrop-blur-md"></div>
-        
         <div class="bg-white/95 border border-slate-200 shadow-2xl rounded-3xl max-w-4xl w-full relative modal-anim max-h-[90vh] flex flex-col overflow-hidden">
-            
             <div class="w-full h-1.5 bg-slate-100 shrink-0">
                 <div id="modalProgressBar" class="modal-progress-fill"></div>
             </div>
-
             <div class="p-6 md:p-8 pb-4 border-b border-slate-100 relative shrink-0 flex items-center gap-3">
                 <i class="fa-solid fa-fire-extinguisher text-rose-500 text-xl"></i>
                 <div>
@@ -229,9 +245,7 @@
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
-
             <div class="p-6 md:p-8 space-y-6 text-xs text-slate-600 leading-relaxed font-light overflow-y-auto">
-                
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
                     <div class="bg-slate-50/50 p-4 rounded-xl border border-slate-100">
                         <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[10px] mb-2 text-sky-700 font-mono">// Project Overview</h5>
@@ -247,7 +261,6 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 border-t border-dashed border-slate-200">
                     <div class="space-y-3">
                         <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[10px] text-indigo-700 font-mono">// Academic Outcomes</h5>
@@ -315,12 +328,10 @@
             modal.classList.add("flex");
             document.body.style.overflow = "hidden"; 
 
-            // Reset and trigger CSS animation execution pipeline for progress bar fill tracking
             progressBar.classList.remove("modal-progress-active");
             void progressBar.offsetWidth; 
             progressBar.classList.add("modal-progress-active");
 
-            // Automated timer closure handle running precisely for 20,000ms (20s)
             modalAutoCloseTimeout = setTimeout(() => {
                 closeModal();
             }, 20000); 
@@ -334,7 +345,6 @@
             modal.classList.remove("flex");
             document.body.style.overflow = "auto";
 
-            // Clean layout trace allocations cleanly
             progressBar.classList.remove("modal-progress-active");
             clearTimeout(modalAutoCloseTimeout);
         }
