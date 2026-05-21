@@ -217,10 +217,23 @@
 
                 <div onclick="openModal('floorcleaner')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm md:col-span-2 lg:col-span-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Smart Floor Cleaner (App-Controlled )</h4>
+                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Smart Floor Cleaner (App-Controlled Mop Bot)</h4>
                         <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Engineering & Software Framework</p>
                         <p class="text-xs text-slate-600 leading-relaxed font-light max-w-4xl">
                             A complex 5-motor drive utility system integrated with custom block-based Android smartphone apps over serial wireless Bluetooth modules.
+                        </p>
+                    </div>
+                    <button class="shrink-0 bg-sky-50 text-sky-600 pointer-events-none px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                        Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </button>
+                </div>
+
+                <div onclick="openModal('aeroguard')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm md:col-span-2 lg:col-span-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">AeroGuard: Bluetooth-Enabled Smoke & Gas Monitor</h4>
+                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Environmental Safety Curriculum</p>
+                        <p class="text-xs text-slate-600 leading-relaxed font-light max-w-4xl">
+                            A wireless smart monitor architecture leveraging MQ2 sensors and Bluetooth modules to activate multi-stage local and smartphone notification safety arrays.
                         </p>
                     </div>
                     <button class="shrink-0 bg-sky-50 text-sky-600 pointer-events-none px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
@@ -349,13 +362,13 @@
                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Mechanical Kinematics:</strong> Engineering mechanical linking mechanisms transforming precise angular rotation into swinging gates.</div>`,
                 technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Multi-Sensor Integration:</strong> Parallel computing structures handling lane tracking data alongside collision avoidance sweeps.</div>
                             <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Servo vs. DC Motor Control:</strong> Management of variable torque induction motors alongside closed-loop exact position actuators.</div>
-                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Safety Override Logic:</strong> Nested execution scripts that securely interrupt standard process arrays during obstacle breaches.</div>`
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Safety Override Logic:</strong> Developing nested conditional programming structures where a critical safety command instantly overrides standard scheduling routines.</div>`
             },
             floorcleaner: {
-                title: "Smart Floor Cleaner",
+                title: "Smart Floor Cleaner (App-Controlled Mop Bot)",
                 subtitle: "Grade 8 Engineering & App Architecture",
                 icon: "fa-broom text-amber-500",
-                overview: "The Smart floor cleaner is an interactive, mobile utility robot designed as an advanced engineering and software project for Grade 8 students. Built on a sturdy, custom-designed corrugated sheet chassis, this robot features a 4-wheel drive system for smooth navigation and a dedicated central cleaning mechanism. The unique highlight of this project curriculum is its dual-disciplinary approach: students not only assemble the physical hardware but also design and build a custom smartphone application from scratch using MIT App Inventor. Over a local Bluetooth connection via an HC-05 module, users can manually steer the robot in any direction and activate the high-speed central mopping system to clean wet surfaces.",
+                overview: "The App-Controlled Mop Bot is an interactive, mobile utility robot designed as an advanced engineering and software project for Grade 8 students. Built on a sturdy, custom-designed corrugated sheet chassis, this robot features a 4-wheel drive system for smooth navigation and a dedicated central cleaning mechanism. The unique highlight of this project curriculum is its dual-disciplinary approach: students not only assemble the physical hardware but also design and build a custom smartphone application from scratch using MIT App Inventor. Over a local Bluetooth connection via an HC-05 module, users can manually steer the robot in any direction and activate the high-speed central mopping system to clean wet surfaces.",
                 process: `<p><strong class="font-semibold text-slate-800">Wireless Communication:</strong> Secures active data pipes between smartphone arrays and standard HC-05 serial nodes.</p>
                           <p><strong class="font-semibold text-slate-800">App-Driven Navigation:</strong> Parses string command characters sent via buttons to drive 4 independent wheel setups.</p>
                           <p><strong class="font-semibold text-slate-800">Cleaning Activation:</strong> Isolates the active operational state toggle to initiate dedicated scrubbing system protocols.</p>
@@ -363,21 +376,37 @@
                 academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>User Interface (UI) Design:</strong> Interactive application development mapping buttons, screens, and layouts cleanly.</div>
                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Rotational and Surface Friction:</strong> Fluid dynamic boundary tests tracking brush scrubbing metrics across mixed coefficients.</div>
                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Structural Load Distribution:</strong> Structuring lightweight corrugated sheets to secure five high-torque motor footprints evenly.</div>`,
-                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Mobile App Development:</strong> Block programming system processing touch event executions and data packet packaging.</div>
-                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Serial Bluetooth Communication:</strong> Synchronous serial bus stream handling via standard radio telemetry parameters.</div>
-                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Multi-Motor Control Layout:</strong> Complex logic configurations enabling coordinated activation of 5 DC units through single-chip targets.</div>`
+                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Mobile App Development:</strong> Gaining hands-on experience with block-based visual programming in MIT App Inventor, learning how to handle button click events and manage data transmissions.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Serial Bluetooth Communication:</strong> Understanding how data is packaged and sent wirelessly via serial communication parameters between a mobile device and a microcontroller.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Multi-Motor Control Layout:</strong> Mastering complex circuit routing by managing a total of 5 DC motors simultaneously using the Arduino Uno and the L298 driver framework.</div>`
+            },
+            aeroguard: {
+                title: "AeroGuard: Bluetooth-Enabled Smoke & Gas Monitor",
+                subtitle: "Grade 8 Environmental Safety Curriculum",
+                icon: "fa-mask-ventilator text-sky-500",
+                overview: "The AeroGuard Monitor is a wireless, smart environmental safety system designed as a comprehensive hardware and software project for Grade 8 students. Housed inside a custom-built enclosure fabricated from lightweight corrugated sheets, the system utilizes an MQ2 gas sensor to continuously track ambient smoke and toxic gas levels. This project features a dual-platform curriculum where students build the physical detection hardware and develop a companion smartphone application using MIT App Inventor. When smoke or smog levels cross a dangerous, pre-programmed threshold, the system triggers a two-stage defense: an immediate local audio alarm via an onboard buzzer, and an instant wireless alert payload sent over Bluetooth to the user's mobile app, which sounds a secondary alarm on the smartphone.",
+                process: `<p><strong class="font-semibold text-slate-800">Environmental Sampling:</strong> The MQ2 sensor continuously tests the surrounding air, generating an analog voltage signal that changes based on gas concentration particles.</p>
+                          <p><strong class="font-semibold text-slate-800">Data Processing:</strong> The Arduino Uno reads this data in real-time; the system remains in a silent standby mode as long as particles stay below threshold limits.</p>
+                          <p><strong class="font-semibold text-slate-800">Local Safety Trigger:</strong> The moment a spike past safety coordinates is detected, the Arduino activates an onboard loud piezo buzzer structure.</p>
+                          <p><strong class="font-semibold text-slate-800">Wireless App Notification:</strong> Simultaneously packages and transmits an emergency signal over HC-05 nodes to trigger a companion digital alarm sound asset on the mobile device layer.</p>`,
+                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Environmental Science:</strong> Analyzing air quality indices, toxic particulate definitions, and early-warning asset mitigation steps.</div>
+                           <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Chemistry of Gas Sensing:</strong> Exploring resistance shifts within micro-chemiresistor configurations during targeted gas contact.</div>
+                           <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Data Thresholding:</strong> Applying clean numerical validation logic to map raw scalar measurements against target risk benchmarks.</div>`,
+                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Wireless Telemetry:</strong> Managing data payload transmissions from an embedded hardware node to an external phone runtime framework.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Advanced Block App Logic:</strong> Creating persistent event listeners inside MIT App Inventor to handle real-time background streams.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Audio Hardware Control:</strong> Interfacing low-power audio sound frequency devices via localized pulse width or signal modulations.</div>`
             }
         };
 
-        const role = "Subject Matter Expert & Regional Technical Coordinator | STEM Operations Executive.";
+        const elType = "Subject Matter Expert & Regional Technical Coordinator | STEM Operations Executive.";
         const el = document.getElementById("typewriter");
         let i = 0, deleting = false;
         
         function loop() {
-            el.textContent = role.substring(0, i);
+            el.textContent = elType.substring(0, i);
             if (!deleting) {
                 i++;
-                if (i > role.length) { deleting = true; setTimeout(loop, 3000); }
+                if (i > elType.length) { deleting = true; setTimeout(loop, 3000); }
                 else setTimeout(loop, 40);
             } else {
                 i--;
@@ -393,7 +422,6 @@
             const data = projectRegistry[projectId];
             if (!data) return;
 
-            // Map data dynamically into modal template elements
             document.getElementById("modalTitle").innerText = data.title;
             document.getElementById("modalSubtitle").innerText = data.subtitle;
             document.getElementById("modalOverview").innerText = data.overview;
@@ -401,7 +429,6 @@
             document.getElementById("modalAcademic").innerHTML = data.academic;
             document.getElementById("modalTechnical").innerHTML = data.technical;
             
-            // Swap icon styles dynamically
             const iconEl = document.getElementById("modalIcon");
             iconEl.className = "fa-solid " + data.icon;
 
