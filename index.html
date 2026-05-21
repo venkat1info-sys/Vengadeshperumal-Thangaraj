@@ -299,17 +299,17 @@
 
             modal.classList.remove("hidden");
             modal.classList.add("flex");
-            document.body.style.overflow = "hidden"; // Stifle scroll metrics
+            document.body.style.overflow = "hidden"; 
 
             // Reset and trigger CSS animation execution pipeline for progress bar fill tracking
             progressBar.classList.remove("modal-progress-active");
             void progressBar.offsetWidth; // Trigger reflow layout check
             progressBar.classList.add("modal-progress-active");
 
-            // Establish automated execution clock bounds running precisely for 20,000ms
+            // CORRECTED: Set to exactly 20,000ms (20 seconds) instead of 2,000ms
             modalAutoCloseTimeout = setTimeout(() => {
                 closeModal();
-            }, 2000); 
+            }, 20000); 
         }
 
         function closeModal() {
