@@ -31,6 +31,19 @@
         /* Modal Animation Wrapper */
         @keyframes scaleUp { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
         .modal-anim { animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+        /* Progress Bar Animation for Popup Modal */
+        @keyframes countdownProgress {
+            from { width: 100%; }
+            to { width: 0%; }
+        }
+        .modal-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4f46e5, #0284c7);
+        }
+        .modal-progress-active {
+            animation: countdownProgress 20s linear forwards;
+        }
     </style>
 </head>
 <body class="p-4 md:p-6 lg:p-10">
@@ -51,7 +64,7 @@
         
         <header class="glass-panel p-16 border border-white relative overflow-hidden">
             <div class="relative z-10">
-                <h1 class="font-display text-6xl md:text-8xl font-bold uppercase tracking-tight text-slate-990">VENGADESHPERUMAL<br><span class="text-sky-600">THANGARAJ</span></h1>
+                <h1 class="font-display text-6xl md:text-8xl font-bold uppercase tracking-tight text-slate-900">VENGADESHPERUMAL<br><span class="text-sky-600">THANGARAJ</span></h1>
                 <p id="typewriter" class="mt-6 text-xl font-mono text-slate-600 min-h-[3rem]"></p>
                 <div class="mt-8 flex gap-6 text-sm text-slate-500 font-mono">
                     <span class="flex items-center gap-2"><i class="fa-solid fa-map-pin text-sky-500"></i> Tamil Nadu, India</span>
@@ -200,49 +213,56 @@
     <div id="popupModal" class="fixed inset-0 z-[2000] hidden items-center justify-center p-4">
         <div onclick="closeModal()" class="absolute inset-0 bg-slate-900/40 backdrop-blur-md"></div>
         
-        <div class="bg-white/95 border border-slate-200 shadow-2xl rounded-3xl max-w-4xl w-full p-8 md:p-10 relative modal-anim max-h-[85vh] overflow-y-auto">
-            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 transition-colors p-2 text-lg">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
+        <div class="bg-white/95 border border-slate-200 shadow-2xl rounded-3xl max-w-4xl w-full relative modal-anim max-h-[85vh] overflow-y-auto overflow-x-hidden">
             
-            <div class="flex items-center gap-3 border-b pb-4 mb-6">
-                <i class="fa-solid fa-fire-extinguisher text-rose-500 text-xl"></i>
-                <div>
-                    <h3 class="font-display font-bold text-xl text-slate-900 uppercase">Autonomous Fire-Fighting Robot</h3>
-                    <p class="font-mono text-[10px] uppercase text-sky-600 font-bold tracking-wider mt-0.5">Grade 8 STEM Curriculum / NCERT Alignment Map</p>
-                </div>
+            <div class="w-full h-1.5 bg-slate-100 sticky top-0 left-0 z-50">
+                <div id="modalProgressBar" class="modal-progress-fill"></div>
             </div>
 
-            <div class="space-y-6 text-xs text-slate-600 leading-relaxed font-light">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="space-y-2">
-                        <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[11px]">// Project Overview</h5>
-                        <p>The Autonomous Fire-Fighting Robot is an automated, mobile robotic vehicle designed as a hands-on learning project for Grade 8 students. Built on a custom, lightweight corrugated sheet chassis, the vehicle autonomously roams or patrols an area to seek out and extinguish small fires. When the onboard flame sensor detects a fire, the robot automatically navigates directly to the location of the hazard, halts at a safe distance, and activates an integrated water pump to extinguish the flame. This project serves as a middle school capstone that bridges theoretical physical sciences with applied robotics and coding.</p>
-                    </div>
-                    <div class="space-y-2">
-                        <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[11px]">// Working Process Layout</h5>
-                        <p><strong class="font-semibold text-slate-800">Environmental Scanning:</strong> The robot operates as a mobile vehicle, patrolling an area while its flame sensor continuously scans the environment for infrared light signatures emitted by fire.</p>
-                        <p><strong class="font-semibold text-slate-800">Autonomous Movement:</strong> The moment a fire is detected, the microcontroller processes the sensor data and automatically drives the vehicle forward, navigating directly toward the source of the flame.</p>
-                        <p><strong class="font-semibold text-slate-800">Halt & Suppression:</strong> It stops automatically at a predetermined safe distance and triggers the water pump nozzle at the hazard target until resets confirm the flame source is extinguished.</p>
+            <div class="p-8 md:p-10">
+                <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 transition-colors p-2 text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                
+                <div class="flex items-center gap-3 border-b pb-4 mb-6">
+                    <i class="fa-solid fa-fire-extinguisher text-rose-500 text-xl"></i>
+                    <div>
+                        <h3 class="font-display font-bold text-xl text-slate-900 uppercase">Autonomous Fire-Fighting Robot</h3>
+                        <p class="font-mono text-[10px] uppercase text-sky-600 font-bold tracking-wider mt-0.5">Grade 8 STEM Curriculum / NCERT Alignment Map</p>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-dashed border-slate-200">
-                    <div class="space-y-2">
-                        <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[11px]">// Pedagogical Rationale & NCERT Alignment</h5>
-                        <p><strong class="font-semibold text-slate-700">Combustion and Flame:</strong> Students practically explore the fire triangle (fuel, oxygen, and heat). By deploying a automated water pump, they observe how lowering the temperature of the combustible material below its ignition point effectively extinguishes a flame.</p>
-                        <p><strong class="font-semibold text-slate-700">Force and Pressure:</strong> The integration of a motorized water pump allows students to study fluid dynamics, analyzing how pressure forces water through a nozzle to target a specific area.</p>
-                        <p><strong class="font-semibold text-slate-700">Friction:</strong> Designing a movable vehicle requires students to calculate the friction between the wheels and the floor. They must balance the weight of the water payload on the corrugated chassis to ensure traction smooth transitions without wheel slips.</p>
-                    </div>
-                    <div class="space-y-4">
-                        <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[11px]">// Project Learning Outcomes</h5>
-                        <div>
-                            <span class="block font-bold text-[10px] text-sky-700 uppercase tracking-wider">Academic Outcomes</span>
-                            <p>Scientific Application of fire suppression chemistry; practical physics mapping conversion of electrical to fluid mechanical pressure vectors; spatial mathematical geometry calculation chassis alignment metrics.</p>
+                <div class="space-y-6 text-xs text-slate-600 leading-relaxed font-light">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-2">
+                            <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[11px]">// Project Overview</h5>
+                            <p>The Autonomous Fire-Fighting Robot is an automated, mobile robotic vehicle designed as a hands-on learning project for Grade 8 students. Built on a custom, lightweight corrugated sheet chassis, the vehicle autonomously roams or patrols an area to seek out and extinguish small fires. When the onboard flame sensor detects a fire, the robot automatically navigates directly to the location of the hazard, halts at a safe distance, and activates an integrated water pump to extinguish the flame. This project serves as a middle school capstone that bridges theoretical physical sciences with applied robotics and coding.</p>
                         </div>
-                        <div>
-                            <span class="block font-bold text-[10px] text-sky-700 uppercase tracking-wider">Technical Outcomes</span>
-                            <p>Circuit architecture segregation cleanly managing low-power logic systems away from inductive high-power pump spikes; implementation of logical binary architectures through if/else structures based on real-time feedback loops.</p>
+                        <div class="space-y-2">
+                            <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[11px]">// Working Process Layout</h5>
+                            <p><strong class="font-semibold text-slate-800">Environmental Scanning:</strong> The robot operates as a mobile vehicle, patrolling an area while its flame sensor continuously scans the environment for infrared light signatures emitted by fire.</p>
+                            <p><strong class="font-semibold text-slate-800">Autonomous Movement:</strong> The moment a fire is detected, the microcontroller processes the sensor data and automatically drives the vehicle forward, navigating directly toward the source of the flame.</p>
+                            <p><strong class="font-semibold text-slate-800">Halt & Suppression:</strong> It stops automatically at a predetermined safe distance and triggers the water pump nozzle at the hazard target until resets confirm the flame source is extinguished.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-dashed border-slate-200">
+                        <div class="space-y-2">
+                            <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[11px]">// Pedagogical Rationale & NCERT Alignment</h5>
+                            <p><strong class="font-semibold text-slate-700">Combustion and Flame:</strong> Students practically explore the fire triangle (fuel, oxygen, and heat). By deploying an automated water pump, they observe how lowering the temperature of the combustible material below its ignition point effectively extinguishes a flame.</p>
+                            <p><strong class="font-semibold text-slate-700">Force and Pressure:</strong> The integration of a motorized water pump allows students to study fluid dynamics, analyzing how pressure forces water through a nozzle to target a specific area.</p>
+                            <p><strong class="font-semibold text-slate-700">Friction:</strong> Designing a movable vehicle requires students to calculate the friction between the wheels and the floor. They must balance the weight of the water payload on the corrugated chassis to ensure traction smooth transitions without wheel slips.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[11px]">// Project Learning Outcomes</h5>
+                            <div>
+                                <span class="block font-bold text-[10px] text-sky-700 uppercase tracking-wider">Academic Outcomes</span>
+                                <p>Scientific Application of fire suppression chemistry; practical physics mapping conversion of electrical to fluid mechanical pressure vectors; spatial mathematical geometry calculation chassis alignment metrics.</p>
+                            </div>
+                            <div>
+                                <span class="block font-bold text-[10px] text-sky-700 uppercase tracking-wider">Technical Outcomes</span>
+                                <p>Circuit architecture segregation cleanly managing low-power logic systems away from inductive high-power pump spikes; implementation of logical binary architectures through if/else structures based on real-time feedback loops.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -270,19 +290,39 @@
         }
         loop();
 
-        // MODAL TRIGGER CONTROLLER CAPABILITIES
+        // GLOBAL TIMEOUT HANDLE TRACKER
+        let modalAutoCloseTimeout;
+
         function openModal() {
             const modal = document.getElementById("popupModal");
+            const progressBar = document.getElementById("modalProgressBar");
+
             modal.classList.remove("hidden");
             modal.classList.add("flex");
-            document.body.style.overflow = "hidden"; // Stifle body scrolls behind popup views
+            document.body.style.overflow = "hidden"; // Stifle scroll metrics
+
+            // Reset and trigger CSS animation execution pipeline for progress bar fill tracking
+            progressBar.classList.remove("modal-progress-active");
+            void progressBar.offsetWidth; // Trigger reflow layout check
+            progressBar.classList.add("modal-progress-active");
+
+            // Establish automated execution clock bounds running precisely for 20,000ms
+            modalAutoCloseTimeout = setTimeout(() => {
+                closeModal();
+            }, 2000); 
         }
 
         function closeModal() {
             const modal = document.getElementById("popupModal");
+            const progressBar = document.getElementById("modalProgressBar");
+
             modal.classList.add("hidden");
             modal.classList.remove("flex");
             document.body.style.overflow = "auto";
+
+            // Clean progress fill trace layouts and kill countdown handles smoothly
+            progressBar.classList.remove("modal-progress-active");
+            clearTimeout(modalAutoCloseTimeout);
         }
     </script>
 </body>
