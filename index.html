@@ -55,7 +55,7 @@
 </head>
 <body class="p-4 md:p-6 lg:p-10">
 
-    <nav class="sticky-nav flex justify-center md:justify-between items-center px-8 py-4 rounded-full border border-slate-200 shadow-sm max-w-6xl mx-auto">
+    <nav class="sticky-nav flex justify-between items-center px-8 py-4 rounded-full border border-slate-200 shadow-sm max-w-6xl mx-auto">
         <div class="hidden md:flex gap-8 font-mono text-[10px] uppercase font-bold text-slate-500 tracking-widest mx-auto md:mx-0">
             <a href="#about" class="hover:text-sky-600 transition-colors">Profile</a>
             <a href="#history" class="hover:text-sky-600 transition-colors">Experience</a>
@@ -291,6 +291,21 @@
                     </div>
                 </div>
 
+                <div onclick="openModal('sonicvelocity')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
+                    <div>
+                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">SonicVelocity: Ultrasonic Speed Radar</h4>
+                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 7-8 Kinematics Testing Track</p>
+                        <p class="text-xs text-slate-600 leading-relaxed font-light">
+                            An applied physics and automation pipeline calculating moving object velocity vectors over discrete non-blocking timing intervals for real-time LCD rendering.
+                        </p>
+                    </div>
+                    <div class="flex justify-end">
+                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
                 <div class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm">
                     <h4 class="font-bold text-sm mb-3 text-sky-700">Atomic Structure AI</h4>
                     <p class="text-xs text-slate-600 leading-relaxed font-light">Web-based AI application designed to identify and analyze chemical elements from hand-drawn sketches of atomic structures.</p>
@@ -470,13 +485,29 @@
                 process: `<p><strong class="font-semibold text-slate-800">Calibration Base State:</strong> System is initialized with a known baseline distance ($D_{Total}$), representing empty ground headspace constants.</p>
                           <p><strong class="font-semibold text-slate-800">Time-of-Flight Emission:</strong> Transmits high-frequency sound bursts traveling downward to echo off the target asset.</p>
                           <p><strong class="font-semibold text-slate-800">Headspace Computation:</strong> Processes flight return thresholds to lock real-time baseline values ($D_{Remaining}$).</p>
-                          <p><strong class="font-semibold text-slate-800">Algebraic Subtraction & Display:</strong> Computes data over explicit algorithmic differences, refreshing the 16x2 LCD layout loop.</p>`,
+                          <p><strong class="font-semibold text-slate-800">Algebraic Subtraction & Display:</strong> Computes data over explicit algebraic differences, refreshing the 16x2 LCD layout loop.</p>`,
                 academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Applied Algebra:</strong> Tangible application of variable equations ($y = a - x$) rendering linear calculations.</div>
                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Physics of Sound Waves:</strong> Exploring Time-of-Flight behaviors and translating echo reflection timing vectors to physical constants.</div>
                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Error Mitigation:</strong> Managing environmental interference loops via static system scale calibration benchmarks.</div>`,
                 technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Digital Display Interfacing:</strong> Wiring, parsing initialization registries, and contrast tuning multi-pin 16x2 panels.</div>
                             <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Ultrasonic Processing:</strong> Managing transmitter triggers (TRIG) and receiver pulses (ECHO) over distance coefficients.</div>
                             <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Data Type Management:</strong> Resolving floating-point variables precision issues against whole runtime integer matrices.</div>`
+            },
+            sonicvelocity: {
+                title: "SonicVelocity: Ultrasonic Speed Radar",
+                subtitle: "Grade 7-8 Kinematics Testing Track Documentation",
+                icon: "fa-gauge-high text-sky-600",
+                overview: "SonicVelocity is an applied physics and kinematics project designed as a hands-on introduction to rate calculations for middle school students. Enclosed in a custom-engineered testing track fabricated from corrugated sheets, the system utilizes an ultrasonic sensor and an Arduino Uno to calculate and display the precise movement speed of a passing object. The core educational focus of this project is applied kinematics (Speed = Distance / Time): when an object enters the sensor's tracking range, the system records its initial position. Following a precise 2-second time interval, the system takes a second distance measurement. By calculating the physical displacement over that fixed time window, the microcontroller dynamically computes the object's velocity and prints the live result to a digital 16x2 LCD screen.",
+                process: `<p><strong class="font-semibold text-slate-800">Intrusion Trigger:</strong> Emits steady sound pulses; logs initial coordinate checkpoints ($D_1$) when target assets break range blocks.</p>
+                          <p><strong class="font-semibold text-slate-800">Fixed Time Interval:</strong> Locks a highly accurate internal timer thread running an exact, non-blocking window ($T = 2\\text{ seconds}$).</p>
+                          <p><strong class="font-semibold text-slate-800">Secondary Sampling:</strong> Re-fires ultrasonic bursts the instant the 2-second countdown expires to trap new spatial coordinates ($D_2$).</p>
+                          <p><strong class="font-semibold text-slate-800">Kinematic Computation & Display:</strong> Computes data loops over baseline variation properties ($\\Delta D = |D_1 - D_2|$), updating speed vectors directly on screen in $cm/s$.</p>`,
+                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Applied Kinematics:</strong> Directly mapping structural physical velocity math arrays ($\\text{Speed} = \\frac{\\text{Distance}}{\\text{Time}}$) inside an automated consumer device.</div>
+                           <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Delta Variations ($\\Delta$):</strong> Conceptualizing differences between variables across specified tracking intervals to calculate displacement metrics.</div>
+                           <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Experimental Physics:</strong> Reducing stream telemetry processing lag vectors to acquire precise operational field data records.</div>`,
+                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Interval Programming:</strong> Building asynchronous timer routines inside a microprocessing unit without triggering processor lock delays.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Dynamic Calculation Loops:</strong> Handling data registers across runtime allocations without overwriting tracking array footprints.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Digital Output Control:</strong> Routing alphanumeric strings across dynamic pin mappings to format calculations perfectly onto character matrices.</div>`
             }
         };
 
