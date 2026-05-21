@@ -40,29 +40,17 @@
             background-color: rgb(255, 255, 255);
             cursor: pointer;
         }
-        .interactive-project-card h4 {
-            transition: color 0.3s ease;
-        }
-        .interactive-project-card:hover h4 {
-            color: #4f46e5;
-        }
+        .interactive-project-card h4 { transition: color 0.3s ease; }
+        .interactive-project-card:hover h4 { color: #4f46e5; }
 
         /* Modal Animation Wrapper */
         @keyframes scaleUp { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
         .modal-anim { animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 
         /* Progress Bar Animation for Popup Modal */
-        @keyframes countdownProgress {
-            from { width: 100%; }
-            to { width: 0%; }
-        }
-        .modal-progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #4f46e5, #0284c7);
-        }
-        .modal-progress-active {
-            animation: countdownProgress 20s linear forwards;
-        }
+        @keyframes countdownProgress { from { width: 100%; } to { width: 0%; } }
+        .modal-progress-fill { height: 100%; background: linear-gradient(90deg, #4f46e5, #0284c7); }
+        .modal-progress-active { animation: countdownProgress 20s linear forwards; }
     </style>
 </head>
 <body class="p-4 md:p-6 lg:p-10">
@@ -188,12 +176,51 @@
             <h2 class="font-display text-lg font-bold uppercase mb-10 text-sky-800 border-b border-sky-100 pb-2">Technical Projects & Initiatives</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <div onclick="openModal()" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm md:col-span-2 lg:col-span-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div onclick="openModal('firefighting')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm md:col-span-2 lg:col-span-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div>
                         <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Autonomous Fire-Fighting Robot</h4>
                         <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 STEM Curriculum Capstone</p>
                         <p class="text-xs text-slate-600 leading-relaxed font-light max-w-4xl">
-                            Built on a custom, lightweight corrugated sheet chassis, this autonomous vehicle is designed as an experiential middle school capstone that effectively bridges theoretical physical sciences with applied robotics and core conditional coding structures.
+                            Built on a custom lightweight chassis, this vehicle autonomously patrols an area to seek out hazards, stopping safely at a distance to extinguish small flames with an integrated pump.
+                        </p>
+                    </div>
+                    <button class="shrink-0 bg-sky-50 text-sky-600 pointer-events-none px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                        Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </button>
+                </div>
+
+                <div onclick="openModal('rescuer')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm md:col-span-2 lg:col-span-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Autonomous Rescuer Robot (Edge-Detection Vehicle)</h4>
+                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 7 STEM Curriculum</p>
+                        <p class="text-xs text-slate-600 leading-relaxed font-light max-w-4xl">
+                            Engineered with an extended overhead sensor arm to navigate flat surfaces safely, identifying cliffs or voids and instantly triggering reverse-evasion maneuvers.
+                        </p>
+                    </div>
+                    <button class="shrink-0 bg-sky-50 text-sky-600 pointer-events-none px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                        Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </button>
+                </div>
+
+                <div onclick="openModal('transport')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm md:col-span-2 lg:col-span-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Autonomous Public Transport System</h4>
+                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Advanced Tracker Project</p>
+                        <p class="text-xs text-slate-600 leading-relaxed font-light max-w-4xl">
+                            An automated line-follower mass-transit model featuring precision scheduled stops, servo-driven linkage doors, and front-facing safety radar arrays.
+                        </p>
+                    </div>
+                    <button class="shrink-0 bg-sky-50 text-sky-600 pointer-events-none px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                        Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </button>
+                </div>
+
+                <div onclick="openModal('floorcleaner')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm md:col-span-2 lg:col-span-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Smart Floor Cleaner (App-Controlled Mop Bot)</h4>
+                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Engineering & Software Framework</p>
+                        <p class="text-xs text-slate-600 leading-relaxed font-light max-w-4xl">
+                            A complex 5-motor drive utility system integrated with custom block-based Android smartphone apps over serial wireless Bluetooth modules.
                         </p>
                     </div>
                     <button class="shrink-0 bg-sky-50 text-sky-600 pointer-events-none px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
@@ -231,76 +258,43 @@
 
     <div id="popupModal" class="fixed inset-0 z-[2000] hidden items-center justify-center p-4">
         <div onclick="closeModal()" class="absolute inset-0 bg-slate-900/40 backdrop-blur-md"></div>
-        
         <div class="bg-white/95 border border-slate-200 shadow-2xl rounded-3xl max-w-4xl w-full relative modal-anim max-h-[90vh] flex flex-col overflow-hidden">
-            
             <div class="w-full h-1.5 bg-slate-100 shrink-0">
                 <div id="modalProgressBar" class="modal-progress-fill"></div>
             </div>
-
             <div class="p-6 md:p-8 pb-4 border-b border-slate-100 relative shrink-0 flex items-center gap-3">
-                <i class="fa-solid fa-fire-extinguisher text-rose-500 text-xl"></i>
+                <i id="modalIcon" class="fa-solid fa-microchip text-sky-600 text-xl"></i>
                 <div>
-                    <h3 class="font-display font-bold text-xl text-slate-900 uppercase leading-none">Autonomous Fire-Fighting Robot</h3>
-                    <p class="font-mono text-[10px] uppercase text-sky-600 font-bold tracking-wider mt-1.5">Grade 8 STEM Curriculum Documentation</p>
+                    <h3 id="modalTitle" class="font-display font-bold text-xl text-slate-900 uppercase leading-none">Project Details</h3>
+                    <p id="modalSubtitle" class="font-mono text-[10px] uppercase text-sky-600 font-bold tracking-wider mt-1.5">STEM Curriculum Documentation</p>
                 </div>
                 <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 transition-colors p-2 text-lg">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
-
             <div class="p-6 md:p-8 space-y-6 text-xs text-slate-600 leading-relaxed font-light overflow-y-auto">
-                
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
                     <div class="bg-slate-50/70 p-5 rounded-2xl border border-slate-100 flex flex-col justify-between">
                         <div>
                             <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[10px] mb-2 text-sky-700 font-mono">// Project Overview</h5>
-                            <p class="leading-relaxed font-light">The Autonomous Fire-Fighting Robot is an automated, mobile robotic vehicle designed as a hands-on learning project for Grade 8 students. Built on a custom, lightweight corrugated sheet chassis, the vehicle autonomously roams or patrols an area to seek out and extinguish small fires. When the onboard flame sensor detects a fire, the robot automatically navigates directly to the location of the hazard, halts at a safe distance, and activates an integrated water pump to extinguish the flame. This project serves as a middle school capstone that bridges theoretical physical sciences with applied robotics and coding.</p>
+                            <p id="modalOverview" class="leading-relaxed font-light"></p>
                         </div>
                     </div>
                     <div class="bg-slate-50/70 p-5 rounded-2xl border border-slate-100 flex flex-col justify-between">
                         <div>
                             <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[10px] mb-3 text-sky-700 font-mono">// Working Process</h5>
-                            <ul class="space-y-2 font-light">
-                                <li><strong class="font-semibold text-slate-850">Environmental Scanning:</strong> The robot operates as a mobile vehicle, patrolling an area while its flame sensor continuously scans the environment for infrared signatures.</li>
-                                <li><strong class="font-semibold text-slate-850">Autonomous Movement:</strong> The moment a fire is detected, the microcontroller processes sensor inputs and automatically drives the vehicle directly toward the heat source.</li>
-                                <li><strong class="font-semibold text-slate-850">Proximity Halt:</strong> To safeguard hardware and logic, the robot terminates movement at a preset, safe operational clearance metric.</li>
-                                <li><strong class="font-semibold text-slate-850">Extinguishing Protocol:</strong> Once halted, the system activates the pressurized pump loop, streaming water continuously until sensor validation confirms fire suppression.</li>
-                            </ul>
+                            <div id="modalProcess" class="space-y-2 font-light"></div>
                         </div>
                     </div>
                 </div>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 border-t border-dashed border-slate-200">
                     <div class="space-y-3 flex flex-col justify-start">
                         <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[10px] text-indigo-700 font-mono">// Academic Outcomes</h5>
-                        <div class="bg-white p-4 rounded-xl border border-slate-100 flex-1">
-                            <span class="block font-semibold text-slate-800 text-[11px] mb-1">Scientific Application</span>
-                            <p class="leading-relaxed">Ability to explain the mechanical and chemical processes involved in fire suppression mechanics and thermodynamic conversion profiles.</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-xl border border-slate-100 flex-1">
-                            <span class="block font-semibold text-slate-800 text-[11px] mb-1">Practical Physics</span>
-                            <p class="leading-relaxed">Understanding electrical-to-mechanical conversion forces to propel vehicle tracking arrays alongside pressure dynamics for fluid transport systems.</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-xl border border-slate-100 flex-1">
-                            <span class="block font-semibold text-slate-800 text-[11px] mb-1">Mathematical Design</span>
-                            <p class="leading-relaxed">Applying spatial measurements, geometric vector structural limits, and weight load metrics to build a stabilized physical chassis framework.</p>
-                        </div>
+                        <div id="modalAcademic" class="space-y-2 flex-1"></div>
                     </div>
                     <div class="space-y-3 flex flex-col justify-start">
                         <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[10px] text-indigo-700 font-mono">// Technical Outcomes</h5>
-                        <div class="bg-white p-4 rounded-xl border border-slate-100 flex-1">
-                            <span class="block font-semibold text-slate-800 text-[11px] mb-1">Circuit Architecture</span>
-                            <p class="leading-relaxed">Understanding how to cleanly isolate sensitive low-power digital control logic buses away from high-power inductive motor and fluid pump lines.</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-xl border border-slate-100 flex-1">
-                            <span class="block font-semibold text-slate-800 text-[11px] mb-1">Algorithmic Thinking</span>
-                            <p class="leading-relaxed">Developing deterministic condition sequences (If/Else structures) to handle automated machine behavior dynamically via persistent loop checks.</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-xl border border-slate-100 flex-1">
-                            <span class="block font-semibold text-slate-800 text-[11px] mb-1">Hardware-Software Integration</span>
-                            <p class="leading-relaxed">Gaining complete system development end-to-end perspective by linking raw structural material fabrication layers directly to physical code modules.</p>
-                        </div>
+                        <div id="modalTechnical" class="space-y-2 flex-1"></div>
                     </div>
                 </div>
             </div>
@@ -308,7 +302,73 @@
     </div>
 
     <script>
-        // TYPEWRITER ENGINE
+        const projectRegistry = {
+            firefighting: {
+                title: "Autonomous Fire-Fighting Robot",
+                subtitle: "Grade 8 STEM Curriculum Documentation",
+                icon: "fa-fire-extinguisher text-rose-500",
+                overview: "The Autonomous Fire-Fighting Robot is an automated, mobile robotic vehicle designed as a hands-on learning project for Grade 8 students. Built on a custom, lightweight corrugated sheet chassis, the vehicle autonomously roams or patrols an area to seek out and extinguish small fires. When the onboard flame sensor detects a fire, the robot automatically navigates directly to the location of the hazard, halts at a safe distance, and activates an integrated water pump to extinguish the flame. This project serves as a middle school capstone that bridges theoretical physical sciences with applied robotics and coding.",
+                process: `<p><strong class="font-semibold text-slate-800">Environmental Scanning:</strong> Patrolled via continuous sweeps searching for signatures.</p>
+                          <p><strong class="font-semibold text-slate-800">Autonomous Movement:</strong> Computes vectors to steer directly into the target hot zone.</p>
+                          <p><strong class="font-semibold text-slate-800">Proximity Halt:</strong> Terminates tracking at predefined clearance bounds.</p>
+                          <p><strong class="font-semibold text-slate-800">Extinguishing Protocol:</strong> Triggers pump module loops until fire signatures drop to zero.</p>`,
+                academic: `<div class="bg-white p-3 rounded-xl border border-slate-100"><strong>Scientific Application:</strong> Explaining suppression chemical processes and thermodynamic balance profiles.</div>
+                           <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Practical Physics:</strong> Mapping conversion metrics between electrical induction and fluid kinetic pressure streams.</div>
+                           <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Mathematical Design:</strong> Construction of balanced spatial geometries for stable vehicle movement payloads.</div>`,
+                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Circuit Architecture:</strong> Isulating low-voltage core microcontrollers cleanly from high-inductive motor spikes.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Algorithmic Thinking:</strong> Crafting robust conditional logical structures to sustain persistent automation safety checks.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Hardware-Software Integration:</strong> Merging mechanical chassis physical layout fabrication steps with logic code deployment loops.</div>`
+            },
+            rescuer: {
+                title: "Autonomous Rescuer Robot (Edge-Detection Vehicle)",
+                subtitle: "Grade 7 STEM Curriculum",
+                icon: "fa-shield-halved text-emerald-500",
+                overview: "The Autonomous Rescuer Robot is a smart, mobile vehicle designed as an experiential learning project for Grade 7 students. Built on a custom chassis fabricated from lightweight corrugated sheets, the vehicle is engineered to navigate surfaces safely without falling off edges (such as table drops or cliffs). The front of the chassis features a 10 to 15 cm extended overhead arm where an infrared (IR) sensor is mounted and angled downward toward the ground. As the vehicle moves forward, it continuously checks for solid ground ahead; the moment the sensor detects an empty void or drop-off, the robot automatically halts and steers away to rescue itself from a fall.",
+                process: `<p><strong class="font-semibold text-slate-800">Surface Monitoring:</strong> Scans the track running ahead of the tires via an extended 10-15cm arm framework.</p>
+                          <p><strong class="font-semibold text-slate-800">Void Detection:</strong> Emits steady infrared light paths tracking immediate reflection breaks over floor drops.</p>
+                          <p><strong class="font-semibold text-slate-800">Autonomous Correction:</strong> Halts driving parameters using the L298 interface before wheels reach edge coordinates.</p>
+                          <p><strong class="font-semibold text-slate-800">Evasion Maneuver:</strong> Executes rotational vector overrides to re-align safely on stable, flat tracks.</p>`,
+                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Light and Reflection:</strong> Mastery of electromagnetic path propagation, signal bounce, and void tracking data inputs.</div>
+                           <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Center of Mass & Balance:</strong> Structural alignment limits balancing long arm levers to avoid mechanical forward tipping loops.</div>
+                           <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Spatial Estimation:</strong> Geometry formulas used to calibrate sensor vectors with stopping time constants.</div>`,
+                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Basic Motor Interfacing:</strong> Harnessing dual H-bridge L298 logic parameters to govern direction and torque.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Sensor Calibration:</strong> Fine-tuning threshold sensitivity parameters to distinguish flat layouts from spatial drop voids.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Logical Programming (If/Else):</strong> Deploying clean binary programmatic paths mapped to physical boundary configurations.</div>`
+            },
+            transport: {
+                title: "Autonomous Public Transport System",
+                subtitle: "Grade 8 Advanced Mass-Transit Track",
+                icon: "fa-bus text-sky-500",
+                overview: "The Autonomous Public Transport System is a smart, automated mass-transit vehicle designed as an advanced learning project for Grade 8 students. Built using a custom corrugated sheet chassis, the vehicle operates as an automated line-follower that navigates a designated track using an infrared (IR) sensor array. To simulate a real-world public transit route, the vehicle is programmed with an automatic scheduling system: every 10 seconds of travel, it stops at a simulated transit station, uses a servo motor to automatically open its doors for 5 seconds for passengers, closes the doors, and resumes its route. Additionally, a frontline collision-avoidance IR sensor acts as a safety radar, immediately halting the vehicle if a pedestrian or obstacle is detected in its path.",
+                process: `<p><strong class="font-semibold text-slate-800">Line Tracking Navigation:</strong> Uses an array tracking structural floor lines to lock the bus route to lanes.</p>
+                          <p><strong class="font-semibold text-slate-800">Scheduled Transit Stops:</strong> Timer threads flag standard stations, forcing halts every 10 operational seconds.</p>
+                          <p><strong class="font-semibold text-slate-800">Automated Passenger Doors:</strong> Drives precise mechanical swinging or linear door linkages via dedicated servo angles.</p>
+                          <p><strong class="font-semibold text-slate-800">Active Safety Radar:</strong> Employs frontal radar collision sensing overrides to lock brakes dynamically when pedestrians are tracked.</p>`,
+                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Time and Automation:</strong> Developing modular execution loops using strict script delay matrices.</div>
+                           <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Kinematics and Friction:</strong> Balancing operational velocities with wheel stopping mechanics to hit precise terminal stop nodes.</div>
+                           <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Mechanical Kinematics:</strong> Engineering mechanical linking mechanisms transforming precise angular rotation into swinging gates.</div>`,
+                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Multi-Sensor Integration:</strong> Parallel computing structures handling lane tracking data alongside collision avoidance sweeps.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Servo vs. DC Motor Control:</strong> Management of variable torque induction motors alongside closed-loop exact position actuators.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Safety Override Logic:</strong> Nested execution scripts that securely interrupt standard process arrays during obstacle breaches.</div>`
+            },
+            floorcleaner: {
+                title: "Smart Floor Cleaner (App-Controlled Mop Bot)",
+                subtitle: "Grade 8 Engineering & App Architecture",
+                icon: "fa-broom text-amber-500",
+                overview: "The App-Controlled Mop Bot is an interactive, mobile utility robot designed as an advanced engineering and software project for Grade 8 students. Built on a sturdy, custom-designed corrugated sheet chassis, this robot features a 4-wheel drive system for smooth navigation and a dedicated central cleaning mechanism. The unique highlight of this project curriculum is its dual-disciplinary approach: students not only assemble the physical hardware but also design and build a custom smartphone application from scratch using MIT App Inventor. Over a local Bluetooth connection via an HC-05 module, users can manually steer the robot in any direction and activate the high-speed central mopping system to clean wet surfaces.",
+                process: `<p><strong class="font-semibold text-slate-800">Wireless Communication:</strong> Secures active data pipes between smartphone arrays and standard HC-05 serial nodes.</p>
+                          <p><strong class="font-semibold text-slate-800">App-Driven Navigation:</strong> Parses string command characters sent via buttons to drive 4 independent wheel setups.</p>
+                          <p><strong class="font-semibold text-slate-800">Cleaning Activation:</strong> Isolates the active operational state toggle to initiate dedicated scrubbing system protocols.</p>
+                          <p><strong class="font-semibold text-slate-800">Surface Mopping:</strong> Powers up a fifth brush motor layout spinning an absorbent sponge array to collect liquid layers.</p>`,
+                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>User Interface (UI) Design:</strong> Interactive application development mapping buttons, screens, and layouts cleanly.</div>
+                           <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Rotational and Surface Friction:</strong> Fluid dynamic boundary tests tracking brush scrubbing metrics across mixed coefficients.</div>
+                           <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Structural Load Distribution:</strong> Structuring lightweight corrugated sheets to secure five high-torque motor footprints evenly.</div>`,
+                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Mobile App Development:</strong> Block programming system processing touch event executions and data packet packaging.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Serial Bluetooth Communication:</strong> Synchronous serial bus stream handling via standard radio telemetry parameters.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Multi-Motor Control Layout:</strong> Complex logic configurations enabling coordinated activation of 5 DC units through single-chip targets.</div>`
+            }
+        };
+
         const role = "Subject Matter Expert & Regional Technical Coordinator | STEM Operations Executive.";
         const el = document.getElementById("typewriter");
         let i = 0, deleting = false;
@@ -327,10 +387,24 @@
         }
         loop();
 
-        // GLOBAL TIMEOUT HANDLE TRACKER
         let modalAutoCloseTimeout;
 
-        function openModal() {
+        function openModal(projectId) {
+            const data = projectRegistry[projectId];
+            if (!data) return;
+
+            // Map data dynamically into modal template elements
+            document.getElementById("modalTitle").innerText = data.title;
+            document.getElementById("modalSubtitle").innerText = data.subtitle;
+            document.getElementById("modalOverview").innerText = data.overview;
+            document.getElementById("modalProcess").innerHTML = data.process;
+            document.getElementById("modalAcademic").innerHTML = data.academic;
+            document.getElementById("modalTechnical").innerHTML = data.technical;
+            
+            // Swap icon styles dynamically
+            const iconEl = document.getElementById("modalIcon");
+            iconEl.className = "fa-solid " + data.icon;
+
             const modal = document.getElementById("popupModal");
             const progressBar = document.getElementById("modalProgressBar");
 
@@ -342,10 +416,7 @@
             void progressBar.offsetWidth; 
             progressBar.classList.add("modal-progress-active");
 
-            // Timed auto-close anchor execution precisely set for 20,000ms (20s)
-            modalAutoCloseTimeout = setTimeout(() => {
-                closeModal();
-            }, 20000); 
+            modalAutoCloseTimeout = setTimeout(() => { closeModal(); }, 20000); 
         }
 
         function closeModal() {
