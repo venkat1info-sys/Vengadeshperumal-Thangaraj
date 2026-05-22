@@ -69,23 +69,14 @@
     <div class="max-w-7xl mx-auto mt-12 space-y-12">
         
         <header class="glass-panel p-10 md:p-16 border border-white relative overflow-hidden">
-            <div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-                <div class="flex-1">
-                    <h1 class="font-display text-3xl md:text-5xl font-bold uppercase tracking-tight text-slate-900">
-                        VENGADESHPERUMAL <span class="text-sky-600">THANGARAJ</span>
-                    </h1>
-                    <p id="typewriter" class="mt-4 text-lg font-mono text-slate-600 min-h-[2.5rem]"></p>
-                    <div class="mt-6 flex flex-wrap gap-6 text-sm text-slate-500 font-mono">
-                        <span class="flex items-center gap-2"><i class="fa-solid fa-map-pin text-sky-500"></i> Tamil Nadu, India</span>
-                        <span class="flex items-center gap-2"><i class="fa-solid fa-phone text-sky-500"></i> +91 85266 28310</span>
-                    </div>
-                </div>
-                
-                <div class="shrink-0 mx-auto md:mx-0">
-                    <img src="https://drive.google.com/uc?export=view&id=1hmZitZIsN3dPKqzgEEiSHUp24JTU9iqH" 
-                         alt="Vengadeshperumal Thangaraj" 
-                         class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white shadow-xl object-cover bg-slate-100"
-                         onerror="this.onerror=null; this.src='https://via.placeholder.com/160?text=VT';">
+            <div class="relative z-10">
+                <h1 class="font-display text-3xl md:text-5xl font-bold uppercase tracking-tight text-slate-900">
+                    VENGADESHPERUMAL <span class="text-sky-600">THANGARAJ</span>
+                </h1>
+                <p id="typewriter" class="mt-4 text-lg font-mono text-slate-600 min-h-[2.5rem]"></p>
+                <div class="mt-6 flex flex-wrap gap-6 text-sm text-slate-500 font-mono">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-map-pin text-sky-500"></i> Tamil Nadu, India</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-phone text-sky-500"></i> +91 85266 28310</span>
                 </div>
             </div>
             <div class="absolute -top-20 -right-20 w-96 h-96 bg-sky-200 rounded-full blur-3xl opacity-30"></div>
@@ -306,274 +297,62 @@
                     </div>
                 </div>
 
-                <div onclick="openModal('pureair')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
-                    <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Finding Pure Air (Pure Air Tracker)</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Environmental Monitoring Node</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
-                            An air sampling node leveraging an Arduino Nano framework and MQ2 sensors to push live telemetry data packets across Bluetooth platforms.
-                        </p>
-                    </div>
-                    <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div onclick="openModal('voicerover')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
-                    <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Smart Rover: Voice Controlled</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Robotics & Automation Project</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
-                            An automated vehicle platform executing clean string-matching driving mechanics via integrated visual mobile speech-to-text algorithms.
-                        </p>
-                    </div>
-                    <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div onclick="openModal('smarthome')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
-                    <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Smart Home System</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 7 Model Infrastructure Automation</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
-                            A miniature domestic layout enabling complete circuit manipulation of lighting loops and servo-driven lock linkages over MIT APP INVENTOR setups.
-                        </p>
-                    </div>
-                    <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div onclick="openModal('tractor')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
-                    <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Mobile-Controlled Tractor</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Heavy Machinery Kinematics</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
-                            An agritech training layout handling differential propulsion and active mechanical payload lifters via synchronous wireless channel routing pipelines.
-                        </p>
-                    </div>
-                    <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div onclick="openModal('aircooler')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
-                    <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Smart Air Cooler System</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Appliance Engineering Architecture</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
-                            An atmospheric temperature control unit coupling variable high-frequency ultrasonic MIST makers with inductive ventilation fan control circuits.
-                        </p>
-                    </div>
-                    <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div onclick="openModal('earthquake')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
-                    <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Earthquakes Monitor</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Seismic Telemetry Station</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
-                            A live digital seismograph node utilizing MPU6050 Hex-Axis I2C sensors to pipe rotational acceleration thresholds to visual graphical software interfaces.
-                        </p>
-                    </div>
-                    <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div onclick="openModal('shadespotter')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
-                    <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Shade Spotter (Gamified Matrix Loop)</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 6 APP Layout & Core Logic</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
-                            An interactive gamified matrix canvas deploying dynamic numerical color offset calculations to challenge visual chroma limits over timed loop tracks.
-                        </p>
-                    </div>
-                    <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div onclick="openModal('digitalcalc')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
-                    <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Digital Calculator</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 6 Computational Array tracking</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
-                            A classic computational asset utilizing dual-textbox parsing and index tracking to enforce strict operational precedence structures error-free.
-                        </p>
-                    </div>
-                    <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div onclick="openModal('simplechatbot')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
-                    <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Simple Chatbot</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 6 String-Matching System</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
-                            An unbroken, local conversation routine managing key phrase loops and multi-index list array tracking to feed native synthesis sound engines.
-                        </p>
-                    </div>
-                    <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div onclick="openModal('stepcounter')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
-                    <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Step Counter (Pedometer APP)</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 6 Physical Hardware Integration</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
-                            A real-time somatic monitor reading background listener events from internal hardware components to compute biological energy profiles.
-                        </p>
-                    </div>
-                    <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div onclick="openModal('aicalc')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
-                    <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">AI Calculator (Voice-Driven)</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 7 Natural Language Processing</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
-                            An advanced speech computational module leveraging natural language parsing to safely isolate alphanumeric characters from spoken audio streams.
-                        </p>
-                    </div>
-                    <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div onclick="openModal('intelchatbot')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
-                    <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Intelligent Chatbot (Conversational AI)</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 7 Persistent Semantic Analytics</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
-                            A localized machine learning pipeline binding sequential text structures directly to key-value fields embedded within non-volatile databases.
-                        </p>
-                    </div>
-                    <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div onclick="openModal('studymatte')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
-                    <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Study Matte (Productivity Portal)</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Multi-Screen Architecture</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
-                            A robust educational capstone managing multi-screen data pass-through tracking, clock schedules, and active global variable trees.
-                        </p>
-                    </div>
-                    <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
-                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div onclick="openModal('grade9vision')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4 border-dashed border-sky-400 bg-sky-50/10">
+                <div onclick="openModal('mobileappscombined')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4 border-dashed border-sky-400 bg-sky-50/10">
                     <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-eye text-sky-600 text-xl"></i>
+                        <i class="fa-solid fa-mobile-screen-button text-sky-600 text-xl"></i>
                         <div>
-                            <h4 class="font-bold text-base text-sky-800 uppercase tracking-wide">Grade 9 AI Projects (Computer Vision & Image)</h4>
-                            <p class="text-xs text-slate-500 font-light mt-0.5">Teachable Machine model tensor embedding, Bohr atomic sketches, dynamic angle protractor overlays, and human hand gesture evaluation matrices.</p>
+                            <h4 class="font-bold text-base text-sky-800 uppercase tracking-wide">Mobile Application Development Suite</h4>
+                            <p class="text-xs text-slate-500 font-light mt-0.5">MIT App Inventor architectures featuring multi-screen layout routing, variable list matrices, local data persistence, and voice controls.</p>
                         </div>
                     </div>
                     <div class="flex justify-end">
                         <button class="bg-sky-600 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-md shadow-sky-600/10 hover:bg-sky-700 transition-colors">
-                            View Image Recognition Layout <i class="fa-solid fa-list-check text-[10px]"></i>
+                            View App Suite <i class="fa-solid fa-list-check text-[10px]"></i>
                         </button>
                     </div>
                 </div>
 
-                <div onclick="openModal('grade9audio')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4 border-dashed border-rose-400 bg-rose-50/10">
-                    <div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-volume-high text-rose-500 text-xl"></i>
-                            <div>
-                                <h4 class="font-bold text-base text-rose-800 uppercase tracking-wide">Grade 9 AI Projects (Audio Deep Learning)</h4>
-                                <p class="text-xs text-slate-500 font-light mt-0.5">Acoustic spectrum time-frequency spectrogram maps, visual rhythm canvas reactives, and speech biometric verification gating profiles.</p>
-                            </div>
+                <div onclick="openModal('aiprojectscombined')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4 border-dashed border-rose-400 bg-rose-50/10">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-brain text-rose-500 text-xl"></i>
+                        <div>
+                            <h4 class="font-bold text-base text-rose-800 uppercase tracking-wide">Artificial Intelligence & Creative Coding Suite</h4>
+                            <p class="text-xs text-slate-500 font-light mt-0.5">Teachable Machine vision CNN classifiers and sound spectrogram deep learning models embedded into real-time interactive P5.js creative drawing layouts.</p>
                         </div>
                     </div>
                     <div class="flex justify-end">
                         <button class="bg-rose-500 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-md shadow-rose-500/10 hover:bg-rose-600 transition-colors">
-                            View Sound Architectures <i class="fa-solid fa-list-check text-[10px]"></i>
+                            View AI Suite <i class="fa-solid fa-list-check text-[10px]"></i>
                         </button>
                     </div>
                 </div>
 
-                <div onclick="openModal('grade6automation')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4 border-dashed border-indigo-300 bg-indigo-50/10">
+                <div onclick="openModal('otherelectronicscombined')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4 border-dashed border-indigo-300 bg-indigo-50/10">
                     <div class="flex items-center gap-3">
                         <i class="fa-solid fa-diagram-project text-indigo-600 text-xl"></i>
                         <div>
-                            <h4 class="font-bold text-base text-indigo-800 uppercase tracking-wide">Grade 6 Projects (Autonomous Systems & Logic)</h4>
-                            <p class="text-xs text-slate-500 font-light mt-0.5">Automated architecture, vector radar mobility systems, non-blocking timers, mapping arrays, and count triggers.</p>
+                            <h4 class="font-bold text-base text-indigo-800 uppercase tracking-wide">Other Electronic Projects</h4>
+                            <p class="text-xs text-slate-500 font-light mt-0.5">Arduino autonomous climate systems, ultrasonic assistive safety radars, non-blocking hold timers, mapping variables, and remote telemetric field saturation warning nodes.</p>
                         </div>
                     </div>
                     <div class="flex justify-end">
                         <button class="bg-indigo-600 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-md shadow-indigo-600/10 hover:bg-indigo-700 transition-colors">
-                            View Logic Systems <i class="fa-solid fa-list-check text-[10px]"></i>
+                            View Electronics Layout <i class="fa-solid fa-list-check text-[10px]"></i>
                         </button>
                     </div>
                 </div>
 
-                <div onclick="openModal('grade7telemetry')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4 border-dashed border-emerald-300 bg-emerald-50/10">
+                <div onclick="openModal('grade5automation')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4 border-dashed border-amber-400 bg-amber-50/10">
                     <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-satellite-dish text-emerald-600 text-xl"></i>
+                        <i class="fa-solid fa-bolt text-amber-500 text-xl"></i>
                         <div>
-                            <h4 class="font-bold text-base text-emerald-800 uppercase tracking-wide">Grade 7 Projects (Advanced Environmental Tracking)</h4>
-                            <p class="text-xs text-slate-500 font-light mt-0.5">Soil saturation dynamics, analog environmental probes, disaster management safety limits, and serial telemetry arrays.</p>
+                            <h4 class="font-bold text-base text-amber-800 uppercase tracking-wide">Other Electrical Projects</h4>
+                            <p class="text-xs text-slate-500 font-light mt-0.5">Touchless optical sensor loops, raw IR daylight threshold configurations, manual manual switches, conductivity measurements, and solderless paper circuit path ribbons.</p>
                         </div>
                     </div>
                     <div class="flex justify-end">
-                        <button class="bg-emerald-600 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-md shadow-emerald-600/10 hover:bg-emerald-700 transition-colors">
-                            View Telemetry Nodes <i class="fa-solid fa-list-check text-[10px]"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div onclick="openModal('grade5automation')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4 md:col-span-1 lg:col-span-2 border-dashed border-sky-300 bg-sky-50/20">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-bezier-curve text-sky-600 text-xl"></i>
-                        <div>
-                            <h4 class="font-bold text-base text-sky-800 uppercase tracking-wide">Grade 1-5 Projects (Automation & Closed Electrical Circuits)</h4>
-                            <p class="text-xs text-slate-500 font-light mt-0.5">Explore foundational analog computing blueprints, optical reflections, and tactile engineering assets built for middle school rollouts.</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-end">
-                        <button class="bg-sky-600 text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-md shadow-sky-600/10 hover:bg-sky-700 transition-colors">
-                            View Electrical Projects Layout <i class="fa-solid fa-list-check text-[10px]"></i>
+                        <button class="bg-amber-500 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-md shadow-amber-500/10 hover:bg-amber-600 transition-colors">
+                            View Electrical Blueprints <i class="fa-solid fa-list-check text-[10px]"></i>
                         </button>
                     </div>
                 </div>
@@ -626,13 +405,13 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
                     <div class="bg-slate-50/70 p-5 rounded-2xl border border-slate-100 flex flex-col justify-between">
                         <div>
-                            <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[10px] mb-2 text-sky-700 font-mono">// Project Overview</h5>
+                            <h5 id="modalPanelLeftTitle" class="font-bold text-slate-800 uppercase tracking-wide text-[10px] mb-2 text-sky-700 font-mono">// Project Overview</h5>
                             <p id="modalOverview" class="leading-relaxed font-light"></p>
                         </div>
                     </div>
                     <div class="bg-slate-50/70 p-5 rounded-2xl border border-slate-100 flex flex-col justify-between">
                         <div>
-                            <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[10px] mb-3 text-sky-700 font-mono">// Working Process</h5>
+                            <h5 id="modalPanelRightTitle" class="font-bold text-slate-800 uppercase tracking-wide text-[10px] mb-3 text-sky-700 font-mono">// Working Process</h5>
                             <div id="modalProcess" class="space-y-2 font-light"></div>
                         </div>
                     </div>
@@ -781,301 +560,185 @@
                             <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Dynamic Calculation Loops:</strong> Handling data registers across runtime allocations without overwriting tracking array footprints.</div>
                             <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Digital Output Control:</strong> Routing alphanumeric strings across dynamic pin mappings to format calculations perfectly onto character matrices.</div>`
             },
-            pureair: {
-                title: "Finding Pure Air (Pure Air Tracker)",
-                subtitle: "Grade 8 Environmental Monitoring Node",
-                icon: "fa-wind text-teal-500",
-                overview: "The Pure Air Tracker is an environmental monitoring node designed to introduce students to data telemetry. Built on a compact Arduino Nano framework, the device uses an MQ2 gas sensor to sample ambient air quality continuously. Through a custom mobile application developed in MIT APP INVENTOR, the hardware streams real-time gas concentration levels over a Bluetooth connection. The app processes this incoming telemetry data to display a live air quality index, warning users visually if pollutants cross a safe threshold.",
-                process: `<p><strong class="font-semibold text-slate-800">Atmospheric Sampling:</strong> The MQ2 sensor actively measures air particle concentrations and sends corresponding analog signals to the Arduino Nano.</p>
-                          <p><strong class="font-semibold text-slate-800">Data Streaming:</strong> The Nano packages the raw sensor readings into serial data packets and transmits them wirelessly via the HC-05 Bluetooth module.</p>
-                          <p><strong class="font-semibold text-slate-800">APP Visualization:</strong> The custom-built smartphone application receives the live stream, parses the data, and displays real-time air quality metrics on a graphical interface.</p>`,
-                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Atmospheric Analytics:</strong> Understanding atmospheric compositions, the chemistry of gas detection, and the math required to scale raw sensor inputs into readable parts-per-million (PPM) values.</div>`,
-                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Telemetry Systems:</strong> Mastering wireless telemetry protocols and programming mobile APPs to receive, read, and dynamically graph shifting live data streams.</div>`
-            },
-            voicerover: {
-                title: "Smart Rover: Voice Controlled",
-                subtitle: "Grade 8 Robotics & Automation Framework",
-                icon: "fa-robot text-purple-500",
-                overview: "The Voice Rover is an introductory robotics and automation project that explores Speech-to-Text translation and machine control. Utilizing an Arduino Nano and a dual-motor chassis, this vehicle interfaces with a smartphone application engineered via MIT APP INVENTOR. The project takes advantage of the smartphone’s internal Google Voice Recognition engine. When a user speaks a command into the APP, the software converts the vocal chord frequencies into textual characters, transmitting them wirelessly over Bluetooth to steer the rover.",
-                process: `<p><strong class="font-semibold text-slate-800">Vocal Processing:</strong> The user presses a button on the custom mobile APP and speaks a command (e.g., 'Forward', 'Stop').</p>
-                          <p><strong class="font-semibold text-slate-800">String Transmission:</strong> The APP's speech-to-text algorithm processes the audio file into a clean text string and transmits it through the HC-05 module.</p>
-                          <p><strong class="font-semibold text-slate-800">Kinematic Execution:</strong> The Arduino Nano screens the incoming string and triggers the respective BO motors to run or halt to execute the directional instruction.</p>`,
-                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Acoustic Conversion:</strong> Understanding the conversion of acoustic sound waves into digital signals and analyzing mechanical drivetrain logic.</div>`,
-                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Speech Recognition Parsing:</strong> Implementing speech-recognition components within mobile APP environments and configuring string-matching logic in C++ code blocks.</div>`
-            },
-            smarthome: {
-                title: "Smart Home System",
-                subtitle: "Grade 7 Model Infrastructure Automation",
-                icon: "fa-house-laptop text-amber-500",
-                overview: "The Smart Home System is a model automation project designed to teach basic Internet of Things (IoT) principles and smart home infrastructure. Controlled entirely via a custom smartphone interface designed in MIT APP INVENTOR, this project features a scaled-down house model equipped with automated lighting and entryways. Students program an Arduino Nano to receive wireless user commands, allowing them to flip internal LED lights on or off and actuate a servo motor to open or close the front door.",
-                process: `<p><strong class="font-semibold text-slate-800">Wireless Control Dashboard:</strong> The user interacts with toggle switches and virtual sliders built into their custom smartphone APP.</p>
-                          <p><strong class="font-semibold text-slate-800">Command Routing:</strong> The APP pushes unique digital flags across the HC-05 Bluetooth network to the central Arduino Nano.</p>
-                          <p><strong class="font-semibold text-slate-800">Actuation:</strong> The Nano interprets the received flags, instantly routing power to switch the targeted LEDs or shifting the servo motor’s angular position to manipulate the doors.</p>`,
-                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Civil Automation:</strong> Exploring modern home efficiency, civil architecture automation, and basic logic loops.</div>`,
-                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Microcontroller Bus Routing:</strong> Learning how to interface digital outputs (LEDs) and positional actuators (servos) onto a single, wirelessly addressable microcontroller node.</div>`
-            },
-            tractor: {
-                title: "Mobile-Controlled Tractor",
-                subtitle: "Grade 8 Heavy Machinery Kinematics",
-                icon: "fa-tractor text-orange-600",
-                overview: "The Mobile-Controlled Tractor simulates heavy agricultural machinery operations using modern wireless controls. Moving away from standard RC controllers, students design a dedicated mobile APP dashboard using MIT APP INVENTOR to manage both propulsion and utility tools. Powered by an Arduino Nano, the chassis features a dual BO motor setup for heavy driving traction, along with an independent steering or lifting mechanism controlled by a high-torque servo motor to emulate authentic steering geometries or attachment lifts.",
-                process: `<p><strong class="font-semibold text-slate-800">Dashboard Mapping:</strong> The mobile APP UI features directional buttons alongside an interactive slider or button to manage the tool attachment.</p>
-                          <p><strong class="font-semibold text-slate-800">Data Transmission:</strong> Commands are batched and transferred simultaneously over the HC-05 Bluetooth transceiver.</p>
-                          <p><strong class="font-semibold text-slate-800">Differential Driving & Actuation:</strong> The Nano splits the incoming instructions—adjusting motor outputs for drive speed while concurrently setting precise servo positions for steering or lift control.</p>`,
-                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Machinery Physics:</strong> Understanding heavy machinery kinematics, center of mass tracking under changing payloads, and differential steering principles.</div>`,
-                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Channel Synchronization:</strong> Synchronizing multiple distinct actuator types (continuous DC motors vs. angular servo mechanisms) over a single wireless communication channel.</div>`
-            },
-            aircooler: {
-                title: "Smart Air Cooler System",
-                subtitle: "Grade 8 Appliance Engineering Architecture",
-                icon: "fa-fan text-blue-400",
-                overview: "The Smart Air Cooler System is a home appliance engineering project focusing on fluid vaporization and atmospheric cooling control. Built with an Arduino Nano, the system integrates a high-frequency ultrasonic MIST maker alongside a powerful DC fan. Through a dedicated control panel designed from scratch in MIT APP INVENTOR, users can wirelessly toggle the system, adjust fan ventilation rates, and activate the atomizer mist ring to quickly lower temperatures on hot days.",
-                process: `<p><strong class="font-semibold text-slate-800">APP Input:</strong> The user sets the desired cooling level using a control dashboard on their smartphone APP.</p>
-                          <p><strong class="font-semibold text-slate-800">Signal Transmission:</strong> The operational modes are converted into specific commands and relayed to the Arduino Nano over Bluetooth.</p>
-                          <p><strong class="font-semibold text-slate-800">Vaporization Control:</strong> The Nano executes the commands by regulating the DC fan's operational speed and powering up the MIST maker to atomize water into a cooling fog.</p>`,
-                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Thermal Evaporation:</strong> Exploring the physics of evaporation, thermal energy transfers, fluid dynamics, and how atomization lowers ambient air temperature.</div>`,
-                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Inductive Load Interfacing:</strong> Safely interfacing high-frequency ultrasonic modules and inductive DC motor loads within a unified microcontroller architecture.</div>`
-            },
-            earthquake: {
-                title: "Earthquakes Monitor",
-                subtitle: "Grade 8 Seismic Telemetry Station",
-                icon: "fa-earth-asia text-red-500",
-                overview: "The Earthquake Monitor is a seismic telemetry station that explores rotational mechanics, gravitational forces, and structural safety. Utilizing an MPU6050 Hex-Axis Gyroscope/Accelerometer linked to an Arduino Nano, the module measures minute ground vibrations and tilt displacements. The unique highlight of this project curriculum is the data bridge: the station streams real-time seismic data over Bluetooth to an MIT APP INVENTOR application, transforming a smartphone into a live digital seismograph that alerts users when structural tremors surpass safe thresholds.",
-                process: `<p><strong class="font-semibold text-slate-800">Inertial Sensing:</strong> The MPU6050 sensor tracks physical movement across three rotational axes (X, Y, Z) and acceleration changes, monitoring for sudden structural vibrations.</p>
-                          <p><strong class="font-semibold text-slate-800">Telemetry Uplink:</strong> The Arduino Nano collects these high-frequency telemetry matrices and uploads them wirelessly through the HC-05 Bluetooth chip.</p>
-                          <p><strong class="font-semibold text-slate-800">Seismic Alerts:</strong> The custom APP continually charts the incoming data variations on the screen, triggering an emergency audio alarm on the smartphone if severe seismic movement is detected.</p>`,
-                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Geology & Mappings:</strong> Understanding geology, structural engineering, seismic waves, and the multi-axis (X, Y, Z) Cartesian coordinate system.</div>`,
-                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>I2C Sensor Calibration:</strong> Interfacing advanced I^2C protocol communication sensors (MPU6050) with microcontrollers and writing data-parsing algorithms in block-based application software.</div>`
-            },
-            shadespotter: {
-                title: "Shade Spotter APP",
-                subtitle: "Grade 6 UI Layout & Game Logic Component",
-                icon: "fa-palette text-pink-500",
-                overview: "Shade Spotter is a gamified color-perception application that challenges users to identify subtle variations in color shades. Built to develop UI layout design and game loop logic, the app generates a grid of colored buttons where all buttons are identical except for one 'target' button that features a slightly different shade. Users must race against a timer to tap the odd shade out to score points.",
-                process: `<p><strong class="font-semibold text-slate-800">Initialization Layout:</strong> Creates dynamic canvas layouts using randomized base operational parameters.</p>
-                          <p><strong class="font-semibold text-slate-800">Offset Matrix blocks:</strong> Math blocks apply a variable offset value to RGB matrix channels, generating an asynchronous target shade block dynamically.</p>
-                          <p><strong class="font-semibold text-slate-800">Condition Controls:</strong> Tapping elements initiates comparison tests against index references to log scores or refresh screens.</p>`,
-                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Color Analytics:</strong> Practical understanding of fundamental color theory constraints, light refraction variables, and standard digital RGB matrix profiles.</div>`,
-                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Matrix Optimization:</strong> Organizing fluid grid constraints and managing mutable variable fields across concurrent clock component triggers.</div>`
-            },
-            digitalcalc: {
-                title: "Digital Calculator APP",
-                subtitle: "Grade 6 Variable Tracking Array",
-                icon: "fa-calculator text-blue-500",
-                overview: "A utility application that introduces students to basic computational logic and numerical variable tracking. The app mimics a standard pocket calculator, allowing users to input numbers and perform fundamental arithmetic operations (addition, subtraction, multiplication, and division).",
-                process: `<p><strong class="font-semibold text-slate-800">String Aggregations:</strong> Pulls raw numerical input tracks directly from standard operational entry boxes.</p>
-                          <p><strong class="font-semibold text-slate-800">Register Buffering:</strong> Pressing operational control buttons binds active variables directly into temporary runtime storage lines.</p>
-                          <p><strong class="font-semibold text-slate-800">Math Blocks processing:</strong> Computes standard formulas securely, casting integer properties down to display output strings.</p>`,
-                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Order of Operations:</strong> Resolving strict order constraints and mapping mathematical order validation workflows.</div>`,
-                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Type Conversions:</strong> Formulating clean text-to-integer conversion pathways while building code loops to block edge errors like division by zero.</div>`
-            },
-            simplechatbot: {
-                title: "Simple Chatbot APP",
-                subtitle: "Grade 6 Rule-Based Communication Structure",
-                icon: "fa-comment-dots text-purple-600",
-                overview: "An interactive, rule-based communication application that simulates a live text conversation. This project introduces students to text parsing and conditional string-matching logic without external APIs.",
-                process: `<p><strong class="font-semibold text-slate-800">Trace Logging:</strong> Translates immediate user text logs directly into clean visual tracking arrays.</p>
-                          <p><strong class="font-semibold text-slate-800">String Parsing:</strong> Routes user entries through multi-layered nested if-then-else filters to detect keyword properties.</p>
-                          <p><strong class="font-semibold text-slate-800">Audio Synthesis:</strong> Couples string logs to local speech engines to articulate response matrices aloud.</p>`,
-                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Linguistic Automation:</strong> Exploring core linguistic properties, automated response mappings, and conversation logic constraints.</div>`,
-                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Array Indexing:</strong> Structuring list variables, performing text index checks, and handling native accessibility speech APIs safely.</div>`
-            },
-            stepcounter: {
-                title: "Step Counter (Pedometer APP)",
-                subtitle: "Grade 6 Hardware Sensor Interfacing",
-                icon: "fa-heart-pulse text-rose-500",
-                overview: "A health and fitness tracking application that utilizes a smartphone's physical internal sensors to log human movement, demonstrating how mobile software interacts directly with phone hardware.",
-                process: `<p><strong class="font-semibold text-slate-800">Sensor Interfacing:</strong> Binds code registers directly to active internal phone step counting sensors.</p>
-                          <p><strong class="font-semibold text-slate-800">Kinematic Conversion:</strong> Processes mechanical accent changes into numerical output registers over persistent listeners.</p>
-                          <p><strong class="font-semibold text-slate-800">Metric Calculations:</strong> Evaluates clock components and mathematical blocks to track physiological payload consumption scores.</p>`,
-                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Kinematics & Bio-metrics:</strong> Investigating human kinematics formulas, structural patterns, and physiological metabolic tracking systems.</div>`,
-                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Hardware Hooks:</strong> Resolving asynchronous physical sensor streams, debugging background listeners, and formatting float properties.</div>`
-            },
-            aicalc: {
-                title: "AI Calculator (Voice-Driven APP)",
-                subtitle: "Grade 7 Natural Language AI Module",
-                icon: "fa-microphone text-indigo-500",
-                overview: "An advanced mathematical utility app that upgrades a standard calculator layout by integrating artificial intelligence and natural language processing. Instead of pressing buttons, users speak full arithmetic strings to execute calculations hands-free.",
-                process: `<p><strong class="font-semibold text-slate-800">Vocal Acquisition:</strong> Launches neural voice conversion models on user trigger inputs.</p>
-                          <p><strong class="font-semibold text-slate-800">String Cleaning:</strong> Filters spoken expressions into clean operational arrays, removing trailing language artifacts.</p>
-                          <p><strong class="font-semibold text-slate-800">Arithmetic Routing:</strong> Pushes isolated integers to calculation engines, outputting vocal audio streams.</p>`,
-                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>NLP Architectures:</strong> Decoding speech engine logic tracks, isolating alphanumeric text sequences, and structural algebraic data mappings.</div>`,
-                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>AI Extensions:</strong> Implementing proprietary speech AI blocks and engineering algorithmic filters to parse unstructured data fields.</div>`
-            },
-            intelchatbot: {
-                title: "Intelligent Chatbot APP",
-                subtitle: "Grade 7 Conversational Data Architecture",
-                icon: "fa-brain text-violet-500",
-                overview: "Moving beyond simple keyword matching, this project explores conversational user experiences by using string processing functions to handle contextual dialogue and look up information across data tables.",
-                process: `<p><strong class="font-semibold text-slate-800">Sentence Analysis:</strong> Evaluates variable sentence properties cleanly across semantic text properties.</p>
-                          <p><strong class="font-semibold text-slate-800">Database Lookup:</strong> Matches computed strings against key-value properties inside persistent database structures.</p>
-                          <p><strong class="font-semibold text-slate-800">Context Retention:</strong> Stores variable user profiles to simulate multi-turn memory properties across loop sequences.</p>`,
-                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Data Modeling:</strong> Studying contextual semantic models, system memory structures, and organized key data groupings.</div>`,
-                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>TinyDB Engineering:</strong> Harnessing non-volatile localized storage matrices, manipulating nested lists, and building robust retention logic.</div>`
-            },
-            studymatte: {
-                title: "Study Matte Portal APP",
-                subtitle: "Grade 8 Multi-Screen System Capstone",
-                icon: "fa-graduation-cap text-sky-600",
-                overview: "A full-featured student productivity dashboard app that integrates calendar organization, assignments tracking, and file sharing into a single application. This project serves as a capstone that challenges students to build multi-screen interfaces and manage complex data sharing.",
-                process: `<p><strong class="font-semibold text-slate-800">Multi-Screen Navigation:</strong> Manages clean workspace swaps via a sliding layout navigation structure.</p>
-                          <p><strong class="font-semibold text-slate-800">Persistent Caching:</strong> Locks active note scripts and agenda logs directly to non-volatile local frameworks.</p>
-                          <p><strong class="font-semibold text-slate-800">Resource Integration:</strong> Pulls external assets via WebViewer blocks, piping layouts to native sharing channels.</p>`,
-                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Productivity UI Design:</strong> Formulating complex time management interfaces, asset classification systems, and accessible layout guidelines.</div>`,
-                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Global Tree Architecture:</strong> Engineering multi-screen variable pass-through rules, caching files, and tracking synchronized data states across deep block architectures.</div>`
-            },
-            grade9vision: {
-                title: "Computer Vision & Image Recognition Grid",
-                subtitle: "Grade 9 Convolutional Neural Networks & Interaction Frameworks",
-                icon: "fa-eye text-sky-500",
-                overview: "A premium modern curriculum grid blending Google Teachable Machine model training with P5.js creative coding libraries for interactive real-time visual AI processing capabilities.",
+
+            // 9. RE-STRUCTURED: COMBINED MOBILE APPLICATION PROJECTS SUITE
+            mobileappscombined: {
+                title: "Mobile Application Portfolio (MIT App Inventor Suite)",
+                subtitle: "Grades 6-8 App Architecture & Interface Systems",
+                icon: "fa-mobile-screen-button text-sky-600",
+                overview: "A comprehensive combined student application ecosystem designed using MIT App Inventor. This suite highlights modular screen handshakes, hardware telemetry loops, persistent storage parsing, and custom UI layouts deployed to bridge logical script structures directly with modern front-end application paradigms.",
                 process: `
-                    <div class="space-y-3 font-light text-slate-600">
+                    <div class="space-y-4 font-light text-slate-600">
                         <div>
-                            <strong class="font-bold text-sky-800 block uppercase text-[10px]">1. Atomic Structure Identifier</strong>
-                            <p class="mt-0.5">Trains custom CNN models to read Bohr sketches, calling exported model.json link tensors inside ML5.js interfaces to overlay atomic chemical numbers, masses, and valency properties dynamically over webcam feeds.</p>
+                            <span class="block font-bold text-sky-800 uppercase text-[10px]">1. Pure Air Tracker (Grade 8 Node)</span>
+                            <p class="mt-0.5">Streams real-time atmospheric MQ2 analog telemetry wirelessly via HC-05 Bluetooth modules to map live air quality indices onto graphical application panels.</p>
                         </div>
                         <div>
-                            <strong class="font-bold text-sky-800 block uppercase text-[10px]">2. Live Geometric Angle Analyzer</strong>
-                            <p class="mt-0.5">Distinguishes geometric angle vectors (Acute, Right, Obtuse, Reflex) across camera frames, generating instantaneous color bounding box layouts on active P5.js layouts.</p>
+                            <span class="block font-bold text-sky-800 uppercase text-[10px]">2. Voice Controlled Smart Rover (Grade 8 Automation)</span>
+                            <p class="mt-0.5">Captures spoken audio data using internal Google Speech engines, converting vocal frequencies into explicit string texts to drive differential DC motor rigs.</p>
                         </div>
                         <div>
-                            <strong class="font-bold text-sky-800 block uppercase text-[10px]">3. Gesture-Driven Rock-Paper-Scissors Game</strong>
-                            <p class="mt-0.5">Eliminates physical controllers via hand tracking data arrays. A countdown loop samples active gestures against machine choice variables to compute winner output strings.</p>
+                            <span class="block font-bold text-sky-800 uppercase text-[10px]">3. Smart Home System Layout (Grade 7 Infrastructure)</span>
+                            <p class="mt-0.5">Provides user switches and toggle sliders to route digital code flags across networks, toggling domestic lighting relays and swinging gate servos.</p>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-sky-800 uppercase text-[10px]">4. Mobile-Controlled Tractor (Grade 8 Machinery)</span>
+                            <p class="mt-0.5">Synchronizes distinct multi-actuator channels simultaneously—managing heavy driving propulsion speeds along with custom lift attachments.</p>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-sky-800 uppercase text-[10px]">5. Smart Air Cooler Management (Grade 8 Fluidics)</span>
+                            <p class="mt-0.5">Regulates high-frequency ultrasonic mist rings and multi-stage ventilation currents through a custom wireless control interface panel.</p>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-sky-800 uppercase text-[10px]">6. Seismic Earthquake Monitor (Grade 8 Geology)</span>
+                            <p class="mt-0.5">Pipes high-frequency MPU6050 six-axis gyroscope acceleration registers over localized channels to map real-time digital graphs on mobile screens.</p>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-sky-800 uppercase text-[10px]">7. Shade Spotter Dashboard (Grade 6 UI Engine)</span>
+                            <p class="mt-0.5">A matrix layout generating dynamic color shade arrays with mathematical offset limits, forcing user speed choices over continuous timer tracks.</p>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-sky-800 uppercase text-[10px]">8. Core Primary Mini-Apps (Grade 6 Utilities)</span>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">Digital Calculator:</strong> Executes variable integer processing while blocking division errors. <strong class="font-medium text-slate-800">Simple Chatbot:</strong> Rule-based string parsing feeding internal text-to-speech loops. <strong class="font-medium text-slate-800">Step Counter:</strong> Background listener hooks tracking human motion parameters.</p>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-sky-800 uppercase text-[10px]">9. Study Matte Portal (Grade 8 Capstone Product)</span>
+                            <p class="mt-0.5">Multi-screen student productivity asset compiling databases, notification schedulers, note frameworks, and cross-screen pass-through logic.</p>
                         </div>
                     </div>`,
                 academic: `
                     <div class="space-y-2 font-light text-slate-600">
-                        <div class="bg-white p-3 rounded-xl border border-slate-100"><strong>Integrated Sciences:</strong> Verifying periodic trends, spatial geometry angles, vertices calculations, and competitive game state matrices.</div>
+                        <div class="bg-white p-3 rounded-xl border border-slate-100"><strong>Data & Wave Physics:</strong> Tracking atmospheric gas densities (PPM fields), mechanical drivetrain load states, acoustic transformation vectors, and thermal vaporization characteristics.</div>
                     </div>`,
                 technical: `
                     <div class="space-y-2 font-light text-slate-600">
-                        <div class="bg-white p-3 rounded-xl border border-slate-100"><strong>AI Pipeline Deployment:</strong> Curating vision databases, calibrating validation weights, structuring tensor thresholds, and nesting JavaScript sketch lifecycles.</div>
+                        <div class="bg-white p-3 rounded-xl border border-slate-100"><strong>Architecture Deployment:</strong> Handling non-volatile database maps (TinyDB models), serial Bluetooth streams, event background listeners, and complex multi-screen variable global paths.</div>
                     </div>`
             },
-            grade9audio: {
-                title: "Audio Deep Learning & Sound Recognition Grid",
-                subtitle: "Grade 9 Spectral Wave Analytics & Biometric Access control",
-                icon: "fa-volume-high text-rose-500",
-                overview: "High-level neural sound classification modules rendering dynamic acoustic reactives and verification security schemas using character wave telemetry profiles.",
+
+            // 10. RE-STRUCTURED: COMBINED ARTIFICIAL INTELLIGENCE PROJECTS SUITE
+            aiprojectscombined: {
+                title: "Artificial Intelligence Portfolio (Teachable Machine & P5.js Suite)",
+                subtitle: "Grade 9 Neural Computations & Image/Audio Analytics",
+                icon: "fa-brain text-rose-500",
+                overview: "A premium high-level AI deployment grid combining cloud-trained neural models with frontend creative JavaScript libraries. These projects introduce visual classification tensors, structural feature extraction weights, and audio spectrogram maps within live web architectures.",
                 process: `
-                    <div class="space-y-3 font-light text-slate-600">
+                    <div class="space-y-4 font-light text-slate-600">
                         <div>
-                            <strong class="font-bold text-rose-800 block uppercase text-[10px]">4. Acoustic Instrument Classifier</strong>
-                            <p class="mt-0.5">Converts microphone data streams into visual time-frequency spectrogram maps, training neural nodes on timbres to trigger audio-reactive particle visualizer sketches.</p>
+                            <span class="block font-bold text-rose-800 uppercase text-[10px]">1. Atomic Structure Identifier (Computer Vision)</span>
+                            <p class="mt-0.5">CNN model classifying sketches of Bohr elements. Integrates an ml5.imageClassifier() template inside P5.js code loops to render atomic constants over webcam grids.</p>
                         </div>
                         <div>
-                            <strong class="font-bold text-rose-800 block uppercase text-[10px]">5. Voice Biometric Access Node</strong>
-                            <p class="mt-0.5">Validates authorized speaker vocal contours. Compares voice fingerprints against baseline thresholds, executing graphic door locks if validation checks score under 85% bounds.</p>
+                            <span class="block font-bold text-rose-800 uppercase text-[10px]">2. Live Geometric Angle Analyzer (Spatial CV)</span>
+                            <p class="mt-0.5">Tracks intersecting vertices, human joint vectors, and real-world corners, generating interactive color protractor canvas bounding boxes over acute or obtuse nodes.</p>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-rose-800 uppercase text-[10px]">3. Gesture-Driven Rock-Paper-Scissors (Tracking Logic)</span>
+                            <p class="mt-0.5">Organizes dynamic hand shape databases (Rock/Paper/Scissors). A countdown draw loop evaluates current hand tracking parameters against randomized computer states.</p>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-rose-800 uppercase text-[10px]">4. Acoustic Instrument Classifier (Deep Learning Audio)</span>
+                            <p class="mt-0.5">Transforms microphone recordings into visual time-frequency spectrogram maps, analyzing wave amplitudes to paint customized sound-reactive canvas particles.</p>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-rose-800 uppercase text-[10px]">5. Voice Biometric Access Node (Speaker Recognition)</span>
+                            <p class="mt-0.5">An authentication lock screen tracking user voice profiles. It applies strict filter restrictions, executing canvas gates if matching scores clear an 85% safety block.</p>
                         </div>
                     </div>`,
                 academic: `
                     <div class="space-y-2 font-light text-slate-600">
-                        <div class="bg-white p-3 rounded-xl border border-slate-100"><strong>Acoustic Wave Physics:</strong> Investigating wave frequencies, variations in pitch metrics, timbre bounds, and cryptographic security properties.</div>
+                        <div class="bg-white p-3 rounded-xl border border-slate-100"><strong>Advanced Applied Sciences:</strong> Periodic table electron maps, spatial trigonometry angular math, probability branches, and acoustic wave amplitude properties.</div>
                     </div>`,
                 technical: `
                     <div class="space-y-2 font-light text-slate-600">
-                        <div class="bg-white p-3 rounded-xl border border-slate-100"><strong>Spectral Array Engineering:</strong> Constructing multi-dimensional frequency transforms, configuring sound extensions, and parsing conditional data metrics.</div>
+                        <div class="bg-white p-3 rounded-xl border border-slate-100"><strong>Machine Learning Deployment:</strong> Training custom epochs, export parameter configurations (model.json tracks), running ML5 sound arrays, and tuning classification confidence ratios.</div>
                     </div>`
             },
-            grade6automation: {
-                title: "Grade 6 Projects (Autonomous Systems & Logic)",
-                subtitle: "Multi-Conditional Automation & Audio Radar Blueprints",
+
+            // 11. RE-STRUCTURED: COMBINED OTHER ELECTRONIC PROJECTS (GRADES 6 & 7)
+            otherelectronicscombined: {
+                title: "Other Electronic Projects Portfolio",
+                subtitle: "Grades 6-7 Arduino System Automation & Telemetry Blueprints",
                 icon: "fa-diagram-project text-indigo-500",
-                overview: "A specialized middle school curriculum block utilizing the Arduino Uno to introduce logical gate branches, proximity waveforms, and sensory mapping algorithms without advanced network layers.",
+                overview: "A specialized middle school tracking grid focusing on climate-responsive logic loops, echo-location calculations, and analog environmental probe arrays managed through the Arduino framework.",
                 process: `
                     <div class="space-y-3 font-light text-slate-600">
                         <div>
-                            <strong class="font-bold text-sky-800 block uppercase text-[10px]">1. Smart Roof System (OR-Gate Logic)</strong>
-                            <p class="mt-0.5">Closes a mechanical roof enclosure via a high-torque servo loop if the rain sensor reads moisture droplets OR the LDR logs nighttime threshold values.</p>
+                            <strong class="font-bold text-indigo-800 block uppercase text-[10px]">1. Smart Roof System (Climate Automation)</strong>
+                            <p class="mt-0.5">Actuates a high-torque protection roof canopy via servo linkages when rain sensors detect moisture droplets OR an LDR logs low ambient daylight inputs.</p>
                         </div>
                         <div>
-                            <strong class="font-bold text-sky-800 block uppercase text-[10px]">2. Smart Blind Stick (Assistive Proximity Radar)</strong>
-                            <p class="mt-0.5">Translates time-of-flight bounce metrics from an ultrasonic radar into proximity audio frequencies via an alert buzzer.</p>
+                            <strong class="font-bold text-indigo-800 block uppercase text-[10px]">2. Smart Blind Stick / Assistive Shoe (Mobility Radar)</strong>
+                            <p class="mt-0.5">An assistive navigation tool running time-of-flight acoustic sound waves through a proximity sensor, triggering a pulse buzzer during obstacle encounters.</p>
                         </div>
                         <div>
-                            <strong class="font-bold text-sky-800 block uppercase text-[10px]">3. Smart Bin (Touchless Sanitation Hinge)</strong>
-                            <p class="mt-0.5">Lifts trash container lids cleanly using servo vector mechanics, executing non-blocking hold timers before resetting positions.</p>
+                            <strong class="font-bold text-indigo-800 block uppercase text-[10px]">3. Smart Bin (Touchless Sanitary Control)</strong>
+                            <p class="mt-0.5">Detects approach limits through ultrasonic data sweeps, engaging mechanical servo hinges for 3-5 seconds using a non-blocking hold timer logic script.</p>
                         </div>
                         <div>
-                            <strong class="font-bold text-sky-800 block uppercase text-[10px]">4. Dancing LED Array (Sound Display mapping)</strong>
-                            <p class="mt-0.5">Maps incoming microphone module voltage ripples across 10 digital outputs to create dynamic sound sync visualizers.</p>
+                            <strong class="font-bold text-indigo-800 block uppercase text-[10px]">4. Dancing LED Array (Audio-Reactive Mapping)</strong>
+                            <p class="mt-0.5">Processes analog microphone voltage spikes, utilizing scalar map() equations to spread volume levels across 10 independent display outputs.</p>
                         </div>
                         <div>
-                            <strong class="font-bold text-sky-800 block uppercase text-[10px]">5. Intelligent Parking System (Civil Counting Loops)</strong>
-                            <p class="mt-0.5">Increments and decrements available space tracking values dynamically using dual gate IR arrays and a character LCD display panel.</p>
+                            <strong class="font-bold text-indigo-800 block uppercase text-[10px]">5. Intelligent Parking System (Civil Slot Tracker)</strong>
+                            <p class="mt-0.5">Coordinates dual ingress/egress IR nodes to automate barrier servo gates while dynamically updating available space counts on a character LCD screen.</p>
+                        </div>
+                        <div>
+                            <strong class="font-bold text-indigo-800 block uppercase text-[10px]">6. Flood & Soil Saturation Alert Node (Disaster Telemetry)</strong>
+                            <p class="mt-0.5">An agritech sensor network probing volumetric water density profiles. Excess saturation triggers high-pitched audio buzzers and streams serial data alerts over Bluetooth.</p>
                         </div>
                     </div>`,
                 academic: `
-                    <div class="space-y-3 font-light text-slate-600">
-                        <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Computational Physics:</strong> Mastering fluid dynamic moisture constraints, time-of-flight acoustic echolocation equations, acoustic pressure arrays, and urban planning mechanics.</div>
+                    <div class="space-y-2 font-light text-slate-600">
+                        <div class="bg-white p-3 rounded-xl border border-slate-100"><strong>Analog Physics:</strong> Investigating moisture conductivity thresholds, acoustic echo math equations, sound amplitudes, fluid density metrics, and modern urban planning algorithms.</div>
                     </div>`,
                 technical: `
-                    <div class="space-y-3 font-light text-slate-600">
-                        <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Core Logic Architectures:</strong> Programming nested conditional Boolean dependencies, sensor tracking calculations, non-blocking asynchronous timers, and scalar map() variables.</div>
+                    <div class="space-y-2 font-light text-slate-600">
+                        <div class="bg-white p-3 rounded-xl border border-slate-100"><strong>Arduino Firmware Architectures:</strong> Structuring multi-conditional Boolean gates (OR tracking), timing variables, index incrementing/decrementing data routines, and wireless serial stream parameters.</div>
                     </div>`
             },
-            grade7telemetry: {
-                title: "Grade 7 Projects (Advanced Environmental Tracking)",
-                subtitle: "Disaster Mitigation & RF Node Mappings",
-                icon: "fa-satellite-dish text-emerald-600",
-                overview: "Advanced lower secondary modules emphasizing analog infrastructure profiling, risk management parameters, and synchronous wireless data packaging across local RF spectrum arrays.",
-                process: `
-                    <div class="space-y-3 font-light text-slate-600">
-                        <div>
-                            <strong class="font-bold text-emerald-800 block uppercase text-[10px]">6. Flood & Soil Saturation Alert Node</strong>
-                            <p class="mt-0.5">An agricultural tracking array deploying soil moisture sensors to flag sudden volumetric saturation spikes. Surpassing safety limits sounds a high-pitched localized piezo buzzer while concurrently pipe-streaming a serial emergency telemetry uplink over HC-05 Bluetooth buses into companion phone platforms.</p>
-                        </div>
-                    </div>`,
-                academic: `
-                    <div class="space-y-3 font-light text-slate-600">
-                        <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Geophysical Mechanics:</strong> Soil density structures, soil tracking thresholds, volumetric fluid retention limits, and emergency flood mitigation strategies.</div>
-                    </div>`,
-                technical: `
-                    <div class="space-y-3 font-light text-slate-600">
-                        <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Telemetry Pipeline Engineering:</strong> Interfacing analog resistance probes, managing trigger thresholds, and transmitting serial string structures wirelessly.</div>
-                    </div>`
-            },
+
+            // 12. RENAME & INTEGRATION: OTHER ELECTRICAL PROJECTS (GRADES 1-5)
             grade5automation: {
-                title: "Electrical Projects Grid (Grades 1-5 Blueprints)",
+                title: "Other Electrical Projects",
                 subtitle: "Foundational Closed Loops & Sensor Automation Architecture",
                 icon: "fa-bolt text-amber-500",
                 overview: "A comprehensive analog portfolio showcasing tactile electronics engineering layouts for lower primary deployments. These modules introduce core electrical current constraints, polarity rules, mechanical routing systems, and basic switching gates using discrete physical components without microcontrollers.",
                 process: `
                     <div class="space-y-3 font-light text-slate-600">
                         <div>
-                            <span class="block font-bold text-sky-800 uppercase text-[10px]">Grade 5: Automation & Sensor Basics</span>
-                            <p class="mt-0.5"><strong class="font-medium text-slate-800">1. Automatic Hand Wash:</strong> IR sensor detects obstacles, closing a single-channel relay switch path to fire the submersible pump loops touchlessly.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-slate-800">2. Fire Prevention System:</strong> Optical flame sweep arrays isolate hazard wavelengths, closing relays to engage fluid motors immediately.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-slate-800">3. Independent Lighthouse:</strong> An LDR variable resistance loop breaks current paths under sunlight and automatically triggers a relay to fire bright beacon LEDs at nightfall.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-slate-800">4. Water Level Indicator:</strong> Leverages the natural electrical conductivity of water to complete circuit traces on a physical metrics container scale.</p>
+                            <span class="block font-bold text-amber-800 uppercase text-[10px]">Automation & Sensor Basics (Grade 5)</span>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">1. Automatic Hand Wash:</strong> IR sensor obstacle checks complete a relay circuit path to run water pump motors touchlessly.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">2. Fire Prevention System:</strong> Flame sensors check for IR threat signatures, toggling single-channel switching arrays to discharge fluid streams.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">3. Independent Lighthouse:</strong> LDR light resistance breaks circuit lines under ambient sun rays and automatically triggers a relay to fire bright beacon LEDs at dark.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">4. Water Level Indicator:</strong> Stripped multi-core copper wire leads map height milestones, completing active current traces through water conductivity.</p>
                             <p class="mt-0.5"><strong class="font-medium text-slate-800">5. Following Robot:</strong> Forward IR nodes activate directional relay shifts, engaging driving DC units when an object guides the loop tracking paths.</p>
                             <p class="mt-0.5"><strong class="font-medium text-slate-800">6. Rotating Toy:</strong> Base optical triggers isolate wave paths, closing relays to actuate a vertically mounted high-speed spinning motor module.</p>
                         </div>
                         <div class="pt-2 border-t border-slate-200">
-                            <span class="block font-bold text-sky-800 uppercase text-[10px]">Grade 4: Switches & Closed Circuits</span>
-                            <p class="mt-0.5"><strong class="font-medium text-slate-800">7. Wired Rover:</strong> Handheld manual toggles change current polarities to drive variable differential drivetrains.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-slate-800">8. Electric Maze:</strong> Metal tracking loops test fine motor controls; closing a circuit with aluminum foil paths completes an alarm buzzer track loop.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-slate-800">9. Interactive Greeting Card:</strong> Embedded magnetic reed switches toggle metal contact leaves when target magnet positions shift inside fold lines.</p>
+                            <span class="block font-bold text-amber-800 uppercase text-[10px]">Switches & Closed Circuits (Grade 4)</span>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">7. Wired Rover:</strong> Direct handheld manual switches swap battery terminal paths to handle full multi-motor differential steering tracking.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">8. Electric Maze:</strong> Aluminum sheet baselines create steady-hand open game loops; touch shorts immediately trigger audio alarm buzzers.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">9. Interactive Greeting Card:</strong> Card seams mask compact reed switch components that snap closed when magnetic alignment passes over fold coordinates.</p>
                         </div>
                     </div>`,
                 academic: `
                     <div class="space-y-3 font-light text-slate-600">
                         <div>
-                            <span class="block font-bold text-indigo-800 uppercase text-[10px]">Grade 3: Foundational Assembly</span>
-                            <p class="mt-0.5"><strong class="font-medium text-slate-800">10. Glowing Memory Frame:</strong> Low-voltage LED line matrices wrapped around picture mounts to teach physical slide configuration switching gates safely.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-slate-800">11. Movable Poppet:</strong> High-speed circular motor shaft rotation converted into asymmetrical kinetic limb shifts using raw pivot offsets.</p>
+                            <span class="block font-bold text-indigo-800 uppercase text-[10px]">Foundational Assembly (Grade 3)</span>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">10. Glowing Memory Frame:</strong> LED tape strings mounted into casing boundaries to demonstrate clean manual toggle slide constraints safely.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">11. Movable Poppet:</strong> High-speed circular motor shafts convert motion vectors into irregular kinetic dancing arrays using physical offset extensions.</p>
                             <p class="mt-0.5"><strong class="font-medium text-slate-800">12. Elevator Model:</strong> Polarity switches shift terminal battery routing lines to reverse hoist directions.</p>
                         </div>
                     </div>`,
                 technical: `
                     <div class="space-y-3 font-light text-slate-600">
                         <div>
-                            <span class="block font-bold text-indigo-800 uppercase text-[10px]">Grade 1 & 2: Paper Circuits & Polarity Basics</span>
-                            <p class="mt-0.5"><strong class="font-medium text-slate-800">13. Paper Circuit (Gr. 2):</strong> Deploying flat copper foil adhesive trace ribbons on layouts to run discrete low-voltage components solderlessly.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-slate-800">14. Series & Parallel (Gr. 2):</strong> Path comparison templates charting single continuous current constraints vs. multi-rung ladder branches.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-slate-800">15. Simple LED Experiment (Gr. 1):</strong> Foundational matching of positive anodes and negative cathodes directly over 3V coin cells.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-slate-800">16. Open & Close Loop:</strong> Manual push mechanics proving current must form a completely continuous, unbroken ring structure to flow.</p>
+                            <span class="block font-bold text-indigo-800 uppercase text-[10px]">Paper Circuits & Polarity (Grades 1 & 2)</span>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">13. Paper Circuit Layouts:</strong> Solderless circuit traces using adhesive copper foil lines taped directly over flat desktop models.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">14. Series & Parallel Formations:</strong> Clear structural line testing comparing single path loops against multi-branch ladder frameworks.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">15. Simple LED Experiment:</strong> The core identification step sliding long positive anodes and short negative cathodes over coin cells.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">16. Open & Close Circuit:</strong> Visual push loops showing current flow requires an unbroken, completed continuous ring map format.</p>
                         </div>
                     </div>`
             }
@@ -1105,22 +768,30 @@
             const data = projectRegistry[projectId];
             if (!data) return;
 
+            // Dynamically adjust internal modal column layouts based on entry profiles
             if (projectId === 'grade5automation') {
+                document.getElementById("modalPanelLeftTitle").innerText = "// Project Registry";
+                document.getElementById("modalPanelRightTitle").innerText = "// Structural Details";
                 document.getElementById("modalSectionLeftTitle").innerText = "// Assembly Layouts";
                 document.getElementById("modalSectionRightTitle").innerText = "// Primary Modules";
-            } else if (projectId === 'grade6automation') {
-                document.getElementById("modalSectionLeftTitle").innerText = "// Academic Outcomes";
-                document.getElementById("modalSectionRightTitle").innerText = "// Technical Outcomes";
-            } else if (projectId === 'grade7telemetry') {
-                document.getElementById("modalSectionLeftTitle").innerText = "// Geophysical Mechanics";
-                document.getElementById("modalSectionRightTitle").innerText = "// Telemetry Pipeline Engineering";
-            } else if (projectId === 'grade9vision') {
-                document.getElementById("modalSectionLeftTitle").innerText = "// Integrated Sciences";
-                document.getElementById("modalSectionRightTitle").innerText = "// AI Pipeline Deployment";
-            } else if (projectId === 'grade9audio') {
-                document.getElementById("modalSectionLeftTitle").innerText = "// Acoustic Wave Physics";
-                document.getElementById("modalSectionRightTitle").innerText = "// Spectral Array Engineering";
+            } else if (projectId === 'otherelectronicscombined') {
+                document.getElementById("modalPanelLeftTitle").innerText = "// Autonomous Systems";
+                document.getElementById("modalPanelRightTitle").innerText = "// Operational Checkpoints";
+                document.getElementById("modalSectionLeftTitle").innerText = "// Analog Physics";
+                document.getElementById("modalSectionRightTitle").innerText = "// Arduino Firmware Architectures";
+            } else if (projectId === 'mobileappscombined') {
+                document.getElementById("modalPanelLeftTitle").innerText = "// Application Portfolio";
+                document.getElementById("modalPanelRightTitle").innerText = "// Component Architectures";
+                document.getElementById("modalSectionLeftTitle").innerText = "// Data & Wave Physics";
+                document.getElementById("modalSectionRightTitle").innerText = "// Architecture Deployment";
+            } else if (projectId === 'aiprojectscombined') {
+                document.getElementById("modalPanelLeftTitle").innerText = "// Image Recognition";
+                document.getElementById("modalPanelRightTitle").innerText = "// Audio Deep Learning";
+                document.getElementById("modalSectionLeftTitle").innerText = "// Advanced Applied Sciences";
+                document.getElementById("modalSectionRightTitle").innerText = "// Machine Learning Deployment";
             } else {
+                document.getElementById("modalPanelLeftTitle").innerText = "// Project Overview";
+                document.getElementById("modalPanelRightTitle").innerText = "// Working Process";
                 document.getElementById("modalSectionLeftTitle").innerText = "// Academic Outcomes";
                 document.getElementById("modalSectionRightTitle").innerText = "// Technical Outcomes";
             }
