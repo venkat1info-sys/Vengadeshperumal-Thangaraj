@@ -81,13 +81,11 @@
                     </div>
                 </div>
                 
-                <div class="shrink-0 mx-auto md:mx-0 relative z-20">
-                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white shadow-xl overflow-hidden bg-white">
-                        <img src="https://drive.google.com/uc?export=view&id=1hmZitZIsN3dPKqzgEEiSHUp24JTU9iqH" 
-                             alt="Vengadeshperumal Thangaraj" 
-                             class="w-full h-full object-cover"
-                             onerror="this.onerror=null; this.src='https://via.placeholder.com/160?text=VT';">
-                    </div>
+                <div class="shrink-0 mx-auto md:mx-0">
+                    <img src="https://drive.google.com/uc?export=view&id=1hmZitZIsN3dPKqzgEEiSHUp24JTU9iqH" 
+                         alt="Vengadeshperumal Thangaraj" 
+                         class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white shadow-xl object-cover bg-slate-100"
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/160?text=VT';">
                 </div>
             </div>
             <div class="absolute -top-20 -right-20 w-96 h-96 bg-sky-200 rounded-full blur-3xl opacity-30"></div>
@@ -398,6 +396,21 @@
                     </div>
                 </div>
 
+                <div onclick="openModal('grade5automation')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4 md:col-span-1 lg:col-span-2 border-dashed border-sky-300 bg-sky-50/20">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-bezier-curve text-sky-600 text-xl"></i>
+                        <div>
+                            <h4 class="font-bold text-base text-sky-800 uppercase tracking-wide">Grade 1-5 Projects (Automation & Closed Electrical Circuits)</h4>
+                            <p class="text-xs text-slate-500 font-light mt-0.5">Explore foundational analog computing blueprints, optical reflections, and tactile engineering assets built for middle school rollouts.</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-end">
+                        <button class="bg-sky-600 text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-md shadow-sky-600/10 hover:bg-sky-700 transition-colors">
+                            View Electrical Projects Layout <i class="fa-solid fa-list-check text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
                 <div class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm">
                     <h4 class="font-bold text-sm mb-3 text-sky-700">Atomic Structure AI</h4>
                     <p class="text-xs text-slate-600 leading-relaxed font-light">Web-based AI application designed to identify and analyze chemical elements from hand-drawn sketches of atomic structures.</p>
@@ -459,11 +472,11 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 border-t border-dashed border-slate-200">
                     <div class="space-y-3 flex flex-col justify-start">
-                        <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[10px] text-indigo-700 font-mono">// Academic Outcomes</h5>
+                        <h5 id="modalSectionLeftTitle" class="font-bold text-slate-800 uppercase tracking-wide text-[10px] text-indigo-700 font-mono">// Academic Outcomes</h5>
                         <div id="modalAcademic" class="space-y-2 flex-1"></div>
                     </div>
                     <div class="space-y-3 flex flex-col justify-start">
-                        <h5 class="font-bold text-slate-800 uppercase tracking-wide text-[10px] text-indigo-700 font-mono">// Technical Outcomes</h5>
+                        <h5 id="modalSectionRightTitle" class="font-bold text-slate-800 uppercase tracking-wide text-[10px] text-indigo-700 font-mono">// Technical Outcomes</h5>
                         <div id="modalTechnical" class="space-y-2 flex-1"></div>
                     </div>
                 </div>
@@ -573,7 +586,7 @@
                 title: "StatureScan: Digital Height Meter",
                 subtitle: "Grade 7-8 Computational Thinking Curriculum",
                 icon: "fa-ruler-vertical text-indigo-500",
-                overview: "StatureScan is an applied physics and mathematics project designed as a hands-on introduction to computational thinking for middle school students. Enclosed in a clean, vertical tower structure fabricated entirely from corrugated sheets, the system utilizes an ultrasonic sensor and an ')Arduino Uno to instantly calculate and display the precise height of any object placed beneath it. The core educational focus of this project is applied algebra and sensor calibration: the total static distance from the overhead sensor down to the baseboard is pre-measured and hardcoded into the Arduino. When an object is placed on the base, the sensor measures the remaining headspace, and the microcontroller dynamically calculates the object's actual height by computing the difference, instantly outputting the result to a digital 16x2 LCD screen.",
+                overview: "StatureScan is an applied physics and mathematics project designed as a hands-on introduction to computational thinking for middle school students. Enclosed in a clean, vertical tower structure fabricated entirely from corrugated sheets, the system utilizes an ultrasonic sensor and an Arduino Uno to instantly calculate and display the precise height of any object placed beneath it. The core educational focus of this project is applied algebra and sensor calibration: the total static distance from the overhead sensor down to the baseboard is pre-measured and hardcoded into the Arduino. When an object is placed on the base, the sensor measures the remaining headspace, and the microcontroller dynamically calculates the object's actual height by computing the difference, instantly outputting the result to a digital 16x2 LCD screen.",
                 process: `<p><strong class="font-semibold text-slate-800">Calibration Base State:</strong> System is initialized with a known baseline distance ($D_{Total}$), representing empty ground headspace constants.</p>
                           <p><strong class="font-semibold text-slate-800">Time-of-Flight Emission:</strong> Transmits high-frequency sound bursts traveling downward to echo off the target asset.</p>
                           <p><strong class="font-semibold text-slate-800">Headspace Computation:</strong> Processes flight return thresholds to lock real-time baseline values ($D_{Remaining}$).</p>
@@ -666,6 +679,49 @@
                           <p><strong class="font-semibold text-slate-800">Seismic Alerts:</strong> The custom APP continually charts the incoming data variations on the screen, triggering an emergency audio alarm on the smartphone if severe seismic movement is detected.</p>`,
                 academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Geology & Mappings:</strong> Understanding geology, structural engineering, seismic waves, and the multi-axis (X, Y, Z) Cartesian coordinate system.</div>`,
                 technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>I2C Sensor Calibration:</strong> Interfacing advanced I^2C protocol communication sensors (MPU6050) with microcontrollers and writing data-parsing algorithms in block-based application software.</div>`
+            },
+            grade5automation: {
+                title: "Electrical Projects Grid (Grades 1-5 Blueprints)",
+                subtitle: "Foundational Closed Loops & Sensor Automation Architecture",
+                icon: "fa-bolt text-amber-500",
+                overview: "A comprehensive analog portfolio showcasing tactile electronics engineering layouts for lower primary deployments. These modules introduce core electrical current constraints, polarity rules, mechanical routing systems, and basic switching gates using discrete physical components without microcontrollers.",
+                process: `
+                    <div class="space-y-3 font-light text-slate-600">
+                        <div>
+                            <span class="block font-bold text-sky-800 uppercase text-[10px]">Grade 5: Automation & Sensor Basics</span>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">1. Automatic Hand Wash:</strong> IR sensor detects obstacles, closing a single-channel relay switch path to fire the submersible pump loops touchlessly.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">2. Fire Prevention System:</strong> Optical flame sweep arrays isolate hazard wavelengths, closing relays to engage fluid motors immediately.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">3. Independent Lighthouse:</strong> An LDR variable resistance loop breaks current paths under sunlight and automatically triggers a relay to fire bright beacon LEDs at nightfall.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">4. Water Level Indicator:</strong> Leverages the natural electrical conductivity of water to complete circuit traces on a physical metrics container scale.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">5. Following Robot:</strong> Forward IR nodes activate directional relay shifts, engaging driving DC units when an object guides the loop tracking paths.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">6. Rotating Toy:</strong> Base optical triggers isolate wave paths, closing relays to actuate a vertically mounted high-speed spinning motor module.</p>
+                        </div>
+                        <div class="pt-2 border-t border-slate-200">
+                            <span class="block font-bold text-sky-800 uppercase text-[10px]">Grade 4: Switches & Closed Circuits</span>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">7. Wired Rover:</strong> Handheld manual toggles change current polarities to drive variable differential drivetrains.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">8. Electric Maze:</strong> Metal tracking loops test fine motor controls; closing a circuit with aluminum foil paths completes an alarm buzzer track loop.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">9. Interactive Greeting Card:</strong> Embedded magnetic reed switches toggle metal contact leaves when target magnet positions shift inside fold lines.</p>
+                        </div>
+                    </div>`,
+                academic: `
+                    <div class="space-y-3 font-light text-slate-600">
+                        <div>
+                            <span class="block font-bold text-indigo-800 uppercase text-[10px]">Grade 3: Foundational Assembly</span>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">10. Glowing Memory Frame:</strong> Low-voltage LED line matrices wrapped around picture mounts to teach physical slide configuration switching gates safely.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">11. Movable Poppet:</strong> High-speed circular motor shaft rotation converted into asymmetrical kinetic limb shifts using raw pivot offsets.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">12. Elevator Model:</strong> Polarity switches shift terminal battery routing lines to reverse hoist directions.</p>
+                        </div>
+                    </div>`,
+                technical: `
+                    <div class="space-y-3 font-light text-slate-600">
+                        <div>
+                            <span class="block font-bold text-indigo-800 uppercase text-[10px]">Grade 1 & 2: Paper Circuits & Polarity Basics</span>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">13. Paper Circuit (Gr. 2):</strong> Deploying flat copper foil adhesive trace ribbons on layouts to run discrete low-voltage components solderlessly.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">14. Series & Parallel (Gr. 2):</strong> Path comparison templates charting single continuous current constraints vs. multi-rung ladder branches.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">15. Simple LED Experiment (Gr. 1):</strong> Foundational matching of positive anodes and negative cathodes directly over 3V coin cells.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">16. Open & Close Loop:</strong> Manual push mechanics proving current must form a completely continuous, unbroken ring structure to flow.</p>
+                        </div>
+                    </div>`
             }
         };
 
@@ -692,6 +748,15 @@
         function openModal(projectId) {
             const data = projectRegistry[projectId];
             if (!data) return;
+
+            // Handle custom view mappings if the grid layout button is initialized
+            if (projectId === 'grade5automation') {
+                document.getElementById("modalSectionLeftTitle").innerText = "// Assembly Layouts";
+                document.getElementById("modalSectionRightTitle").innerText = "// Primary Modules";
+            } else {
+                document.getElementById("modalSectionLeftTitle").innerText = "// Academic Outcomes";
+                document.getElementById("modalSectionRightTitle").innerText = "// Technical Outcomes";
+            }
 
             document.getElementById("modalTitle").innerText = data.title;
             document.getElementById("modalSubtitle").innerText = data.subtitle;
