@@ -55,7 +55,7 @@
 </head>
 <body class="p-4 md:p-6 lg:p-10">
 
-    <nav class="sticky-nav flex justify-between items-center px-8 py-4 rounded-full border border-slate-200 shadow-sm max-w-6xl mx-auto">
+    <nav class="sticky-nav flex justify-center md:justify-between items-center px-8 py-4 rounded-full border border-slate-200 shadow-sm max-w-6xl mx-auto">
         <div class="hidden md:flex gap-8 font-mono text-[10px] uppercase font-bold text-slate-500 tracking-widest mx-auto md:mx-0">
             <a href="#about" class="hover:text-sky-600 transition-colors">Profile</a>
             <a href="#history" class="hover:text-sky-600 transition-colors">Experience</a>
@@ -81,11 +81,13 @@
                     </div>
                 </div>
                 
-                <div class="shrink-0 mx-auto md:mx-0">
-                    <img src="https://lh3.googleusercontent.com/d/1hmZitZIsN3dPKqzgEEiSHUp24JTU9iqH" 
-                         alt="Vengadeshperumal Thangaraj" 
-                         class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white shadow-xl object-cover bg-slate-100"
-                         onerror="this.onerror=null; this.src='https://via.placeholder.com/160?text=VT';">
+                <div class="shrink-0 mx-auto md:mx-0 relative z-20">
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white shadow-xl overflow-hidden bg-white">
+                        <img src="https://drive.google.com/uc?export=view&id=1hmZitZIsN3dPKqzgEEiSHUp24JTU9iqH" 
+                             alt="Vengadeshperumal Thangaraj" 
+                             class="w-full h-full object-cover"
+                             onerror="this.onerror=null; this.src='https://via.placeholder.com/160?text=VT';">
+                    </div>
                 </div>
             </div>
             <div class="absolute -top-20 -right-20 w-96 h-96 bg-sky-200 rounded-full blur-3xl opacity-30"></div>
@@ -306,6 +308,96 @@
                     </div>
                 </div>
 
+                <div onclick="openModal('pureair')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
+                    <div>
+                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Finding Pure Air (Pure Air Tracker)</h4>
+                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Environmental Monitoring Node</p>
+                        <p class="text-xs text-slate-600 leading-relaxed font-light">
+                            An air sampling node leveraging an Arduino Nano framework and MQ2 sensors to push live telemetry data packets across Bluetooth platforms.
+                        </p>
+                    </div>
+                    <div class="flex justify-end">
+                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div onclick="openModal('voicerover')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
+                    <div>
+                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Smart Rover: Voice Controlled</h4>
+                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Robotics & Automation Project</p>
+                        <p class="text-xs text-slate-600 leading-relaxed font-light">
+                            An automated vehicle platform executing clean string-matching driving mechanics via integrated visual mobile speech-to-text algorithms.
+                        </p>
+                    </div>
+                    <div class="flex justify-end">
+                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div onclick="openModal('smarthome')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
+                    <div>
+                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Smart Home System</h4>
+                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 7 Model Infrastructure Automation</p>
+                        <p class="text-xs text-slate-600 leading-relaxed font-light">
+                            A miniature domestic layout enabling complete circuit manipulation of lighting loops and servo-driven lock linkages over MIT APP INVENTOR setups.
+                        </p>
+                    </div>
+                    <div class="flex justify-end">
+                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div onclick="openModal('tractor')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
+                    <div>
+                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Mobile-Controlled Tractor</h4>
+                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Heavy Machinery Kinematics</p>
+                        <p class="text-xs text-slate-600 leading-relaxed font-light">
+                            An agritech training layout handling differential propulsion and active mechanical payload lifters via synchronous wireless channel routing pipelines.
+                        </p>
+                    </div>
+                    <div class="flex justify-end">
+                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div onclick="openModal('aircooler')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
+                    <div>
+                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Smart Air Cooler System</h4>
+                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Appliance Engineering Architecture</p>
+                        <p class="text-xs text-slate-600 leading-relaxed font-light">
+                            An atmospheric temperature control unit coupling variable high-frequency ultrasonic MIST makers with inductive ventilation fan control circuits.
+                        </p>
+                    </div>
+                    <div class="flex justify-end">
+                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div onclick="openModal('earthquake')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
+                    <div>
+                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Earthquakes Monitor</h4>
+                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Seismic Telemetry Station</p>
+                        <p class="text-xs text-slate-600 leading-relaxed font-light">
+                            A live digital seismograph node utilizing MPU6050 Hex-Axis I2C sensors to pipe rotational acceleration thresholds to visual graphical software interfaces.
+                        </p>
+                    </div>
+                    <div class="flex justify-end">
+                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                            Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
                 <div class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm">
                     <h4 class="font-bold text-sm mb-3 text-sky-700">Atomic Structure AI</h4>
                     <p class="text-xs text-slate-600 leading-relaxed font-light">Web-based AI application designed to identify and analyze chemical elements from hand-drawn sketches of atomic structures.</p>
@@ -438,10 +530,10 @@
                           <p><strong class="font-semibold text-slate-800">App-Driven Navigation:</strong> Parses string command characters sent via buttons to drive 4 independent wheel setups.</p>
                           <p><strong class="font-semibold text-slate-800">Cleaning Activation:</strong> Isolates the active operational state toggle to initiate dedicated scrubbing system protocols.</p>
                           <p><strong class="font-semibold text-slate-800">Surface Mopping:</strong> Powers up a fifth brush motor layout spinning an absorbent sponge array to collect liquid layers.</p>`,
-                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>User Interface (UI) Design:</strong> Interactive application development mapping buttons, screens, and layouts cleanly.</div>
-                           <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Rotational and Surface Friction:</strong> Fluid dynamic boundary tests tracking brush scrubbing metrics across mixed coefficients.</div>
+                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>User Interface (UI) Design:</strong> Interactive APP development mapping buttons, screens, and layouts cleanly.</div>
+                           <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Rotational Friction:</strong> Fluid dynamic boundary tests tracking brush scrubbing metrics across mixed coefficients.</div>
                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Structural Load Distribution:</strong> Structuring lightweight corrugated sheets to secure five high-torque motor footprints evenly.</div>`,
-                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Mobile App Development:</strong> Gaining hands-on experience with block-based visual programming in MIT App Inventor, learning how to handle button click events and manage data transmissions.</div>
+                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Mobile APP Development:</strong> Gaining hands-on experience with block-based visual programming in MIT APP INVENTOR, handling touch events and wireless outputs.</div>
                             <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Serial Bluetooth Communication:</strong> Understanding how data is packaged and sent wirelessly via serial communication parameters between a mobile device and a microcontroller.</div>
                             <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Multi-Motor Control Layout:</strong> Mastering complex circuit routing by managing a total of 5 DC motors simultaneously using the Arduino Uno and the L298 driver framework.</div>`
             },
@@ -449,23 +541,23 @@
                 title: "AeroGuard: Bluetooth-Enabled Smoke & Gas Monitor",
                 subtitle: "Grade 8 Environmental Safety Curriculum",
                 icon: "fa-mask-ventilator text-sky-500",
-                overview: "The AeroGuard Monitor is a wireless, smart environmental safety system designed as a comprehensive hardware and software project for Grade 8 students. Housed inside a custom-built enclosure fabricated from lightweight corrugated sheets, the system utilizes an MQ2 gas sensor to continuously track ambient smoke and toxic gas levels. This project features a dual-platform curriculum where students build the physical detection hardware and develop a companion smartphone application using MIT App Inventor. When smoke or smog levels cross a dangerous, pre-programmed threshold, the system triggers a two-stage defense: an immediate local audio alarm via an onboard buzzer, and an instant wireless alert payload sent over Bluetooth to the user's mobile app, which sounds a secondary alarm on the smartphone.",
+                overview: "The AeroGuard Monitor is a wireless, smart environmental safety system designed as a comprehensive hardware and software project for Grade 8 students. Housed inside a custom-built enclosure fabricated from lightweight corrugated sheets, the system utilizes an MQ2 gas sensor to continuously track ambient smoke and toxic gas levels. This project features a dual-platform curriculum where students build the physical detection hardware and develop a companion smartphone application using MIT APP INVENTOR. When smoke or smog levels cross a dangerous, pre-programmed threshold, the system triggers a two-stage defense: an immediate local audio alarm via an onboard buzzer, and an instant wireless alert payload sent over Bluetooth to the user's mobile app, which sounds a secondary alarm on the smartphone.",
                 process: `<p><strong class="font-semibold text-slate-800">Environmental Sampling:</strong> The MQ2 sensor continuously tests the surrounding air, generating an analog voltage signal that changes based on gas concentration particles.</p>
                           <p><strong class="font-semibold text-slate-800">Data Processing:</strong> The Arduino Uno reads this data in real-time; the system remains in a silent standby mode as long as particles stay below threshold limits.</p>
                           <p><strong class="font-semibold text-slate-800">Local Safety Trigger:</strong> The moment a spike past safety coordinates is detected, the Arduino activates an onboard loud piezo buzzer structure.</p>
-                          <p><strong class="font-semibold text-slate-800">Wireless App Notification:</strong> Simultaneously packages and transmits an emergency signal over HC-05 nodes to trigger a companion digital alarm sound asset on the mobile device layer.</p>`,
+                          <p><strong class="font-semibold text-slate-800">Wireless APP Notification:</strong> Simultaneously packages and transmits an emergency signal over HC-05 nodes to trigger a companion digital alarm sound asset on the mobile device layer.</p>`,
                 academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Environmental Science:</strong> Analyzing air quality indices, toxic particulate definitions, and early-warning asset mitigation steps.</div>
                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Chemistry of Gas Sensing:</strong> Exploring resistance shifts within micro-chemiresistor configurations during targeted gas contact.</div>
                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Data Thresholding:</strong> Applying clean numerical validation logic to map raw scalar measurements against target risk benchmarks.</div>`,
                 technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Wireless Telemetry:</strong> Managing data payload transmissions from an embedded hardware node to an external phone runtime framework.</div>
-                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Advanced Block App Logic:</strong> Creating persistent event listeners inside MIT App Inventor to handle real-time background streams.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Advanced Block APP Logic:</strong> Creating persistent event listeners inside MIT APP INVENTOR to handle real-time background streams.</div>
                             <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Audio Hardware Control:</strong> Interfacing low-power audio sound frequency devices via localized pulse width or signal modulations.</div>`
             },
             agroshield: {
                 title: "AgroShield: Smart Crop Protection System",
                 subtitle: "Grade 8 Agritech & Wildlife Deterrent Curriculum",
                 icon: "fa-seedling text-emerald-600",
-                overview: "AgroShield is an interactive agritech project designed as an advanced hardware, software, and craft integration curriculum for Grade 8 students. Students apply their creative and engineering skills to construct a detailed crop field miniature using corrugated sheets and colored papers. The core system is an automated, wireless wildlife deterrent mechanism. When an intruding animal enters the crop field, a Passive Infrared (PIR) sensor instantly captures the movement. This triggers an onboard servo motor fitted with a custom mechanical puppet to swing rapidly left and right, creating a kinetic distraction to scare the animal away. Simultaneously, the system leverages a dual-platform curriculum where students build a companion smartphone application using MIT App Inventor; the hardware transmits an instant wireless alert via an HC-05 Bluetooth module, notifying the farmer on their mobile device that an intrusion has occurred.",
+                overview: "AgroShield is an interactive agritech project designed as an advanced hardware, software, and craft integration curriculum for Grade 8 students. Students apply their creative and engineering skills to construct a detailed crop field miniature using corrugated sheets and colored papers. The core system is an automated, wireless wildlife deterrent mechanism. When an intruding animal enters the crop field, a Passive Infrared (PIR) sensor instantly captures the movement. This triggers an onboard servo motor fitted with a custom mechanical puppet to swing rapidly left and right, creating a kinetic distraction to scare the animal away. Simultaneously, the system leverages a dual-platform curriculum where students build a companion smartphone application using MIT APP INVENTOR; the hardware transmits an instant wireless alert via an HC-05 Bluetooth module, notifying the farmer on their mobile device that an intrusion has occurred.",
                 process: `<p><strong class="font-semibold text-slate-800">Intrusion Monitoring:</strong> System stays on guard with a PIR sensor actively monitoring the field perimeter for changes in infrared body emissions.</p>
                           <p><strong class="font-semibold text-slate-800">Local Deterrent Activation:</strong> Processing instant trigger events to actuate the high-torque servo loop sequence.</p>
                           <p><strong class="font-semibold text-slate-800">Kinetic Distraction:</strong> Automatically drives servo horns back and forth between 0° and 180° to actuate predator puppets and visual deterrent vectors.</p>
@@ -474,14 +566,14 @@
                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Biomedical Physics (IR):</strong> Mastery of thermal wave emission physics and tracking motion shifts across ambient radiation parameters.</div>
                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Spatial Fabrication:</strong> Engineering precision mechanical dimensions to scale realistic fields down onto craft sheet structures.</div>`,
                 technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Kinematic Servo Control:</strong> Tuning angular boundaries, sweeping interval delays, and rotational constraints using servo libraries.</div>
-                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Event Application Logic:</strong> Mapping string sequence checks inside MIT App Inventor blocks to trigger real-time color changes or security alerts.</div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Event APP Logic:</strong> Mapping string sequence checks inside MIT APP INVENTOR blocks to trigger real-time color changes or security alerts.</div>
                             <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Wireless Node Networking:</strong> Serial streaming configurations allowing offline sensor devices to securely pipe data payloads directly into a connected smartphone ecosystem.</div>`
             },
             staturescan: {
                 title: "StatureScan: Digital Height Meter",
                 subtitle: "Grade 7-8 Computational Thinking Curriculum",
                 icon: "fa-ruler-vertical text-indigo-500",
-                overview: "StatureScan is an applied physics and mathematics project designed as a hands-on introduction to computational thinking for middle school students. Enclosed in a clean, vertical tower structure fabricated entirely from corrugated sheets, the system utilizes an ultrasonic sensor and an Arduino Uno to instantly calculate and display the precise height of any object placed beneath it. The core educational focus of this project is applied algebra and sensor calibration: the total static distance from the overhead sensor down to the baseboard is pre-measured and hardcoded into the Arduino. When an object is placed on the base, the sensor measures the remaining headspace, and the microcontroller dynamically calculates the object's actual height by computing the difference, instantly outputting the result to a digital 16x2 LCD screen.",
+                overview: "StatureScan is an applied physics and mathematics project designed as a hands-on introduction to computational thinking for middle school students. Enclosed in a clean, vertical tower structure fabricated entirely from corrugated sheets, the system utilizes an ultrasonic sensor and an ')Arduino Uno to instantly calculate and display the precise height of any object placed beneath it. The core educational focus of this project is applied algebra and sensor calibration: the total static distance from the overhead sensor down to the baseboard is pre-measured and hardcoded into the Arduino. When an object is placed on the base, the sensor measures the remaining headspace, and the microcontroller dynamically calculates the object's actual height by computing the difference, instantly outputting the result to a digital 16x2 LCD screen.",
                 process: `<p><strong class="font-semibold text-slate-800">Calibration Base State:</strong> System is initialized with a known baseline distance ($D_{Total}$), representing empty ground headspace constants.</p>
                           <p><strong class="font-semibold text-slate-800">Time-of-Flight Emission:</strong> Transmits high-frequency sound bursts traveling downward to echo off the target asset.</p>
                           <p><strong class="font-semibold text-slate-800">Headspace Computation:</strong> Processes flight return thresholds to lock real-time baseline values ($D_{Remaining}$).</p>
@@ -508,6 +600,72 @@
                 technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Interval Programming:</strong> Building asynchronous timer routines inside a microprocessing unit without triggering processor lock delays.</div>
                             <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Dynamic Calculation Loops:</strong> Handling data registers across runtime allocations without overwriting tracking array footprints.</div>
                             <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Digital Output Control:</strong> Routing alphanumeric strings across dynamic pin mappings to format calculations perfectly onto character matrices.</div>`
+            },
+            pureair: {
+                title: "Finding Pure Air (Pure Air Tracker)",
+                subtitle: "Grade 8 Environmental Monitoring Node",
+                icon: "fa-wind text-teal-500",
+                overview: "The Pure Air Tracker is an environmental monitoring node designed to introduce students to data telemetry. Built on a compact Arduino Nano framework, the device uses an MQ2 gas sensor to sample ambient air quality continuously. Through a custom mobile application developed in MIT APP INVENTOR, the hardware streams real-time gas concentration levels over a Bluetooth connection. The app processes this incoming telemetry data to display a live air quality index, warning users visually if pollutants cross a safe threshold.",
+                process: `<p><strong class="font-semibold text-slate-800">Atmospheric Sampling:</strong> The MQ2 sensor actively measures air particle concentrations and sends corresponding analog signals to the Arduino Nano.</p>
+                          <p><strong class="font-semibold text-slate-800">Data Streaming:</strong> The Nano packages the raw sensor readings into serial data packets and transmits them wirelessly via the HC-05 Bluetooth module.</p>
+                          <p><strong class="font-semibold text-slate-800">APP Visualization:</strong> The custom-built smartphone application receives the live stream, parses the data, and displays real-time air quality metrics on a graphical interface.</p>`,
+                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Atmospheric Analytics:</strong> Understanding atmospheric compositions, the chemistry of gas detection, and the math required to scale raw sensor inputs into readable parts-per-million (PPM) values.</div>`,
+                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Telemetry Systems:</strong> Mastering wireless telemetry protocols and programming mobile APPs to receive, read, and dynamically graph shifting live data streams.</div>`
+            },
+            voicerover: {
+                title: "Smart Rover: Voice Controlled",
+                subtitle: "Grade 8 Robotics & Automation Framework",
+                icon: "fa-robot text-purple-500",
+                overview: "The Voice Rover is an introductory robotics and automation project that explores Speech-to-Text translation and machine control. Utilizing an Arduino Nano and a dual-motor chassis, this vehicle interfaces with a smartphone application engineered via MIT APP INVENTOR. The project takes advantage of the smartphone’s internal Google Voice Recognition engine. When a user speaks a command into the APP, the software converts the vocal chord frequencies into textual characters, transmitting them wirelessly over Bluetooth to steer the rover.",
+                process: `<p><strong class="font-semibold text-slate-800">Vocal Processing:</strong> The user presses a button on the custom mobile APP and speaks a command (e.g., 'Forward', 'Stop').</p>
+                          <p><strong class="font-semibold text-slate-800">String Transmission:</strong> The APP's speech-to-text algorithm processes the audio file into a clean text string and transmits it through the HC-05 module.</p>
+                          <p><strong class="font-semibold text-slate-800">Kinematic Execution:</strong> The Arduino Nano screens the incoming string and triggers the respective BO motors to run or halt to execute the directional instruction.</p>`,
+                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Acoustic Conversion:</strong> Understanding the conversion of acoustic sound waves into digital signals and analyzing mechanical drivetrain logic.</div>`,
+                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Speech Recognition Parsing:</strong> Implementing speech-recognition components within mobile APP environments and configuring string-matching logic in C++ code blocks.</div>`
+            },
+            smarthome: {
+                title: "Smart Home System",
+                subtitle: "Grade 7 Model Infrastructure Automation",
+                icon: "fa-house-laptop text-amber-500",
+                overview: "The Smart Home System is a model automation project designed to teach basic Internet of Things (IoT) principles and smart home infrastructure. Controlled entirely via a custom smartphone interface designed in MIT APP INVENTOR, this project features a scaled-down house model equipped with automated lighting and entryways. Students program an Arduino Nano to receive wireless user commands, allowing them to flip internal LED lights on or off and actuate a servo motor to open or close the front door.",
+                process: `<p><strong class="font-semibold text-slate-800">Wireless Control Dashboard:</strong> The user interacts with toggle switches and virtual sliders built into their custom smartphone APP.</p>
+                          <p><strong class="font-semibold text-slate-800">Command Routing:</strong> The APP pushes unique digital flags across the HC-05 Bluetooth network to the central Arduino Nano.</p>
+                          <p><strong class="font-semibold text-slate-800">Actuation:</strong> The Nano interprets the received flags, instantly routing power to switch the targeted LEDs or shifting the servo motor’s angular position to manipulate the doors.</p>`,
+                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Civil Automation:</strong> Exploring modern home efficiency, civil architecture automation, and basic logic loops.</div>`,
+                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Microcontroller Bus Routing:</strong> Learning how to interface digital outputs (LEDs) and positional actuators (servos) onto a single, wirelessly addressable microcontroller node.</div>`
+            },
+            tractor: {
+                title: "Mobile-Controlled Tractor",
+                subtitle: "Grade 8 Heavy Machinery Kinematics",
+                icon: "fa-tractor text-orange-600",
+                overview: "The Mobile-Controlled Tractor simulates heavy agricultural machinery operations using modern wireless controls. Moving away from standard RC controllers, students design a dedicated mobile APP dashboard using MIT APP INVENTOR to manage both propulsion and utility tools. Powered by an Arduino Nano, the chassis features a dual BO motor setup for heavy driving traction, along with an independent steering or lifting mechanism controlled by a high-torque servo motor to emulate authentic steering geometries or attachment lifts.",
+                process: `<p><strong class="font-semibold text-slate-800">Dashboard Mapping:</strong> The mobile APP UI features directional buttons alongside an interactive slider or button to manage the tool attachment.</p>
+                          <p><strong class="font-semibold text-slate-800">Data Transmission:</strong> Commands are batched and transferred simultaneously over the HC-05 Bluetooth transceiver.</p>
+                          <p><strong class="font-semibold text-slate-800">Differential Driving & Actuation:</strong> The Nano splits the incoming instructions—adjusting motor outputs for drive speed while concurrently setting precise servo positions for steering or lift control.</p>`,
+                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Machinery Physics:</strong> Understanding heavy machinery kinematics, center of mass tracking under changing payloads, and differential steering principles.</div>`,
+                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Channel Synchronization:</strong> Synchronizing multiple distinct actuator types (continuous DC motors vs. angular servo mechanisms) over a single wireless communication channel.</div>`
+            },
+            aircooler: {
+                title: "Smart Air Cooler System",
+                subtitle: "Grade 8 Appliance Engineering Architecture",
+                icon: "fa-fan text-blue-400",
+                overview: "The Smart Air Cooler System is a home appliance engineering project focusing on fluid vaporization and atmospheric cooling control. Built with an Arduino Nano, the system integrates a high-frequency ultrasonic MIST maker alongside a powerful DC fan. Through a dedicated control panel designed from scratch in MIT APP INVENTOR, users can wirelessly toggle the system, adjust fan ventilation rates, and activate the atomizer mist ring to quickly lower temperatures on hot days.",
+                process: `<p><strong class="font-semibold text-slate-800">APP Input:</strong> The user sets the desired cooling level using a control dashboard on their smartphone APP.</p>
+                          <p><strong class="font-semibold text-slate-800">Signal Transmission:</strong> The operational modes are converted into specific commands and relayed to the Arduino Nano over Bluetooth.</p>
+                          <p><strong class="font-semibold text-slate-800">Vaporization Control:</strong> The Nano executes the commands by regulating the DC fan's operational speed and powering up the MIST maker to atomize water into a cooling fog.</p>`,
+                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Thermal Evaporation:</strong> Exploring the physics of evaporation, thermal energy transfers, fluid dynamics, and how atomization lowers ambient air temperature.</div>`,
+                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Inductive Load Interfacing:</strong> Safely interfacing high-frequency ultrasonic modules and inductive DC motor loads within a unified microcontroller architecture.</div>`
+            },
+            earthquake: {
+                title: "Earthquakes Monitor",
+                subtitle: "Grade 8 Seismic Telemetry Station",
+                icon: "fa-earth-asia text-red-500",
+                overview: "The Earthquake Monitor is a seismic telemetry station that explores rotational mechanics, gravitational forces, and structural safety. Utilizing an MPU6050 Hex-Axis Gyroscope/Accelerometer linked to an Arduino Nano, the module measures minute ground vibrations and tilt displacements. The unique highlight of this project curriculum is the data bridge: the station streams real-time seismic data over Bluetooth to an MIT APP INVENTOR application, transforming a smartphone into a live digital seismograph that alerts users when structural tremors surpass safe thresholds.",
+                process: `<p><strong class="font-semibold text-slate-800">Inertial Sensing:</strong> The MPU6050 sensor tracks physical movement across three rotational axes (X, Y, Z) and acceleration changes, monitoring for sudden structural vibrations.</p>
+                          <p><strong class="font-semibold text-slate-800">Telemetry Uplink:</strong> The Arduino Nano collects these high-frequency telemetry matrices and uploads them wirelessly through the HC-05 Bluetooth chip.</p>
+                          <p><strong class="font-semibold text-slate-800">Seismic Alerts:</strong> The custom APP continually charts the incoming data variations on the screen, triggering an emergency audio alarm on the smartphone if severe seismic movement is detected.</p>`,
+                academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Geology & Mappings:</strong> Understanding geology, structural engineering, seismic waves, and the multi-axis (X, Y, Z) Cartesian coordinate system.</div>`,
+                technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>I2C Sensor Calibration:</strong> Interfacing advanced I^2C protocol communication sensors (MPU6050) with microcontrollers and writing data-parsing algorithms in block-based application software.</div>`
             }
         };
 
