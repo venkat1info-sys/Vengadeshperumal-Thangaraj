@@ -9,85 +9,107 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@200;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <style>
-        /* Base Dark Red-Black Palette Setup */
-        body { font-family: 'Plus Jakarta Sans', sans-serif; color: #f8fafc; }
+        /* Light High-Tech Ambient Base Theme Layout */
+        body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1e293b; }
         .font-display { font-family: 'Space Grotesk', sans-serif; }
         .font-mono { font-family: 'JetBrains Mono', monospace; }
         
-        /* Glassmorphism Dark Cards with Premium Red Accent Borders */
-        .glass-panel { background: rgba(15, 23, 42, 0.45); backdrop-filter: blur(16px); border: 1px solid rgba(239, 68, 68, 0.15); border-radius: 2rem; }
-        .card-shadow { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2); }
+        /* Premium Light Glassmorphism Cards */
+        .glass-panel { background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(16px); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 2rem; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(30, 41, 59, 0.05), 0 8px 10px -6px rgba(30, 41, 59, 0.03); }
         
-        /* Floating Transparent Header Navbar */
-        .sticky-nav { position: sticky; top: 1rem; z-index: 1000; background: rgba(10, 10, 12, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(239, 68, 68, 0.1); }
+        /* Floating Navbar Control Panel */
+        .sticky-nav { position: sticky; top: 1rem; z-index: 1000; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); border: 1px solid rgba(34, 197, 94, 0.15); }
         
-        /* Typewriter Cursor Caret Effect */
-        .typewriter-caret::after { content: '▋'; animation: blink 1.2s infinite; margin-left: 6px; color: #ef4444; }
+        /* Hexagon Image Mask Logic Matrix */
+        .hexagon-mask {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .hexagon-mask:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        /* Typewriter Cursor Caret Engine */
+        .typewriter-caret::after { content: '▋'; animation: blink 1.2s infinite; margin-left: 6px; color: #16a34a; }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
-        /* Skill Bar Accents */
-        .skill-bar { height: 6px; background: rgba(226, 232, 240, 0.1); border-radius: 3px; overflow: hidden; }
-        .skill-fill { height: 100%; background: linear-gradient(90deg, #dc2626, #ef4444); transition: width 1.5s ease-out; }
+        /* Skill Bar Elements */
+        .skill-bar { height: 6px; background: rgba(30, 41, 59, 0.08); border-radius: 3px; overflow: hidden; }
+        .skill-fill { height: 100%; background: linear-gradient(90deg, #16a34a, #22c55e); transition: width 1.5s ease-out; }
 
-        /* Smooth Interactive Card Translation Pipeline */
+        /* Smooth Interactive Project Showroom Animations */
         .interactive-project-card {
             transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
                         box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
                         background-color 0.4s ease;
         }
         .interactive-project-card:hover {
-            transform: translateY(-5px) scale(1.015);
-            box-shadow: 0 25px 30px -5px rgba(220, 38, 38, 0.15), 0 10px 15px -5px rgba(0, 0, 0, 0.4);
-            background-color: rgba(30, 41, 59, 0.5);
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 20px 25px -5px rgba(22, 163, 74, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+            background-color: rgba(255, 255, 255, 0.95);
             cursor: pointer;
         }
         .interactive-project-card h4 { transition: color 0.3s ease; }
-        .interactive-project-card:hover h4 { color: #f87171; }
+        .interactive-project-card:hover h4 { color: #16a34a; }
 
-        /* Modal Scale Transitions */
+        /* Modal Scale Configurations */
         @keyframes scaleUp { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
         .modal-anim { animation: scaleUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 
-        /* Timed Progress Bar Fill Tracking */
+        /* Timed Progress Line Mechanics */
         @keyframes countdownProgress { from { width: 100%; } to { width: 0%; } }
-        .modal-progress-fill { height: 100%; background: linear-gradient(90deg, #dc2626, #f87171); }
+        .modal-progress-fill { height: 100%; background: linear-gradient(90deg, #16a34a, #4ade80); }
         .modal-progress-active { animation: countdownProgress 20s linear forwards; }
     </style>
 </head>
-<body class="p-4 md:p-6 lg:p-10 bg-gradient-to-br from-red-950 via-slate-900 to-black min-h-screen">
+<body class="p-4 md:p-6 lg:p-10 bg-gradient-to-tr from-green-50 via-yellow-50 via-white to-sky-100 min-h-screen">
 
     <nav class="sticky-nav flex justify-center md:justify-between items-center px-8 py-4 rounded-full shadow-sm max-w-6xl mx-auto">
-        <div class="hidden md:flex gap-8 font-mono text-[10px] uppercase font-bold text-slate-400 tracking-widest mx-auto md:mx-0">
-            <a href="#about" class="hover:text-red-400 transition-colors">Profile</a>
-            <a href="#history" class="hover:text-red-400 transition-colors">Experience</a>
-            <a href="#education" class="hover:text-red-400 transition-colors">Education</a>
-            <a href="#skills" class="hover:text-red-400 transition-colors">Skills</a>
-            <a href="#projects" class="hover:text-red-400 transition-colors">Projects</a>
-            <a href="#portfolio" class="hover:text-red-400 transition-colors">Creative Work</a>
+        <div class="hidden md:flex gap-8 font-mono text-[10px] uppercase font-bold text-slate-500 tracking-widest mx-auto md:mx-0">
+            <a href="#about" class="hover:text-green-600 transition-colors">Profile</a>
+            <a href="#history" class="hover:text-green-600 transition-colors">Experience</a>
+            <a href="#education" class="hover:text-green-600 transition-colors">Education</a>
+            <a href="#skills" class="hover:text-green-600 transition-colors">Skills</a>
+            <a href="#projects" class="hover:text-green-600 transition-colors">Projects</a>
+            <a href="#portfolio" class="hover:text-green-600 transition-colors">Creative Work</a>
         </div>
-        <a href="https://drive.google.com/file/d/1u3f-diBEupHsiVNl_MidWZydSpgowHNH/view?usp=sharing" target="_blank" class="bg-red-600 text-white px-5 py-2 rounded-full text-[10px] font-bold uppercase hover:bg-red-700 transition-colors">CV Download</a>
+        <a href="https://drive.google.com/file/d/1u3f-diBEupHsiVNl_MidWZydSpgowHNH/view?usp=sharing" target="_blank" class="bg-green-600 text-white px-5 py-2 rounded-full text-[10px] font-bold uppercase hover:bg-green-700 transition-colors">CV Download</a>
     </nav>
 
     <div class="max-w-7xl mx-auto mt-12 space-y-12">
         
-        <header class="glass-panel p-10 md:p-16 border border-white relative overflow-hidden">
-            <div class="relative z-10">
-                <h1 class="font-display text-3xl md:text-5xl font-bold uppercase tracking-tight text-white">
-                    VENGADESHPERUMAL <span class="text-red-500">THANGARAJ</span>
-                </h1>
-                <p id="typewriter" class="text-lg font-mono text-slate-350 min-h-[2.5rem] typewriter-caret text-rose-300/90"></p>
-                <div class="mt-6 flex flex-wrap gap-6 text-sm text-slate-500 font-mono">
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-map-pin text-red-500"></i> Tamil Nadu, India</span>
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-phone text-red-500"></i> +91 85266 28310</span>
+        <header class="glass-panel p-10 md:p-16 relative overflow-hidden">
+            <div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+                <div class="flex-1 space-y-2">
+                    <h1 class="font-display text-3xl md:text-5xl font-bold uppercase tracking-tight text-slate-900">
+                        VENGADESHPERUMAL <span class="text-green-600">THANGARAJ</span>
+                    </h1>
+                    <p id="typewriter" class="text-lg font-mono min-h-[2.5rem] typewriter-caret text-green-700 font-semibold"></p>
+                    <div class="pt-2 flex flex-wrap gap-6 text-sm text-slate-500 font-mono">
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-map-pin text-green-600"></i> Tamil Nadu, India</span>
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-phone text-green-600"></i> +91 85266 28310</span>
+                    </div>
+                </div>
+                
+                <div class="shrink-0 mx-auto md:mx-0 relative">
+                    <div class="w-36 h-36 md:w-44 md:h-44 bg-gradient-to-br from-green-500 to-sky-400 p-1 hexagon-mask shadow-xl">
+                        <div class="w-full h-full bg-white hexagon-mask overflow-hidden">
+                            <img src="https://drive.google.com/uc?export=view&id=1hmZitZIsN3dPKqzgEEiSHUp24JTU9iqH" 
+                                 alt="Vengadeshperumal Thangaraj" 
+                                 class="w-full h-full object-cover object-center scale-105"
+                                 onerror="this.onerror=null; this.src='https://via.placeholder.com/180x180?text=VT';">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="absolute -top-20 -right-20 w-96 h-96 bg-sky-200 rounded-full blur-3xl opacity-30"></div>
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-green-200/40 rounded-full blur-3xl opacity-50"></div>
         </header>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <section id="about" class="lg:col-span-2 glass-panel p-10 card-shadow">
-                <h2 class="font-display text-lg font-bold uppercase mb-6 text-red-400 border-b border-red-900/40 pb-2">Executive Profile</h2>
-                <p class="text-slate-300 leading-relaxed font-light text-lg">
+                <h2 class="font-display text-lg font-bold uppercase mb-6 text-slate-800 border-b border-green-100 pb-2">Executive Profile</h2>
+                <p class="text-slate-600 leading-relaxed font-light text-lg">
                     Dynamic, results-driven STEM Leader with over 8.5 years of progressive leadership experience driving multi-center academic operations and technical product delivery. Proven track record directing operations across 11 institutional campuses and governing high-performing teams of over 50 faculty members. Expert in cross-functional leadership, institutional stakeholder management, and the end-to-end R&D of highly scalable K-10 robotics, AI, and AR/VR educational programs.
                 </p>
             </section>
@@ -95,69 +117,69 @@
             <section class="glass-panel p-10 card-shadow space-y-6">
                 <div class="flex justify-between items-center">
                     <span class="font-mono text-[10px] font-bold text-slate-400 uppercase">Key Milestones</span>
-                    <i class="fa-solid fa-chart-line text-red-500"></i>
+                    <i class="fa-solid fa-chart-line text-green-600"></i>
                 </div>
                 <div class="space-y-4">
-                    <div class="flex justify-between items-center"><span class="font-bold text-4xl text-white">11</span> <span class="text-xs text-slate-400">Campuses Governed</span></div>
-                    <div class="flex justify-between items-center"><span class="font-bold text-4xl text-white">50+</span> <span class="text-xs text-slate-400">Faculty Mentored</span></div>
-                    <div class="flex justify-between items-center"><span class="font-bold text-4xl text-white">100+</span> <span class="text-xs text-slate-400">STEM Solutions</span></div>
+                    <div class="flex justify-between items-center"><span class="font-bold text-4xl text-slate-800">11</span> <span class="text-xs text-slate-500">Campuses Governed</span></div>
+                    <div class="flex justify-between items-center"><span class="font-bold text-4xl text-slate-800">50+</span> <span class="text-xs text-slate-500">Faculty Mentored</span></div>
+                    <div class="flex justify-between items-center"><span class="font-bold text-4xl text-slate-800">100+</span> <span class="text-xs text-slate-500">STEM Solutions</span></div>
                 </div>
             </section>
         </div>
 
         <section id="history" class="glass-panel p-10 card-shadow">
-            <h2 class="font-display text-lg font-bold uppercase mb-10 text-red-400 border-b border-red-900/40 pb-2">Professional History</h2>
+            <h2 class="font-display text-lg font-bold uppercase mb-10 text-slate-800 border-b border-green-100 pb-2">Professional History</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="space-y-4 border-r border-slate-800/60 pr-4">
-                    <h3 class="font-bold text-white text-lg">Subject Matter Expert</h3>
-                    <p class="font-mono text-[10px] uppercase text-red-400 font-bold">Image Infotainment Ltd. | 2022-Present</p>
-                    <ul class="text-sm text-slate-300 space-y-2 list-disc ml-4 font-light">
+                <div class="space-y-4 border-r border-slate-100 pr-4">
+                    <h3 class="font-bold text-slate-800 text-lg">Subject Matter Expert</h3>
+                    <p class="font-mono text-[10px] uppercase text-green-600 font-bold">Image Infotainment Ltd. | 2022-Present</p>
+                    <ul class="text-sm text-slate-600 space-y-2 list-disc ml-4 font-light">
                         <li>Directing operations across 11 school partner centers.</li>
                         <li>Lead technical R&D for Robotics, AI & AR/VR.</li>
                     </ul>
                 </div>
-                <div class="space-y-4 border-r border-slate-800/60 pr-4">
-                    <h3 class="font-bold text-slate-900">Program Coordinator (Team Lead)</h3>
-                    <p class="font-mono text-[10px] uppercase text-sky-600 font-bold">Image Infotainment Ltd. | 2019-2022</p>
+                <div class="space-y-4 border-r border-slate-100 pr-4">
+                    <h3 class="font-bold text-slate-800">Program Coordinator (Team Lead)</h3>
+                    <p class="font-mono text-[10px] uppercase text-green-600 font-bold">Image Infotainment Ltd. | 2019-2022</p>
                     <ul class="text-sm text-slate-600 space-y-2 list-disc ml-4 font-light">
                         <li>Managed core team of 4 senior technical educators.</li>
                         <li>Oversaw instructional pathways and audit logs.</li>
                     </ul>
                 </div>
                 <div class="space-y-4">
-                    <h3 class="font-bold text-slate-900">Programming & Graphic Faculty</h3>
-                    <p class="font-mono text-[10px] uppercase text-sky-600 font-bold">Image Infotainment Ltd. | 2017-2019</p>
+                    <h3 class="font-bold text-slate-800">Programming & Graphic Faculty</h3>
+                    <p class="font-mono text-[10px] uppercase text-green-600 font-bold">Image Infotainment Ltd. | 2017-2019</p>
                     <p class="text-sm text-slate-600 font-light">Instruction in core computer science syntax and digital graphic design workflows.</p>
                 </div>
             </div>
         </section>
 
         <section id="education" class="glass-panel p-10 card-shadow">
-            <h2 class="font-display text-lg font-bold uppercase mb-10 text-sky-800 border-b border-sky-100 pb-2">Education & Certifications</h2>
+            <h2 class="font-display text-lg font-bold uppercase mb-10 text-slate-800 border-b border-green-100 pb-2">Education & Certifications</h2>
             <div class="grid md:grid-cols-2 gap-12">
-                <div class="space-y-4 md:border-r border-slate-200 md:pr-8">
-                    <h3 class="font-bold text-slate-900 text-lg">B.E. Electronics & Communication Engineering</h3>
-                    <p class="font-mono text-[10px] uppercase text-sky-600 font-bold">Vidya Mandir Institute of Technology | 2013-2017</p>
+                <div class="space-y-4 md:border-r border-slate-100 md:pr-8">
+                    <h3 class="font-bold text-slate-800 text-lg">B.E. Electronics & Communication Engineering</h3>
+                    <p class="font-mono text-[10px] uppercase text-green-600 font-bold">Vidya Mandir Institute of Technology | 2013-2017</p>
                     <p class="text-sm text-slate-600 font-light leading-relaxed">
                         Comprehensive foundation in embedded systems, digital electronics, microcontrollers, and communication architectures, forming the technical bedrock for scalable robotics and IoT development.
                     </p>
                 </div>
                 <div class="space-y-4">
-                    <h3 class="font-bold text-slate-900 text-lg">Professional Certifications</h3>
+                    <h3 class="font-bold text-slate-800 text-lg">Professional Certifications</h3>
                     <ul class="text-sm text-slate-600 space-y-3 list-disc ml-4 font-light">
-                        <li><strong class="font-medium text-slate-800">STEM Education Instructor Certification</strong> via STEM.org</li>
-                        <li><strong class="font-medium text-slate-800">Master Trainer:</strong> AR/VR, Graphic Design & Technical Systems</li>
-                        <li><strong class="font-medium text-slate-800">Robotics & WRO Project Frameworks</strong> via India STEM Foundation</li>
+                        <li><strong class="font-medium text-slate-700">STEM Education Instructor Certification</strong> via STEM.org</li>
+                        <li><strong class="font-medium text-slate-700">Master Trainer:</strong> AR/VR, Graphic Design & Technical Systems</li>
+                        <li><strong class="font-medium text-slate-700">Robotics & WRO Project Frameworks</strong> via India STEM Foundation</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="glass-panel p-10 card-shadow">
-            <h2 class="font-display text-lg font-bold uppercase mb-8 text-sky-800 border-b border-sky-100 pb-2">Technical Matrix</h2>
+            <h2 class="font-display text-lg font-bold uppercase mb-8 text-slate-800 border-b border-green-100 pb-2">Technical Matrix</h2>
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="space-y-6">
-                    <h4 class="font-bold text-sm uppercase text-slate-900">Creative & Multimedia Design</h4>
+                    <h4 class="font-bold text-sm uppercase text-slate-700">Creative & Multimedia Design</h4>
                     <div class="space-y-3">
                         <div><div class="flex justify-between text-xs mb-1 font-mono uppercase"><span>Photoshop & Illustrator</span><span>95%</span></div><div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div></div>
                         <div><div class="flex justify-between text-xs mb-1 font-mono uppercase"><span>After Effects (VFX/Motion)</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div></div>
@@ -176,184 +198,184 @@
         </section>
 
         <section id="projects" class="glass-panel p-10 card-shadow">
-            <h2 class="font-display text-lg font-bold uppercase mb-10 text-sky-800 border-b border-sky-100 pb-2">Technical Projects & Initiatives</h2>
+            <h2 class="font-display text-lg font-bold uppercase mb-10 text-slate-800 border-b border-green-100 pb-2">Technical Projects & Initiatives</h2>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 
-                <div onclick="openModal('firefighting')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
+                <div onclick="openModal('firefighting')" class="interactive-project-card p-6 bg-white/40 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between gap-4">
                     <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Autonomous Fire-Fighting Robot</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 STEM Curriculum Capstone</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
+                        <h4 class="font-bold text-base mb-1 text-slate-800 uppercase tracking-wide">Autonomous Fire-Fighting Robot</h4>
+                        <p class="font-mono text-[10px] uppercase text-green-600 font-bold tracking-wider mb-2">Grade 8 STEM Curriculum Capstone</p>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">
                             Built on a custom lightweight chassis, this vehicle autonomously patrols an area to seek out hazards, stopping safely at a distance to extinguish small flames with an integrated pump.
                         </p>
                     </div>
                     <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                        <button class="bg-green-50 text-green-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-green-100 hover:bg-green-600 hover:text-white transition-colors">
                             Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                         </button>
                     </div>
                 </div>
 
-                <div onclick="openModal('rescuer')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
+                <div onclick="openModal('rescuer')" class="interactive-project-card p-6 bg-white/40 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between gap-4">
                     <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Autonomous Rescuer Robot</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 7 STEM Curriculum</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
+                        <h4 class="font-bold text-base mb-1 text-slate-800 uppercase tracking-wide">Autonomous Rescuer Robot</h4>
+                        <p class="font-mono text-[10px] uppercase text-green-600 font-bold tracking-wider mb-2">Grade 7 STEM Curriculum</p>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">
                             Engineered with an extended overhead sensor arm to navigate flat surfaces safely, identifying cliffs or voids and instantly triggering reverse-evasion maneuvers.
                         </p>
                     </div>
                     <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                        <button class="bg-green-50 text-green-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-green-100 hover:bg-green-600 hover:text-white transition-colors">
                             Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                         </button>
                     </div>
                 </div>
 
-                <div onclick="openModal('transport')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
+                <div onclick="openModal('transport')" class="interactive-project-card p-6 bg-white/40 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between gap-4">
                     <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">Autonomous Public Transport System</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Advanced Tracker Project</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
+                        <h4 class="font-bold text-base mb-1 text-slate-800 uppercase tracking-wide">Autonomous Public Transport System</h4>
+                        <p class="font-mono text-[10px] uppercase text-green-600 font-bold tracking-wider mb-2">Grade 8 Advanced Tracker Project</p>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">
                             An automated line-follower mass-transit model featuring precision scheduled stops, servo-driven linkage doors, and front-facing safety radar arrays.
                         </p>
                     </div>
                     <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                        <button class="bg-green-50 text-green-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-green-100 hover:bg-green-600 hover:text-white transition-colors">
                             Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                         </button>
                     </div>
                 </div>
 
-                <div onclick="openModal('floorcleaner')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
+                <div onclick="openModal('floorcleaner')" class="interactive-project-card p-6 bg-white/40 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between gap-4">
                     <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">APP-CONTROLLED MOP BOT (SMART FLOOR CLEANER)</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Engineering & Software Framework</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
+                        <h4 class="font-bold text-base mb-1 text-slate-800 uppercase tracking-wide">APP-CONTROLLED MOP BOT (SMART FLOOR CLEANER)</h4>
+                        <p class="font-mono text-[10px] uppercase text-green-600 font-bold tracking-wider mb-2">Grade 8 Engineering & Software Framework</p>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">
                             A complex 5-motor drive utility system integrated with custom block-based Android smartphone apps over serial wireless Bluetooth modules.
                         </p>
                     </div>
                     <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                        <button class="bg-green-50 text-green-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-green-100 hover:bg-green-600 hover:text-white transition-colors">
                             Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                         </button>
                     </div>
                 </div>
 
-                <div onclick="openModal('aeroguard')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
+                <div onclick="openModal('aeroguard')" class="interactive-project-card p-6 bg-white/40 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between gap-4">
                     <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">AeroGuard: Smoke & Gas Monitor</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Environmental Safety Curriculum</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
+                        <h4 class="font-bold text-base mb-1 text-slate-800 uppercase tracking-wide">AeroGuard: Smoke & Gas Monitor</h4>
+                        <p class="font-mono text-[10px] uppercase text-green-600 font-bold tracking-wider mb-2">Grade 8 Environmental Safety Curriculum</p>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">
                             A wireless smart monitor architecture leveraging MQ2 sensors and Bluetooth modules to activate multi-stage local and smartphone notification safety arrays.
                         </p>
                     </div>
                     <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                        <button class="bg-green-50 text-green-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-green-100 hover:bg-green-600 hover:text-white transition-colors">
                             Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                         </button>
                     </div>
                 </div>
 
-                <div onclick="openModal('agroshield')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
+                <div onclick="openModal('agroshield')" class="interactive-project-card p-6 bg-white/40 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between gap-4">
                     <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">AgroShield: Smart Crop Protection System</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 8 Agritech & Wildlife Deterrent Curriculum</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
+                        <h4 class="font-bold text-base mb-1 text-slate-800 uppercase tracking-wide">AgroShield: Smart Crop Protection System</h4>
+                        <p class="font-mono text-[10px] uppercase text-green-600 font-bold tracking-wider mb-2">Grade 8 Agritech & Wildlife Deterrent Curriculum</p>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">
                             An automated wildlife deterrent pairing PIR motion sensors with servo mechanical kinetic puppets and real-time Bluetooth telemetry status feeds.
                         </p>
                     </div>
                     <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                        <button class="bg-green-50 text-green-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-green-100 hover:bg-green-600 hover:text-white transition-colors">
                             Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                         </button>
                     </div>
                 </div>
 
-                <div onclick="openModal('staturescan')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
+                <div onclick="openModal('staturescan')" class="interactive-project-card p-6 bg-white/40 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between gap-4">
                     <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">StatureScan: Digital Height Meter</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 7-8 Applied Physics & Algebra Enclosure</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
+                        <h4 class="font-bold text-base mb-1 text-slate-800 uppercase tracking-wide">StatureScan: Digital Height Meter</h4>
+                        <p class="font-mono text-[10px] uppercase text-green-600 font-bold tracking-wider mb-2">Grade 7-8 Applied Physics & Algebra Enclosure</p>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">
                             An automated linear measurement architecture running time-of-flight ultrasonic signal calculations mapped directly against hardcoded baseline constants onto crisp 16x2 LCD runtimes.
                         </p>
                     </div>
                     <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                        <button class="bg-green-50 text-green-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-green-100 hover:bg-green-600 hover:text-white transition-colors">
                             Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                         </button>
                     </div>
                 </div>
 
-                <div onclick="openModal('sonicvelocity')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
+                <div onclick="openModal('sonicvelocity')" class="interactive-project-card p-6 bg-white/40 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between gap-4">
                     <div>
-                        <h4 class="font-bold text-base mb-1 text-sky-700 uppercase tracking-wide">SonicVelocity: Ultrasonic Speed Radar</h4>
-                        <p class="font-mono text-[10px] uppercase text-sky-500 font-bold tracking-wider mb-2">Grade 7-8 Kinematics Testing Track</p>
-                        <p class="text-xs text-slate-600 leading-relaxed font-light">
+                        <h4 class="font-bold text-base mb-1 text-slate-800 uppercase tracking-wide">SonicVelocity: Ultrasonic Speed Radar</h4>
+                        <p class="font-mono text-[10px] uppercase text-green-600 font-bold tracking-wider mb-2">Grade 7-8 Kinematics Testing Track</p>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">
                             An applied physics and automation pipeline calculating moving object velocity vectors over discrete non-blocking timing intervals for real-time LCD rendering.
                         </p>
                     </div>
                     <div class="flex justify-end">
-                        <button class="bg-sky-50 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-sky-100">
+                        <button class="bg-green-50 text-green-600 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-green-100 hover:bg-green-600 hover:text-white transition-colors">
                             Read More <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                         </button>
                     </div>
                 </div>
 
-                <div onclick="openModal('mobileappscombined')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4 border-dashed border-sky-400 bg-sky-50/10">
+                <div onclick="openModal('mobileappscombined')" class="interactive-project-card p-6 bg-white/40 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between gap-4 border-dashed border-green-400 bg-green-50/10">
                     <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-mobile-screen-button text-sky-600 text-xl"></i>
+                        <i class="fa-solid fa-mobile-screen-button text-green-600 text-xl"></i>
                         <div>
-                            <h4 class="font-bold text-base text-sky-800 uppercase tracking-wide">Mobile Application Development Suite</h4>
+                            <h4 class="font-bold text-base text-slate-800 uppercase tracking-wide">Mobile Application Development Suite</h4>
                             <p class="text-xs text-slate-500 font-light mt-0.5">MIT App Inventor architectures featuring multi-screen layout routing, variable list matrices, local data persistence, and voice controls.</p>
                         </div>
                     </div>
                     <div class="flex justify-end">
-                        <button class="bg-sky-600 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-md shadow-sky-600/10 hover:bg-sky-700 transition-colors">
+                        <button class="bg-green-50 text-green-600 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-green-100 hover:bg-green-600 hover:text-white transition-colors">
                             View App Suite <i class="fa-solid fa-list-check text-[10px]"></i>
                         </button>
                     </div>
                 </div>
 
-                <div onclick="openModal('aiprojectscombined')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4 border-dashed border-rose-400 bg-rose-50/10">
+                <div onclick="openModal('aiprojectscombined')" class="interactive-project-card p-6 bg-white/40 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between gap-4 border-dashed border-green-500 bg-green-50/10">
                     <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-brain text-rose-500 text-xl"></i>
+                        <i class="fa-solid fa-brain text-green-600 text-xl"></i>
                         <div>
-                            <h4 class="font-bold text-base text-rose-800 uppercase tracking-wide">Artificial Intelligence & Creative Coding Suite</h4>
+                            <h4 class="font-bold text-base text-slate-800 uppercase tracking-wide">Artificial Intelligence & Creative Coding Suite</h4>
                             <p class="text-xs text-slate-500 font-light mt-0.5">Teachable Machine vision CNN classifiers and sound spectrogram deep learning models embedded into real-time interactive P5.js creative drawing layouts.</p>
                         </div>
                     </div>
                     <div class="flex justify-end">
-                        <button class="bg-rose-500 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-md shadow-rose-500/10 hover:bg-rose-600 transition-colors">
+                        <button class="bg-green-50 text-green-600 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-green-100 hover:bg-green-600 hover:text-white transition-colors">
                             View AI Suite <i class="fa-solid fa-list-check text-[10px]"></i>
                         </button>
                     </div>
                 </div>
 
-                <div onclick="openModal('otherelectronicscombined')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4 border-dashed border-indigo-300 bg-indigo-50/10">
+                <div onclick="openModal('otherelectronicscombined')" class="interactive-project-card p-6 bg-white/40 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between gap-4 border-dashed border-green-400 bg-green-50/10">
                     <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-diagram-project text-indigo-600 text-xl"></i>
+                        <i class="fa-solid fa-diagram-project text-green-600 text-xl"></i>
                         <div>
-                            <h4 class="font-bold text-base text-indigo-800 uppercase tracking-wide">Other Electronic Projects</h4>
+                            <h4 class="font-bold text-base text-slate-800 uppercase tracking-wide">Other Electronic Projects</h4>
                             <p class="text-xs text-slate-500 font-light mt-0.5">Arduino autonomous climate systems, ultrasonic assistive safety radars, non-blocking hold timers, mapping variables, and remote telemetric field saturation warning nodes.</p>
                         </div>
                     </div>
                     <div class="flex justify-end">
-                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-md shadow-indigo-600/10 hover:bg-indigo-700 transition-colors">
+                        <button class="bg-green-50 text-green-600 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-green-100 hover:bg-green-600 hover:text-white transition-colors">
                             View Electronics Layout <i class="fa-solid fa-list-check text-[10px]"></i>
                         </button>
                     </div>
                 </div>
 
-                <div onclick="openModal('grade5automation')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4 border-dashed border-amber-400 bg-amber-50/10">
+                <div onclick="openModal('grade5automation')" class="interactive-project-card p-6 bg-white/40 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between gap-4 border-dashed border-green-400 bg-green-50/10">
                     <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-bolt text-amber-500 text-xl"></i>
+                        <i class="fa-solid fa-bolt text-green-600 text-xl"></i>
                         <div>
-                            <h4 class="font-bold text-base text-amber-800 uppercase tracking-wide">Other Electrical Projects</h4>
+                            <h4 class="font-bold text-base text-slate-800 uppercase tracking-wide">Other Electrical Projects</h4>
                             <p class="text-xs text-slate-500 font-light mt-0.5">Touchless optical sensor loops, raw IR daylight threshold configurations, manual switches, conductivity measurements, and solderless paper circuit paths.</p>
                         </div>
                     </div>
                     <div class="flex justify-end">
-                        <button class="bg-amber-500 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-md shadow-amber-500/10 hover:bg-amber-600 transition-colors">
+                        <button class="bg-green-50 text-green-600 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-green-100 hover:bg-green-600 hover:text-white transition-colors">
                             View Electrical Blueprints <i class="fa-solid fa-list-check text-[10px]"></i>
                         </button>
                     </div>
@@ -363,11 +385,11 @@
         </section>
 
         <section id="portfolio" class="glass-panel p-10 card-shadow">
-            <h2 class="font-display text-lg font-bold uppercase mb-6 text-red-400 border-b border-red-900/40 pb-2">Motion Graphics & Video Showreel</h2>
-            <p class="text-sm text-slate-300 font-light mb-6 max-w-4xl">
+            <h2 class="font-display text-lg font-bold uppercase mb-6 text-green-700 border-b border-green-100 pb-2">Motion Graphics & Video Showreel</h2>
+            <p class="text-sm text-slate-600 font-light mb-6 max-w-4xl">
                 A high-definition visualization portfolio compiling professional video editing, vector illustrations, complex layout design, and motion graphic pipelines produced using Adobe After Effects and Premiere Pro.
             </p>
-            <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-slate-800 bg-black/40">
+            <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-slate-200 shadow-inner bg-white/50">
                 <iframe src="https://drive.google.com/file/d/1CxVbqKZKnrJa3VYuj120kYVmJa2qDYJu/preview" 
                         class="absolute top-0 left-0 w-full h-full" 
                         allow="autoplay; encrypted-media" 
@@ -379,16 +401,16 @@
     </div>
 
     <div id="popupModal" class="fixed inset-0 z-[2000] hidden items-center justify-center p-4">
-        <div onclick="closeModal()" class="absolute inset-0 bg-slate-950/60 backdrop-blur-md"></div>
-        <div class="bg-slate-900/95 border border-red-900/50 shadow-2xl rounded-3xl max-w-4xl w-full relative modal-anim max-h-[90vh] flex flex-col overflow-hidden text-slate-100">
+        <div onclick="closeModal()" class="absolute inset-0 bg-slate-900/30 backdrop-blur-md"></div>
+        <div class="bg-white/95 border border-slate-200 shadow-2xl rounded-3xl max-w-4xl w-full relative modal-anim max-h-[90vh] flex flex-col overflow-hidden text-slate-800">
             <div class="w-full h-1.5 bg-slate-100 shrink-0">
                 <div id="modalProgressBar" class="modal-progress-fill"></div>
             </div>
             <div class="p-6 md:p-8 pb-4 border-b border-slate-100 relative shrink-0 flex items-center gap-3">
-                <i id="modalIcon" class="fa-solid fa-microchip text-sky-600 text-xl"></i>
+                <i id="modalIcon" class="fa-solid fa-microchip text-green-600 text-xl"></i>
                 <div>
                     <h3 id="modalTitle" class="font-display font-bold text-xl text-slate-900 uppercase leading-none">Project Details</h3>
-                    <p id="modalSubtitle" class="font-mono text-[10px] uppercase text-sky-600 font-bold tracking-wider mt-1.5">STEM Curriculum Documentation</p>
+                    <p id="modalSubtitle" class="font-mono text-[10px] uppercase text-green-600 font-bold tracking-wider mt-1.5">STEM Curriculum Documentation</p>
                 </div>
                 <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 transition-colors p-2 text-lg">
                     <i class="fa-solid fa-xmark"></i>
@@ -396,26 +418,26 @@
             </div>
             <div class="p-6 md:p-8 space-y-6 text-xs text-slate-600 leading-relaxed font-light overflow-y-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-                    <div class="bg-slate-50/70 p-5 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                    <div class="bg-slate-50/50 p-5 rounded-2xl border border-slate-100 flex flex-col justify-between">
                         <div>
-                            <h5 id="modalPanelLeftTitle" class="font-bold text-slate-800 uppercase tracking-wide text-[10px] mb-2 text-sky-700 font-mono">// Project Overview</h5>
-                            <p id="modalOverview" class="leading-relaxed font-light"></p>
+                            <h5 id="modalPanelLeftTitle" class="font-bold text-slate-800 uppercase tracking-wide text-[10px] mb-2 text-green-600 font-mono">// Project Overview</h5>
+                            <p id="modalOverview" class="leading-relaxed font-light text-slate-600"></p>
                         </div>
                     </div>
-                    <div class="bg-slate-50/70 p-5 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                    <div class="bg-slate-50/50 p-5 rounded-2xl border border-slate-100 flex flex-col justify-between">
                         <div>
-                            <h5 id="modalPanelRightTitle" class="font-bold text-slate-800 uppercase tracking-wide text-[10px] mb-3 text-sky-700 font-mono">// Working Process</h5>
-                            <div id="modalProcess" class="space-y-2 font-light"></div>
+                            <h5 id="modalPanelRightTitle" class="font-bold text-slate-800 uppercase tracking-wide text-[10px] mb-3 text-green-600 font-mono">// Working Process</h5>
+                            <div id="modalProcess" class="space-y-2 font-light text-slate-600"></div>
                         </div>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 border-t border-dashed border-slate-200">
                     <div class="space-y-3 flex flex-col justify-start">
-                        <h5 id="modalSectionLeftTitle" class="font-bold text-slate-800 uppercase tracking-wide text-[10px] text-indigo-700 font-mono">// Academic Outcomes</h5>
+                        <h5 id="modalSectionLeftTitle" class="font-bold text-slate-800 uppercase tracking-wide text-[10px] text-green-700 font-mono">// Academic Outcomes</h5>
                         <div id="modalAcademic" class="space-y-2 flex-1"></div>
                     </div>
                     <div class="space-y-3 flex flex-col justify-start">
-                        <h5 id="modalSectionRightTitle" class="font-bold text-slate-800 uppercase tracking-wide text-[10px] text-indigo-700 font-mono">// Technical Outcomes</h5>
+                        <h5 id="modalSectionRightTitle" class="font-bold text-slate-800 uppercase tracking-wide text-[10px] text-green-700 font-mono">// Technical Outcomes</h5>
                         <div id="modalTechnical" class="space-y-2 flex-1"></div>
                     </div>
                 </div>
@@ -553,185 +575,177 @@
                             <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Dynamic Calculation Loops:</strong> Handling data registers across runtime allocations without overwriting tracking array footprints.</div>
                             <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Digital Output Control:</strong> Routing alphanumeric strings across dynamic pin mappings to format calculations perfectly onto character matrices.</div>`
             },
-
-            // 9. COMBINED MOBILE APPLICATION PROJECTS SUITE
             mobileappscombined: {
                 title: "Mobile Application Portfolio (MIT App Inventor Suite)",
                 subtitle: "Grades 6-8 App Architecture & Interface Systems",
-                icon: "fa-mobile-screen-button text-sky-600",
+                icon: "fa-mobile-screen-button text-green-600",
                 overview: "A comprehensive combined student application ecosystem designed using MIT App Inventor. This suite highlights modular screen handshakes, hardware telemetry loops, persistent storage parsing, and custom UI layouts deployed to bridge logical script structures directly with modern front-end application paradigms.",
                 process: `
-                    <div class="space-y-4 font-light text-slate-350">
+                    <div class="space-y-4 font-light text-slate-600">
                         <div>
-                            <span class="block font-bold text-red-400 uppercase text-[10px]">1. Pure Air Tracker (Grade 8 Node)</span>
+                            <span class="block font-bold text-green-700 uppercase text-[10px]">1. Pure Air Tracker (Grade 8 Node)</span>
                             <p class="mt-0.5">Streams real-time atmospheric MQ2 analog telemetry wirelessly via HC-05 Bluetooth modules to map live air quality indices onto graphical application panels.</p>
                         </div>
                         <div>
-                            <span class="block font-bold text-red-400 uppercase text-[10px]">2. Voice Controlled Smart Rover (Grade 8 Automation)</span>
+                            <span class="block font-bold text-green-700 uppercase text-[10px]">2. Voice Controlled Smart Rover (Grade 8 Automation)</span>
                             <p class="mt-0.5">Captures spoken audio data using internal Google Speech engines, converting vocal frequencies into explicit string texts to drive differential DC motor rigs.</p>
                         </div>
                         <div>
-                            <span class="block font-bold text-red-400 uppercase text-[10px]">3. Smart Home System Layout (Grade 7 Infrastructure)</span>
+                            <span class="block font-bold text-green-700 uppercase text-[10px]">3. Smart Home System Layout (Grade 7 Infrastructure)</span>
                             <p class="mt-0.5">Provides user switches and toggle sliders to route digital code flags across networks, toggling domestic lighting relays and swinging gate servos.</p>
                         </div>
                         <div>
-                            <span class="block font-bold text-red-400 uppercase text-[10px]">4. Mobile-Controlled Tractor (Grade 8 Machinery)</span>
+                            <span class="block font-bold text-green-700 uppercase text-[10px]">4. Mobile-Controlled Tractor (Grade 8 Machinery)</span>
                             <p class="mt-0.5">Synchronizes distinct multi-actuator channels simultaneously—managing heavy driving propulsion speeds along with custom lift attachments.</p>
                         </div>
                         <div>
-                            <span class="block font-bold text-red-400 uppercase text-[10px]">5. Smart Air Cooler Management (Grade 8 Fluidics)</span>
+                            <span class="block font-bold text-green-700 uppercase text-[10px]">5. Smart Air Cooler Management (Grade 8 Fluidics)</span>
                             <p class="mt-0.5">Regulates high-frequency ultrasonic mist rings and multi-stage ventilation currents through a custom wireless control interface panel.</p>
                         </div>
                         <div>
-                            <span class="block font-bold text-red-400 uppercase text-[10px]">6. Seismic Earthquake Monitor (Grade 8 Geology)</span>
+                            <span class="block font-bold text-green-700 uppercase text-[10px]">6. Seismic Earthquake Monitor (Grade 8 Geology)</span>
                             <p class="mt-0.5">Pipes high-frequency MPU6050 six-axis gyroscope acceleration registers over localized channels to map real-time digital graphs on mobile screens.</p>
                         </div>
                         <div>
-                            <span class="block font-bold text-red-400 uppercase text-[10px]">7. Shade Spotter Dashboard (Grade 6 UI Engine)</span>
+                            <span class="block font-bold text-green-700 uppercase text-[10px]">7. Shade Spotter Dashboard (Grade 6 UI Engine)</span>
                             <p class="mt-0.5">A matrix layout generating dynamic color shade arrays with mathematical offset limits, forcing user speed choices over continuous timer tracks.</p>
                         </div>
                         <div>
-                            <span class="block font-bold text-red-400 uppercase text-[10px]">8. Core Primary Mini-Apps (Grade 6 Utilities)</span>
-                            <p class="mt-0.5"><strong class="font-medium text-white">Digital Calculator:</strong> Executes variable integer processing while blocking division errors. <strong class="font-medium text-white">Simple Chatbot:</strong> Rule-based string parsing feeding internal text-to-speech loops. <strong class="font-medium text-white">Step Counter:</strong> Background listener hooks tracking human motion parameters.</p>
+                            <span class="block font-bold text-green-700 uppercase text-[10px]">8. Core Primary Mini-Apps (Grade 6 Utilities)</span>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">Digital Calculator:</strong> Executes variable integer processing while blocking division errors. <strong class="font-medium text-slate-800">Simple Chatbot:</strong> Rule-based string parsing feeding internal text-to-speech loops. <strong class="font-medium text-slate-800">Step Counter:</strong> Background listener hooks tracking human motion parameters.</p>
                         </div>
                         <div>
-                            <span class="block font-bold text-red-400 uppercase text-[10px]">9. Study Matte Portal (Grade 8 Capstone Product)</span>
+                            <span class="block font-bold text-green-700 uppercase text-[10px]">9. Study Matte Portal (Grade 8 Capstone Product)</span>
                             <p class="mt-0.5">Multi-screen student productivity asset compiling databases, notification schedulers, note frameworks, and cross-screen data pass-through logic.</p>
                         </div>
                     </div>`,
                 academic: `
-                    <div class="space-y-2 font-light text-slate-300">
-                        <div class="bg-slate-950/40 p-3 rounded-xl border border-slate-800"><strong>Data & Wave Physics:</strong> Tracking atmospheric gas densities (PPM fields), mechanical drivetrain load states, acoustic transformation vectors, and thermal vaporization characteristics.</div>
+                    <div class="space-y-2 font-light text-slate-600">
+                        <div class="bg-white p-3 rounded-xl border border-slate-100"><strong>Data & Wave Physics:</strong> Tracking atmospheric gas densities (PPM fields), mechanical drivetrain load states, acoustic transformation vectors, and thermal vaporization characteristics.</div>
                     </div>`,
                 technical: `
-                    <div class="space-y-2 font-light text-slate-300">
-                        <div class="bg-slate-950/40 p-3 rounded-xl border border-slate-800"><strong>Architecture Deployment:</strong> Handling non-volatile database maps (TinyDB models), serial Bluetooth streams, event background listeners, and complex multi-screen variable global paths.</div>
+                    <div class="space-y-2 font-light text-slate-600">
+                        <div class="bg-white p-3 rounded-xl border border-slate-100"><strong>Architecture Deployment:</strong> Handling non-volatile database maps (TinyDB models), serial Bluetooth streams, event background listeners, and complex multi-screen variable global paths.</div>
                     </div>`
             },
-
-            // 10. COMBINED ARTIFICIAL INTELLIGENCE PROJECTS SUITE
             aiprojectscombined: {
                 title: "Artificial Intelligence Portfolio (Teachable Machine & P5.js Suite)",
                 subtitle: "Grade 9 Neural Computations & Image/Audio Analytics",
-                icon: "fa-brain text-rose-500",
+                icon: "fa-brain text-green-600",
                 overview: "A premium high-level AI deployment grid combining cloud-trained neural models with frontend creative JavaScript libraries. These projects introduce visual classification tensors, structural feature extraction weights, and audio spectrogram maps within live web architectures.",
                 process: `
-                    <div class="space-y-4 font-light text-slate-300">
+                    <div class="space-y-4 font-light text-slate-600">
                         <div>
-                            <span class="block font-bold text-rose-400 uppercase text-[10px]">1. Atomic Structure Identifier (Computer Vision)</span>
+                            <span class="block font-bold text-green-700 uppercase text-[10px]">1. Atomic Structure Identifier (Computer Vision)</span>
                             <p class="mt-0.5">CNN model classifying sketches of Bohr elements. Integrates an ml5.imageClassifier() template inside P5.js code loops to render atomic constants over webcam grids.</p>
                         </div>
                         <div>
-                            <span class="block font-bold text-rose-400 uppercase text-[10px]">2. Live Geometric Angle Analyzer (Spatial CV)</span>
+                            <span class="block font-bold text-green-700 uppercase text-[10px]">2. Live Geometric Angle Analyzer (Spatial CV)</span>
                             <p class="mt-0.5">Tracks intersecting vertices, human joint vectors, and real-world corners, generating interactive color protractor canvas bounding boxes over acute or obtuse nodes.</p>
                         </div>
                         <div>
-                            <span class="block font-bold text-rose-400 uppercase text-[10px]">3. Gesture-Driven Rock-Paper-Scissors (Tracking Logic)</span>
+                            <span class="block font-bold text-green-700 uppercase text-[10px]">3. Gesture-Driven Rock-Paper-Scissors (Tracking Logic)</span>
                             <p class="mt-0.5">Organizes dynamic hand shape databases (Rock/Paper/Scissors). A countdown draw loop evaluates current hand tracking parameters against randomized computer states.</p>
                         </div>
                         <div>
-                            <span class="block font-bold text-rose-400 uppercase text-[10px]">4. Acoustic Instrument Classifier (Deep Learning Audio)</span>
+                            <span class="block font-bold text-green-700 uppercase text-[10px]">4. Acoustic Instrument Classifier (Deep Learning Audio)</span>
                             <p class="mt-0.5">Converts microphone recordings into visual time-frequency spectrogram maps, analyzing wave amplitudes to paint customized sound-reactive canvas particles.</p>
                         </div>
                         <div>
-                            <span class="block font-bold text-rose-400 uppercase text-[10px]">5. Voice Biometric Access Node (Speaker Recognition)</span>
+                            <span class="block font-bold text-green-700 uppercase text-[10px]">5. Voice Biometric Access Node (Speaker Recognition)</span>
                             <p class="mt-0.5">An authentication lock screen tracking user voice profiles. It applies strict filter restrictions, executing canvas gates if matching scores clear an 85% safety block.</p>
                         </div>
                     </div>`,
                 academic: `
-                    <div class="space-y-2 font-light text-slate-300">
-                        <div class="bg-slate-950/40 p-3 rounded-xl border border-slate-800"><strong>Advanced Applied Sciences:</strong> Periodic table electron maps, spatial trigonometry angular math, probability branches, and acoustic wave amplitude properties.</div>
+                    <div class="space-y-2 font-light text-slate-600">
+                        <div class="bg-white p-3 rounded-xl border border-slate-100"><strong>Advanced Applied Sciences:</strong> Periodic table electron maps, spatial trigonometry angular math, probability branches, and acoustic wave amplitude properties.</div>
                     </div>`,
                 technical: `
-                    <div class="space-y-2 font-light text-slate-300">
-                        <div class="bg-slate-950/40 p-3 rounded-xl border border-slate-800"><strong>Machine Learning Deployment:</strong> Training custom epochs, export parameter configurations (model.json tracks), running ML5 sound arrays, and tuning classification confidence ratios.</div>
+                    <div class="space-y-2 font-light text-slate-600">
+                        <div class="bg-white p-3 rounded-xl border border-slate-100"><strong>Machine Learning Deployment:</strong> Training custom epochs, export parameter configurations (model.json tracks), running ML5 sound arrays, and tuning classification confidence ratios.</div>
                     </div>`
             },
-
-            // 11. COMBINED OTHER ELECTRONIC PROJECTS (GRADES 6 & 7)
             otherelectronicscombined: {
                 title: "Other Electronic Projects Portfolio",
                 subtitle: "Grades 6-7 Arduino System Automation & Telemetry Blueprints",
-                icon: "fa-diagram-project text-indigo-500",
+                icon: "fa-diagram-project text-green-600",
                 overview: "A specialized middle school tracking grid focusing on climate-responsive logic loops, echo-location calculations, and analog environmental probe arrays managed through the Arduino framework.",
                 process: `
-                    <div class="space-y-3 font-light text-slate-300">
+                    <div class="space-y-3 font-light text-slate-600">
                         <div>
-                            <strong class="font-bold text-indigo-400 block uppercase text-[10px]">1. Smart Roof System (Climate Automation)</strong>
+                            <strong class="font-bold text-green-700 block uppercase text-[10px]">1. Smart Roof System (Climate Automation)</strong>
                             <p class="mt-0.5">Actuates a high-torque protection roof canopy via servo linkages when rain sensors detect moisture droplets OR an LDR logs low ambient daylight inputs.</p>
                         </div>
                         <div>
-                            <strong class="font-bold text-indigo-400 block uppercase text-[10px]">2. Smart Blind Stick / Assistive Shoe (Mobility Radar)</strong>
+                            <strong class="font-bold text-green-700 block uppercase text-[10px]">2. Smart Blind Stick / Assistive Shoe (Mobility Radar)</strong>
                             <p class="mt-0.5">An assistive navigation tool running time-of-flight acoustic sound waves through a proximity sensor, triggering a pulse buzzer during obstacle encounters.</p>
                         </div>
                         <div>
-                            <strong class="font-bold text-indigo-400 block uppercase text-[10px]">3. Smart Bin (Touchless Sanitary Control)</strong>
+                            <strong class="font-bold text-green-700 block uppercase text-[10px]">3. Smart Bin (Touchless Sanitary Control)</strong>
                             <p class="mt-0.5">Detects approach limits through ultrasonic data sweeps, engaging mechanical servo hinges for 3-5 seconds using a non-blocking hold timer logic script.</p>
                         </div>
                         <div>
-                            <strong class="font-bold text-indigo-400 block uppercase text-[10px]">4. Dancing LED Array (Audio-Reactive Mapping)</strong>
+                            <strong class="font-bold text-green-700 block uppercase text-[10px]">4. Dancing LED Array (Audio-Reactive Mapping)</strong>
                             <p class="mt-0.5">Processes analog microphone voltage spikes, utilizing scalar map() equations to spread volume levels across 10 independent display outputs.</p>
                         </div>
                         <div>
-                            <strong class="font-bold text-indigo-400 block uppercase text-[10px]">5. Intelligent Parking System (Civil Slot Tracker)</strong>
+                            <strong class="font-bold text-green-700 block uppercase text-[10px]">5. Intelligent Parking System (Civil Slot Tracker)</strong>
                             <p class="mt-0.5">Coordinates dual ingress/egress IR nodes to automate barrier servo gates while dynamically updating available space counts on a character LCD screen.</p>
                         </div>
                         <div>
-                            <strong class="font-bold text-indigo-400 block uppercase text-[10px]">6. Flood & Soil Saturation Alert Node (Disaster Telemetry)</strong>
+                            <strong class="font-bold text-green-700 block uppercase text-[10px]">6. Flood & Soil Saturation Alert Node (Disaster Telemetry)</strong>
                             <p class="mt-0.5">An agritech sensor network probing volumetric water density profiles. Excess saturation triggers high-pitched audio buzzers and streams serial data alerts over Bluetooth.</p>
                         </div>
                     </div>`,
                 academic: `
-                    <div class="space-y-2 font-light text-slate-300">
-                        <div class="bg-slate-950/40 p-3 rounded-xl border border-slate-800"><strong>Analog Physics:</strong> Investigating moisture conductivity thresholds, acoustic echo math equations, sound amplitudes, fluid density metrics, and modern urban planning algorithms.</div>
+                    <div class="space-y-2 font-light text-slate-600">
+                        <div class="bg-white p-3 rounded-xl border border-slate-100"><strong>Analog Physics:</strong> Investigating moisture conductivity thresholds, acoustic echo math equations, sound amplitudes, fluid density metrics, and modern urban planning algorithms.</div>
                     </div>`,
                 technical: `
-                    <div class="space-y-2 font-light text-slate-300">
-                        <div class="bg-slate-950/40 p-3 rounded-xl border border-slate-800"><strong>Arduino Firmware Architectures:</strong> Structuring multi-conditional Boolean gates (OR tracking), timing variables, index incrementing/decrementing data routines, and wireless serial stream parameters.</div>
+                    <div class="space-y-2 font-light text-slate-600">
+                        <div class="bg-white p-3 rounded-xl border border-slate-100"><strong>Arduino Firmware Architectures:</strong> Structuring multi-conditional Boolean gates (OR tracking), timing variables, index incrementing/decrementing data routines, and wireless serial stream parameters.</div>
                     </div>`
             },
-
-            // 12. OTHER ELECTRICAL PROJECTS (GRADES 1-5)
             grade5automation: {
                 title: "Other Electrical Projects",
                 subtitle: "Foundational Closed Loops & Sensor Automation Architecture",
-                icon: "fa-bolt text-amber-500",
+                icon: "fa-bolt text-green-600",
                 overview: "A comprehensive analog portfolio showcasing tactile electronics engineering layouts for lower primary deployments. These modules introduce core electrical current constraints, polarity rules, mechanical routing systems, and basic switching gates using discrete physical components without microcontrollers.",
                 process: `
-                    <div class="space-y-3 font-light text-slate-300">
+                    <div class="space-y-3 font-light text-slate-600">
                         <div>
-                            <span class="block font-bold text-amber-400 uppercase text-[10px]">Automation & Sensor Basics (Grade 5)</span>
-                            <p class="mt-0.5"><strong class="font-medium text-white">1. Automatic Hand Wash:</strong> IR sensor obstacle checks complete a relay circuit path to run water pump motors touchlessly.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-white">2. Fire Prevention System:</strong> Flame sensors check for IR threat signatures, toggling single-channel switching arrays to discharge fluid streams.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-white">3. Independent Lighthouse:</strong> LDR light resistance breaks circuit lines under ambient sun rays and automatically triggers a relay to fire bright beacon LEDs at dark.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-white">4. Water Level Indicator:</strong> Stripped multi-core copper wire leads map height milestones, completing active current traces through water conductivity.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-white">5. Following Robot:</strong> Forward IR nodes activate directional relay shifts, engaging driving DC units when an object guides the loop tracking paths.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-white">6. Rotating Toy:</strong> Base optical triggers isolate wave paths, closing relays to actuate a vertically mounted high-speed spinning motor module.</p>
+                            <span class="block font-bold text-green-700 uppercase text-[10px]">Automation & Sensor Basics (Grade 5)</span>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">1. Automatic Hand Wash:</strong> IR sensor obstacle checks complete a relay circuit path to run water pump motors touchlessly.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">2. Fire Prevention System:</strong> Flame sensors check for IR threat signatures, toggling single-channel switching arrays to discharge fluid streams.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">3. Independent Lighthouse:</strong> LDR light resistance breaks circuit lines under ambient sun rays and automatically triggers a relay to fire bright beacon LEDs at dark.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">4. Water Level Indicator:</strong> Stripped multi-core copper wire leads map height milestones, completing active current traces through water conductivity.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">5. Following Robot:</strong> Forward IR nodes activate directional relay shifts, engaging driving DC units when an object guides the loop tracking paths.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">6. Rotating Toy:</strong> Base optical triggers isolate wave paths, closing relays to actuate a vertically mounted high-speed spinning motor module.</p>
                         </div>
-                        <div class="pt-2 border-t border-slate-800">
-                            <span class="block font-bold text-amber-400 uppercase text-[10px]">Switches & Closed Circuits (Grade 4)</span>
-                            <p class="mt-0.5"><strong class="font-medium text-white">7. Wired Rover:</strong> Direct handheld manual switches swap battery terminal paths to handle full multi-motor differential steering tracking.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-white">8. Electric Maze:</strong> Aluminum sheet baselines create steady-hand open game loops; touch shorts immediately trigger audio alarm buzzers.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-white">9. Interactive Greeting Card:</strong> Card seams mask compact reed switch components that snap closed when magnetic alignment passes over fold coordinates.</p>
+                        <div class="pt-2 border-t border-slate-200">
+                            <span class="block font-bold text-green-700 uppercase text-[10px]">Switches & Closed Circuits (Grade 4)</span>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">7. Wired Rover:</strong> Direct handheld manual switches swap battery terminal paths to handle full multi-motor differential steering tracking.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">8. Electric Maze:</strong> Aluminum sheet baselines create steady-hand open game loops; touch shorts immediately trigger audio alarm buzzers.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">9. Interactive Greeting Card:</strong> Card seams mask compact reed switch components that snap closed when magnetic alignment passes over fold coordinates.</p>
                         </div>
                     </div>`,
                 academic: `
-                    <div class="space-y-3 font-light text-slate-300">
+                    <div class="space-y-3 font-light text-slate-600">
                         <div>
-                            <span class="block font-bold text-indigo-400 uppercase text-[10px]">Foundational Assembly (Grade 3)</span>
-                            <p class="mt-0.5"><strong class="font-medium text-white">10. Glowing Memory Frame:</strong> LED tape strings mounted into casing boundaries to demonstrate clean manual toggle slide constraints safely.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-white">11. Movable Poppet:</strong> High-speed circular motor shafts convert motion vectors into irregular kinetic dancing arrays using physical offset extensions.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-white">12. Elevator Model:</strong> Polarity switches shift terminal battery routing lines to reverse hoist directions.</p>
+                            <span class="block font-bold text-indigo-700 uppercase text-[10px]">Foundational Assembly (Grade 3)</span>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">10. Glowing Memory Frame:</strong> LED tape strings mounted into casing boundaries to demonstrate clean manual toggle slide constraints safely.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">11. Movable Poppet:</strong> High-speed circular motor shafts convert motion vectors into irregular kinetic dancing arrays using physical offset extensions.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">12. Elevator Model:</strong> Polarity switches shift terminal battery routing lines to reverse hoist directions.</p>
                         </div>
                     </div>`,
                 technical: `
-                    <div class="space-y-3 font-light text-slate-300">
+                    <div class="space-y-3 font-light text-slate-600">
                         <div>
-                            <span class="block font-bold text-indigo-400 uppercase text-[10px]">Paper Circuits & Polarity (Grades 1 & 2)</span>
-                            <p class="mt-0.5"><strong class="font-medium text-white">13. Paper Circuit Layouts:</strong> Solderless circuit traces using adhesive copper foil lines taped directly over flat desktop models.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-white">14. Series & Parallel Formations:</strong> Clear structural line testing comparing single path loops against multi-branch ladder frameworks.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-white">15. Simple LED Experiment:</strong> The core identification step sliding long positive anodes and short negative cathodes over coin cells.</p>
-                            <p class="mt-0.5"><strong class="font-medium text-white">16. Open & Close Circuit:</strong> Visual push loops showing current flow requires an unbroken, completed continuous ring map format.</p>
+                            <span class="block font-bold text-indigo-700 uppercase text-[10px]">Paper Circuits & Polarity (Grades 1 & 2)</span>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">13. Paper Circuit Layouts:</strong> Solderless circuit traces using adhesive copper foil lines taped directly over flat desktop models.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">14. Series & Parallel Formations:</strong> Clear structural line testing comparing single path loops against multi-branch ladder frameworks.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">15. Simple LED Experiment:</strong> The core identification step sliding long positive anodes and short negative cathodes over coin cells.</p>
+                            <p class="mt-0.5"><strong class="font-medium text-slate-800">16. Open & Close Circuit:</strong> Visual push loops showing current flow requires an unbroken, completed continuous ring map format.</p>
                         </div>
                     </div>`
             }
