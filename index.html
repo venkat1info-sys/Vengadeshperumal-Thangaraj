@@ -396,6 +396,37 @@
                     </div>
                 </div>
 
+                <div onclick="openModal('grade6automation')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4 border-dashed border-indigo-300 bg-indigo-50/10">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-diagram-project text-indigo-600 text-xl"></i>
+                        <div>
+                            <h4 class="font-bold text-base text-indigo-800 uppercase tracking-wide">Grade 6 Projects (Autonomous Systems & Logic)</h4>
+                            <p class="text-xs text-slate-500 font-light mt-0.5">Automated architecture, vector radar mobility systems, non-blocking timers, mapping arrays, and count triggers.</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-end">
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-md shadow-indigo-600/10 hover:bg-indigo-700 transition-colors">
+                            View Logic Systems <i class="fa-solid fa-list-check text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div onclick="openModal('grade7telemetry')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4 border-dashed border-emerald-300 bg-emerald-50/10">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-satellite-dish text-emerald-600 text-xl"></i>
+                        <div>
+                            <h4 class="font-bold text-base text-emerald-800 uppercase tracking-wide">Grade 7 Projects (Advanced Environmental Tracking)</h4>
+                            <p class="font-mono text-[10px] text-slate-400 font-bold uppercase">Advanced Telemetry Blueprints</p>
+                            <p class="text-xs text-slate-500 font-light mt-0.5">Soil saturation dynamics, analog environmental probes, disaster management safety limits, and serial telemetry arrays.</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-end">
+                        <button class="bg-emerald-600 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-md shadow-emerald-600/10 hover:bg-emerald-700 transition-colors">
+                            View Telemetry Nodes <i class="fa-solid fa-list-check text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
                 <div onclick="openModal('grade5automation')" class="interactive-project-card p-6 bg-white/50 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4 md:col-span-1 lg:col-span-2 border-dashed border-sky-300 bg-sky-50/20">
                     <div class="flex items-center gap-3">
                         <i class="fa-solid fa-bezier-curve text-sky-600 text-xl"></i>
@@ -680,6 +711,64 @@
                 academic: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Geology & Mappings:</strong> Understanding geology, structural engineering, seismic waves, and the multi-axis (X, Y, Z) Cartesian coordinate system.</div>`,
                 technical: `<div class="bg-white p-4 rounded-xl border border-slate-100"><strong>I2C Sensor Calibration:</strong> Interfacing advanced I^2C protocol communication sensors (MPU6050) with microcontrollers and writing data-parsing algorithms in block-based application software.</div>`
             },
+            grade6automation: {
+                title: "Grade 6 Projects (Autonomous Systems & Logic)",
+                subtitle: "Multi-Conditional Automation & Audio Radar Blueprints",
+                icon: "fa-diagram-project text-indigo-500",
+                overview: "A specialized middle school curriculum block utilizing the Arduino Uno to introduce logical gate branches, proximity waveforms, and sensory mapping algorithms without advanced network layers.",
+                process: `
+                    <div class="space-y-3 font-light text-slate-600">
+                        <div>
+                            <strong class="font-bold text-sky-800 block uppercase text-[10px]">1. Smart Roof System (OR-Gate Logic)</strong>
+                            <p class="mt-0.5">Closes a mechanical roof enclosure via a high-torque servo loop if the rain sensor reads moisture droplets OR the LDR logs nighttime threshold values.</p>
+                        </div>
+                        <div>
+                            <strong class="font-bold text-sky-800 block uppercase text-[10px]">2. Smart Blind Stick (Assistive Proximity Radar)</strong>
+                            <p class="mt-0.5">Translates time-of-flight bounce metrics from an ultrasonic radar into proximity audio frequencies via an alert buzzer.</p>
+                        </div>
+                        <div>
+                            <strong class="font-bold text-sky-800 block uppercase text-[10px]">3. Smart Bin (Touchless Sanitation Hinge)</strong>
+                            <p class="mt-0.5">Lifts trash container lids cleanly using servo vector mechanics, executing non-blocking hold timers before resetting positions.</p>
+                        </div>
+                        <div>
+                            <strong class="font-bold text-sky-800 block uppercase text-[10px]">4. Dancing LED Array (Sound Display mapping)</strong>
+                            <p class="mt-0.5">Maps incoming microphone module voltage ripples across 10 digital outputs to create dynamic sound sync visualizers.</p>
+                        </div>
+                        <div>
+                            <strong class="font-bold text-sky-800 block uppercase text-[10px]">5. Intelligent Parking System (Civil Counting Loops)</strong>
+                            <p class="mt-0.5">Increments and decrements available space tracking values dynamically using dual gate IR arrays and a character LCD display panel.</p>
+                        </div>
+                    </div>`,
+                academic: `
+                    <div class="space-y-3 font-light text-slate-600">
+                        <div class="bg-white p-3 rounded-xl border border-slate-100"><strong>Computational Physics:</strong> Mastering fluid dynamic moisture constraints, time-of-flight acoustic echolocation equations, acoustic pressure arrays, and urban planning mechanics.</div>
+                    </div>`,
+                technical: `
+                    <div class="space-y-3 font-light text-slate-600">
+                        <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Core Logic Architectures:</strong> Programming nested conditional Boolean dependencies, sensor tracking calculations, non-blocking asynchronous timers, and scalar map() variables.</div>
+                    </div>`
+            },
+            grade7telemetry: {
+                title: "Grade 7 Projects (Advanced Environmental Tracking)",
+                subtitle: "Disaster Mitigation & RF Node Mappings",
+                icon: "fa-satellite-dish text-emerald-600",
+                overview: "Advanced lower secondary modules emphasizing analog infrastructure profiling, risk management parameters, and synchronous wireless data packaging across local RF spectrum arrays.",
+                process: `
+                    <div class="space-y-3 font-light text-slate-600">
+                        <div>
+                            <strong class="font-bold text-emerald-800 block uppercase text-[10px]">6. Flood & Soil Saturation Alert Node</strong>
+                            <p class="mt-0.5">An agricultural tracking array deploying soil moisture sensors to flag sudden volumetric saturation spikes. Surpassing safety limits sounds a high-pitched localized piezo buzzer while concurrently pipe-streaming a serial emergency telemetry uplink over HC-05 Bluetooth buses into companion phone platforms.</p>
+                        </div>
+                    </div>`,
+                academic: `
+                    <div class="space-y-3 font-light text-slate-600">
+                        <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Geophysical Mechanics:</strong> Soil density structures, soil tracking thresholds, volumetric fluid retention limits, and emergency flood mitigation strategies.</div>
+                    </div>`,
+                technical: `
+                    <div class="space-y-3 font-light text-slate-600">
+                        <div class="bg-white p-4 rounded-xl border border-slate-100"><strong>Telemetry Pipeline Engineering:</strong> Interfacing analog resistance probes, managing trigger thresholds, and transmitting serial string structures wirelessly.</div>
+                    </div>`
+            },
             grade5automation: {
                 title: "Electrical Projects Grid (Grades 1-5 Blueprints)",
                 subtitle: "Foundational Closed Loops & Sensor Automation Architecture",
@@ -749,10 +838,15 @@
             const data = projectRegistry[projectId];
             if (!data) return;
 
-            // Handle custom view mappings if the grid layout button is initialized
             if (projectId === 'grade5automation') {
                 document.getElementById("modalSectionLeftTitle").innerText = "// Assembly Layouts";
                 document.getElementById("modalSectionRightTitle").innerText = "// Primary Modules";
+            } else if (projectId === 'grade6automation') {
+                document.getElementById("modalSectionLeftTitle").innerText = "// Academic Outcomes";
+                document.getElementById("modalSectionRightTitle").innerText = "// Technical Outcomes";
+            } else if (projectId === 'grade7telemetry') {
+                document.getElementById("modalSectionLeftTitle").innerText = "// Geophysical Mechanics";
+                document.getElementById("modalSectionRightTitle").innerText = "// Telemetry Pipeline Engineering";
             } else {
                 document.getElementById("modalSectionLeftTitle").innerText = "// Academic Outcomes";
                 document.getElementById("modalSectionRightTitle").innerText = "// Technical Outcomes";
